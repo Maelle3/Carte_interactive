@@ -1,0 +1,14 @@
+import requests
+
+url_geocode = "http://api-adresse.data.gouv.fr/search/"
+adresse_test = "11 rue Moustier Marseille"
+
+
+def geocode(adresse):
+    reponse = reponse = requests.get(url_geocode, params={"q": adresse})
+    lat = reponse.json().get("features")[0].get("geometry").get("coordinates")[0]
+    lon = reponse.json().get("features")[0].get("geometry").get("coordinates")[1]
+    return lat, lon
+
+
+print(geocode(adresse_test))

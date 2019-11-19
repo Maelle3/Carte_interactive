@@ -2,6 +2,10 @@ import pandas as pd
 import geocode as geo
 
 
+#liste des classifications de pathologies
+##'classification_pathologies'=["affaissemnt", "altération", "risque de chutes", "fissures", "fissures", "débris", "affaissement", "basculement d'escalier", "risque d'effondrement"]
+
+
 def ouverture_bdd(bdd):
     return pd.read_csv(bdd)
 

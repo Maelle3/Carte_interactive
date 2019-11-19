@@ -1,4 +1,4 @@
-adresse,lon,lat,pathologies,lieux, url
+adresse,lon,lat,pathologies,lieux,url
 41 rue de Rome Marseille,43.294193,5.379158,affaissement caractéristique,plancher bas du 2nd étage,http://www.marseille.fr/sites/default/files/contenu/logement/Arretes-peril/41-rue-de-rome-pi_2018_02952-final.pdf
 41 rue de Rome Marseille,43.294193,5.379158,état d'altération,plancher haut du 1er étage,http://www.marseille.fr/sites/default/files/contenu/logement/Arretes-peril/41-rue-de-rome-pi_2018_02952-final.pdf
 1 rue de la Palud Marseille,43.294829,5.37892,risque de chute d'enduis de la façade et d'éléments de maçonnerie instables,Mur mitoyen de l'immeuble au numéro 3,http://www.marseille.fr/sites/default/files/contenu/logement/Arretes-peril/1-rue-de-le-palud-2018_02948-edited-2.pdf

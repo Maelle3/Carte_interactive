@@ -6,10 +6,11 @@ def ouverture_bdd(bdd):
     return pd.read_csv(bdd)
 
 
-def ajout_ligne(bdd, url, adresse):
+def ajout_ligne(bdd, url, adresse, pathologies, lieu):
     db = ouverture_bdd(bdd)
-    l = len(db)
-    db.loc[l] = [l+1, adresse, geo.geocode(adresse)[0], geo.geocode(adresse)[1], [], url]
+    longeur = len(db)
+    print(geo.geocode(adresse))
+    db.loc[longeur] = [adresse, geo.geocode(adresse)[0], geo.geocode(adresse)[1], pathologies, lieu, url]
     db.to_csv(bdd, index=False)
     return None
 

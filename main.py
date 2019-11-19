@@ -2,11 +2,21 @@ import geocode as geo
 import carte
 import database
 
-adresse1 = geo.geocode(geo.adresse_test)
-adresse_centrale = geo.geocode("38 rue frédéric joliot curie marseille")
 c = carte.creation_carte()
-carte.creation_marker(c, adresse1[0], adresse1[1], "ca a marché")
-carte.creation_marker(c, adresse_centrale[0], adresse_centrale[1], "Centrale Marseille")
+
+liste_adresses = carte.adresses("arretes.csv")
+liste_messages = carte.message("arretes.csv")
+
+for i in range(len(liste_adresses)):
+    carte.creation_marker(c,geo.geocode(liste_adresses[i])[0], geo.geocode(liste_adresses[i])[1], liste_messages[i])
+
+
+#adresse1=geo.geocode("11 rue Moustier Marseille")
+#carte.creation_marker(c, adresse1[0], adresse1[1], "ca a marché")
+
 
 c.save('carte.html')
+
+##df[["lieux","pathologies"]]
+##df.loc[df['adresse']='truc', :])
 

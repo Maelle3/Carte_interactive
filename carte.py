@@ -6,12 +6,13 @@ lon_marseille = 5.3810700
 
 
 def creation_carte():
-    return folium.Map(location=[lat_marseille, lon_marseille], zoom_start=12, min_zoom=11)
+    return folium.Map(location = [lat_marseille, lon_marseille], zoom_start = 12, min_zoom = 11)
 
 
-def creation_marker(carte, x , y, message):
+def creation_marker(carte, x, y, message):
     popup = folium.Popup(message, max_width=600,  min_width=600)
     return folium.Marker([x, y], popup=popup, icon=folium.Icon(icon='info-sign')).add_to(carte)
+
 
 def adresses(bdd):
     db = database.ouverture_bdd(bdd)
@@ -37,9 +38,9 @@ def message(bdd):
              u = db2.iloc[j].url
              if u not in liste_url:
                 liste_url.append(u)
-                char+= '<i>'+u + '</i><br>'
-             char+= db2.iloc[j].classification_pathologies + " " + db2.iloc[j].classification_lieux + "<br>"
-        char+='</font>'
+                char += '<i>'+u + '</i><br>'
+             char += db2.iloc[j].classification_pathologies + " " + db2.iloc[j].classification_lieux + "<br>"
+        char += '</font>'
         liste.append(char)
     return liste
 

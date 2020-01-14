@@ -12,7 +12,37 @@ def recup_pathologie(texte):
 
 ##Il reste à gérer les bas de page
 
+# for i in os.listdir("./Datas/TXT"):
+#     print(recup_pathologie("./Datas/TXT/" + i))
+
+def ajout_class(string1, string2, classification, pathologie):
+    if string1 in pathologie :
+        if string2 not in classification:
+            classification.append(string2)
+
+def classification_pathologie(pathologie):
+    classification = []
+    ajout_class("ffais", "affaissement",classification, pathologie )
+    ajout_class("ltér", "altération",classification, pathologie )
+    ajout_class("hute", "chutes",classification, pathologie )
+    ajout_class("tomber", "chutes",classification, pathologie )
+    ajout_class("orro", "corrosion",classification, pathologie )
+    ajout_class("ouill", "corrosion",classification, pathologie )
+    ajout_class("lectr", "danger électrique",classification, pathologie )
+    ajout_class("ébris", "débris",classification, pathologie )
+    ajout_class("éform", "déformation",classification, pathologie )
+    ajout_class("égrad", "dégradation",classification, pathologie )
+    ajout_class("éstruc", "déstructuration",classification, pathologie )
+    ajout_class("étérior", "détérioration",classification, pathologie )
+    ajout_class("ffondr", "effondrement",classification, pathologie )
+    ajout_class("stabl", "effondrement",classification, pathologie )
+    ajout_class("tanch", "étanchéité",classification, pathologie )
+    ajout_class("issu", "fissures",classification, pathologie )
+    ajout_class("ragil", "fragilité",classification, pathologie )
+    ajout_class("aible", "fragilité",classification, pathologie )
+    ajout_class("umid", "humidité",classification, pathologie )
+    ajout_class("oisi", "moisissures",classification, pathologie )
+    return classification
+
 for i in os.listdir("./Datas/TXT"):
-    print(recup_pathologie("./Datas/TXT/" + i))
-
-
+    print(classification_pathologie(recup_pathologie("./Datas/TXT/" + i )))

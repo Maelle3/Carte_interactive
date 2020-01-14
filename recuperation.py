@@ -44,5 +44,29 @@ def classification_pathologie(pathologie):
     ajout_class("oisi", "moisissures",classification, pathologie )
     return classification
 
-for i in os.listdir("./Datas/TXT"):
-    print(classification_pathologie(recup_pathologie("./Datas/TXT/" + i )))
+# for i in os.listdir("./Datas/TXT"):
+#     print(classification_pathologie(recup_pathologie("./Datas/TXT/" + i )))
+
+def classification_lieu(pathologie):
+    classification = []
+    ajout_class("alcon", "balcon",classification, pathologie )
+    ajout_class("agade", "façade",classification, pathologie )
+    ajout_class("açade", "façade",classification, pathologie )
+    ajout_class("acade", "façade",classification, pathologie )
+    ajout_class("oiture", "toiture",classification, pathologie )
+    ajout_class("scalier", "escalier",classification, pathologie )
+    ajout_class("loison", "cloison",classification, pathologie )
+    ajout_class("lafond", "plafond",classification, pathologie )
+    ajout_class("sol", "plancher",classification, pathologie )
+    ajout_class("lancher", "plancher",classification, pathologie )
+    ajout_class("enêtre", "fenêtre",classification, pathologie )
+    ajout_class("enetre", "fenêtre",classification, pathologie )
+    ajout_class("outre", "poutre",classification, pathologie )
+    ajout_class("arrelage", "plancher",classification, pathologie )
+    ajout_class("harpente", "charpente",classification, pathologie )
+    ajout_class("mur", "mur",classification, pathologie )
+    ajout_class("arche", "escalier",classification, pathologie )
+    ajout_class("orniche", "corniche",classification, pathologie )
+    ajout_class("lafond", "plafond",classification, pathologie )
+    ajout_class("errass", "balcon",classification, pathologie )
+    return classification

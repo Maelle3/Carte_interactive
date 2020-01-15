@@ -1,5 +1,13 @@
 import os
 
+def recup_id(texte):
+    fichier = open(texte, "r", encoding = "latin-1")
+    res = str(fichier.read()).partition("ID : ")[2].partition("\n")[0]
+    return res
+
+for i in os.listdir("./Datas/TXT"):
+     print(recup_id("./Datas/TXT/" + i))
+
 def recup_adresse(texte):
     fichier = open(texte, "r", encoding = "latin-1")
     res = str(fichier.read()).partition("immeuble sis ")[2].partition("-")[0].partition("")[0]
@@ -10,7 +18,9 @@ def recup_pathologie(texte):
     res = str(fichier.read()).partition("pathologies suivantes :")[2].partition("Considérant")[0]
     return res
 
-##Il reste à gérer les bas de page
+#################
+# Il reste à gérer les bas de page
+##################
 
 # for i in os.listdir("./Datas/TXT"):
 #     print(recup_pathologie("./Datas/TXT/" + i))
@@ -70,3 +80,6 @@ def classification_lieu(pathologie):
     ajout_class("lafond", "plafond",classification, pathologie )
     ajout_class("errass", "balcon",classification, pathologie )
     return classification
+
+# for i in os.listdir("./Datas/TXT"):
+#      print(classification_lieu(recup_pathologie("./Datas/TXT/" + i )))

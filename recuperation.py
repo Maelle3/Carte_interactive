@@ -5,8 +5,6 @@ def recup_id(texte):
     res = str(fichier.read()).partition("ID : ")[2].partition("\n")[0]
     return res
 
-for i in os.listdir("./Datas/TXT"):
-     print(recup_id("./Datas/TXT/" + i))
 
 def recup_adresse(texte):
     fichier = open(texte, "r", encoding = "latin-1")

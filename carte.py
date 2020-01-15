@@ -30,17 +30,16 @@ def message(bdd):
     liste_adresse = adresses(bdd)
     db = database.ouverture_bdd(bdd)
     liste = []
-    for i in liste_adresse:
-        db2 = db.loc[db.adresse==i, :]
-        char = '<font size="+1"><B>'+ i + "</B><br>"
+    for adresse in liste_adresse:
+        char = '<font size="+1"><B>'+ adresse + "</B><br>"
         liste_url = []
-        l = len(db2)
-        for j in range(l):
-             u = db2.iloc[j].url
-             if u not in liste_url:
-                liste_url.append(u)
-                char += '<i>'+u + '</i><br>'
-             char += db2.iloc[j].classification_pathologies + " " + db2.iloc[j].classification_lieux + "<br>"
+        for key, value in db.items():
+            if  value[0]["adresse"] == adresse :
+                 u = value[0]["url"]
+                 if u not in liste_url:
+                    liste_url.append(u)
+                    char += '<i>'+u + '</i><br>'
+                 char += str(value[0]["classification_pathologies"]) + " <br> " + str(value[0]["classification_lieux"])+ "<br>"
         char += '</font>'
         liste.append(char)
     return liste

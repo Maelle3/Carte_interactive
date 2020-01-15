@@ -24,4 +24,4 @@ def image_to_txt():
             fichier.close()
 
 
-image_to_txt()
+

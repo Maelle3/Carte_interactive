@@ -1,6 +1,7 @@
 import folium
 import database
 
+
 lat_marseille = 43.2969500
 lon_marseille = 5.3810700
 
@@ -18,8 +19,8 @@ def adresses(bdd):
     db = database.ouverture_bdd(bdd)
     l = len(db)
     liste = []
-    for i in range(l):
-        adresse = db.loc[i].adresse
+    for key, value in db.items():
+        adresse = value[0]["adresse"]
         if adresse not in liste:
             liste.append(adresse)
     return liste

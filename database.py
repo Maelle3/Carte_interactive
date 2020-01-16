@@ -16,9 +16,6 @@ def ouverture_bdd(bdd):
         data_dict = json.load(json_data)
     return data_dict
 
-json2 = ouverture_bdd("data.json")
-
-
 
 
 

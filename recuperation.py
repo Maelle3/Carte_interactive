@@ -7,7 +7,7 @@ def recup_id(texte):
 
 def recup_adresse(texte):
     fichier = open(texte, "r", encoding = "latin-1")
-    res = str(fichier.read()).partition("immeuble sis ")[2].partition("-")[0].partition("")[0]
+    res = str(fichier.read()).partition("immeuble sis ")[2].partition("-")[0].partition("")[0].partition("â")[0]
     return res
 
 def recup_pathologie(texte):

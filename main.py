@@ -7,8 +7,6 @@ import recuperation as rec
 
 """Ce qu'il reste à faire:
 - ajouter des pdfs
-- mieux afficher les classification (sans les [] et les ''), peut être aussi rendre l'affichage plus clair pour 
-    différencier les pathologies des lieux
 - ajouter un système de filtre
 - gérer le problèmes de footer
 - gérer les exceptions (2 adresses, mains levées etc)

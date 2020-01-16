@@ -26,6 +26,13 @@ def adresses(bdd):
     return liste
 
 
+def return_string(liste):
+    str = "- " +liste[0]
+    for i in range(1, len(liste)):
+        str+=", "  + liste[i]
+    return str
+
+
 def message(bdd):
     liste_adresse = adresses(bdd)
     db = database.ouverture_bdd(bdd)
@@ -38,7 +45,7 @@ def message(bdd):
                  if key not in liste_key:
                     liste_key.append(key)
                     char += '<i>'+ '<a href=./Datas/PDF/'+ value[0]["pdf"]  + ' Target="_blank">Lien vers le pdf</a>'+ '</i><br>'
-                    char += str(value[0]["classification_pathologies"]) + " <br> " + str(value[0]["classification_lieux"])+ "<br>"
+                    char += return_string(value[0]["classification_pathologies"]) + " <br> " + return_string(value[0]["classification_lieux"])+ "<br>"
         char += '</font>'
         liste.append(char)
     return liste

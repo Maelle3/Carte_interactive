@@ -14,22 +14,18 @@ import recuperation as rec
 
 
 conv.image_to_txt()
-json2 = database.ouverture_bdd("data.json")
+json2 = database.ouverture_bdd()
 
 for i in os.listdir("./Datas/TXT"):
     path = "./Datas/TXT/" + i
-    id  = rec.recup_id(path)
+    id = rec.recup_id(path)
     if id not in json2:
-        database.ajout_ligne("data.json", id, i.partition(".txt")[0]+ ".pdf", rec.recup_adresse(path) + ", Marseille", rec.recup_pathologie(path))
-
-
+        database.ajout_ligne(id, i.partition(".txt")[0] + ".pdf", rec.recup_adresse(path) + ", Marseille",
+                             rec.recup_pathologie(path))
 
 c = carte.creation_carte()
-
-
-
-liste_adresses = carte.adresses("data.json")
-liste_messages = carte.message("data.json")
+liste_adresses = carte.adresses()
+liste_messages = carte.message()
 
 
 for i in range(len(liste_adresses)):
@@ -37,5 +33,3 @@ for i in range(len(liste_adresses)):
 
 
 c.save('carte.html')
-
-

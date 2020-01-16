@@ -1,39 +1,38 @@
-import pandas as pd
+# import pandas as pd
 import geocode as geo
 import json
 import recuperation as rec
 
 
 # liste des classifications de pathologies
-##'classification_pathologies'=["affaissemnt", "altération", "risque de chutes", "fissures", "fissures", "débris", "affaissement", "basculement d'escalier", "risque d'effondrement"]
+# 'classification_pathologies'=["affaissemnt", "altération", "risque de chutes", "fissures", "fissures", "débris",
+# "affaissement", "basculement d'escalier", "risque d'effondrement"]
 
 
 # def ouverture_bdd(bdd):
 #     return pd.read_csv(bdd)
 
-def ouverture_bdd(bdd):
+def ouverture_bdd():
     with open('data.json', encoding='latin-1') as json_data:
         data_dict = json.load(json_data)
     return data_dict
 
 
-
-
-def ajout_ligne(bdd,id, pdf, adresse, pathologies):
-    db = ouverture_bdd(bdd)
-    db[id] = [{"adresse" : adresse, "longitude" : geo.geocode(adresse)[0], "lattitude" : geo.geocode(adresse)[1],
-               "pathologies" : pathologies, "classification_pathologies" : rec.classification_pathologie(pathologies),
-               "classification_lieux" : rec.classification_lieu(pathologies) , "pdf" :  pdf}]
+def ajout_ligne(id, pdf, adresse, pathologies):
+    db = ouverture_bdd()
+    db[id] = [{"adresse": adresse, "longitude": geo.geocode(adresse)[0], "lattitude": geo.geocode(adresse)[1],
+               "pathologies": pathologies, "classification_pathologies": rec.classification_pathologie(pathologies),
+               "classification_lieux": rec.classification_lieu(pathologies), "pdf":  pdf}]
     with open('data.json', 'w', encoding='latin-1') as f:
-         json.dump(db, f, ensure_ascii=False)
+        json.dump(db, f, ensure_ascii=False)
     return None
 
 # def affiche_bdd(bdd):
 #     return ouverture_bdd(bdd)
 
 
-def get_coordonnees_url(bdd, url):
-    db = ouverture_bdd(bdd)
+def get_coordonnees_url(url):
+    db = ouverture_bdd()
     i = 0
     url_found = False
     while not url_found:
@@ -63,12 +62,6 @@ def get_coordonnees_url(bdd, url):
 #             i += 1
 #         else:
 #             return db.loc[i].url
-
-
-
-
-
-
 
 # data = {}
 # data2 = {"addresse" : "adresse1", "longitude" : 1, "lattitude" : 1, "classification" : ["fissures", "effondrement"]}

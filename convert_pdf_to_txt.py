@@ -2,6 +2,7 @@ import os
 import pytesseract
 from pdf2image import convert_from_path
 
+# à adapter en fonction de l'ordinateur utilisé
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 
@@ -22,6 +23,3 @@ def image_to_txt():
             fichier = open("./Datas/TXT/" + nom + ".txt", "w")
             fichier.write(texte)
             fichier.close()
-
-
-

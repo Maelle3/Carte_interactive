@@ -1,0 +1,9 @@
+33-rue-mazenod-arrete_pi_2018_02932-final : pas la bonne introduction de pathologie on reconnait pas la phrase
+
+pgi_expert_4-6-rue-saint-georges-13013_2019_04064_vdm : pas la bonne introduction de pathologie on reconnait pas la phrase
+
+239-chemin-de-la-pelouque-13016_2018_03269 : mur de soutenement sis et pas immeuble sis
+
+115-RUE-DE-L-EVECHE-13002_2018_03432 : probleme de nom de rue pour le geocodage ? 
+
+42-TRAVERSE-DES-POLYTRES-13013_2018_03094 :  mur de cl6ture de la parcelle sise et pas immeuble sis

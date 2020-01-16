@@ -7,11 +7,11 @@ import recuperation as rec
 
 """Ce qu'il reste à faire:
 - ajouter des pdfs
-- gérer l'affichage du pdf (peut être sans url, peut être avec)
 - mieux afficher les classification (sans les [] et les ''), peut être aussi rendre l'affichage plus clair pour 
     différencier les pathologies des lieux
 - ajouter un système de filtre
-- gérer le problème de footer
+- gérer le problèmes de footer
+- gérer les exceptions (2 adresses, mains levées etc)
 """
 
 
@@ -22,8 +22,8 @@ for i in os.listdir("./Datas/TXT"):
     path = "./Datas/TXT/" + i
     id  = rec.recup_id(path)
     if id not in json2:
-        database.ajout_ligne("data.json", id, "url//" + id, rec.recup_adresse(path) + ", Marseille", rec.recup_pathologie(path))
-        print(rec.recup_adresse(path))
+        database.ajout_ligne("data.json", id, i.partition(".txt")[0]+ ".pdf", rec.recup_adresse(path) + ", Marseille", rec.recup_pathologie(path))
+
 
 
 c = carte.creation_carte()

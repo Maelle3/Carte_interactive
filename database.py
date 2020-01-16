@@ -22,11 +22,11 @@ json2 = ouverture_bdd("data.json")
 
 
 
-def ajout_ligne(bdd,id, url, adresse, pathologies):
+def ajout_ligne(bdd,id, pdf, adresse, pathologies):
     db = ouverture_bdd(bdd)
     db[id] = [{"adresse" : adresse, "longitude" : geo.geocode(adresse)[0], "lattitude" : geo.geocode(adresse)[1],
                "pathologies" : pathologies, "classification_pathologies" : rec.classification_pathologie(pathologies),
-               "classification_lieux" : rec.classification_lieu(pathologies) , "url" :  url}]
+               "classification_lieux" : rec.classification_lieu(pathologies) , "pdf" :  pdf}]
     with open('data.json', 'w') as f:
          json.dump(db, f, ensure_ascii=False)
     return None

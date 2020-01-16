@@ -32,15 +32,13 @@ def message(bdd):
     liste = []
     for adresse in liste_adresse:
         char = '<font size="+1"><B>'+ adresse + "</B><br>"
-        liste_url = []
+        liste_key = []
         for key, value in db.items():
             if  value[0]["adresse"] == adresse :
-                 u = value[0]["url"]
-                 if u not in liste_url:
-                    liste_url.append(u)
-                    char += '<i>'+u + '</i><br>'
-                 char += str(value[0]["classification_pathologies"]) + " <br> " + str(value[0]["classification_lieux"])+ "<br>"
+                 if key not in liste_key:
+                    liste_key.append(key)
+                    char += '<i>'+ '<a href=./Datas/PDF/'+ value[0]["pdf"]  + ' Target="_blank">Lien vers le pdf</a>'+ '</i><br>'
+                    char += str(value[0]["classification_pathologies"]) + " <br> " + str(value[0]["classification_lieux"])+ "<br>"
         char += '</font>'
         liste.append(char)
     return liste
-

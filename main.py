@@ -11,6 +11,7 @@ import recuperation as rec
 - mieux afficher les classification (sans les [] et les ''), peut être aussi rendre l'affichage plus clair pour 
     différencier les pathologies des lieux
 - ajouter un système de filtre
+- gérer le problème de footer
 """
 
 

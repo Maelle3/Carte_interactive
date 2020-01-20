@@ -2,8 +2,8 @@ import os
 import pytesseract
 from pdf2image import convert_from_path
 
-# à adapter en fonction de l'ordinateur utilisé
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+# ï¿½ adapter en fonction de l'ordinateur utilisï¿½
+#pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 
 def pdf_to_image(pdf_path):

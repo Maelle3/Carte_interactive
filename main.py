@@ -4,6 +4,8 @@ import database
 import os
 import convert_pdf_to_txt as conv
 import recuperation as rec
+import webbrowser
+
 
 """Ce qu'il reste à faire:
 - ajouter des pdfs
@@ -33,3 +35,6 @@ for i in range(len(liste_adresses)):
 
 
 c.save('carte.html')
+
+
+webbrowser.open("file://"+os.getcwd()+'/carte.html')

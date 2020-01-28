@@ -5,7 +5,8 @@ import os
 import convert_pdf_to_txt as conv
 import recuperation as rec
 import webbrowser
-
+import folium
+from folium.plugins import MarkerCluster
 
 """Ce qu'il reste à faire:
 - ajouter des pdfs
@@ -26,15 +27,20 @@ for i in os.listdir("./Datas/TXT"):
                              rec.recup_pathologie(path))
 
 c = carte.creation_carte()
+
+mcg = folium.plugins.MarkerCluster(control=False)
+c.add_child(mcg)
+
 liste_adresses = carte.adresses()
 liste_messages = carte.message()
 
 
 for i in range(len(liste_adresses)):
-    carte.creation_marker(c, geo.geocode(liste_adresses[i])[0], geo.geocode(liste_adresses[i])[1], liste_messages[i])
+    carte.creation_marker(mcg, geo.geocode(liste_adresses[i])[0], geo.geocode(liste_adresses[i])[1], liste_messages[i])
 
 
 c.save('carte.html')
 
 
 webbrowser.open("file://"+os.getcwd()+'/carte.html')
+

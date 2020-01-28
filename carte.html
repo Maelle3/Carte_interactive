@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_62c25579290b429bbdc102c2e8800ab4 {
+                #map_e9bb00c2186d406793237286cd04ea54 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -32,16 +32,19 @@
                 }
             </style>
         
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
 </head>
 <body>    
     
-            <div class="folium-map" id="map_62c25579290b429bbdc102c2e8800ab4" ></div>
+            <div class="folium-map" id="map_e9bb00c2186d406793237286cd04ea54" ></div>
         
 </body>
 <script>    
     
-            var map_62c25579290b429bbdc102c2e8800ab4 = L.map(
-                "map_62c25579290b429bbdc102c2e8800ab4",
+            var map_e9bb00c2186d406793237286cd04ea54 = L.map(
+                "map_e9bb00c2186d406793237286cd04ea54",
                 {
                     center: [43.29695, 5.38107],
                     crs: L.CRS.EPSG3857,
@@ -55,707 +58,713 @@
 
         
     
-            var tile_layer_0f9d9026363749b88018481212ed5c45 = L.tileLayer(
+            var tile_layer_1e71ccfb7b8c45afac275eb987f492b1 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 11, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
+            ).addTo(map_e9bb00c2186d406793237286cd04ea54);
         
     
-            var marker_4a36943b3c304753876a369d3a7f530c = L.marker(
-                [43.294829, 5.37892],
+            var marker_cluster_2d648d794cda45a8a8a6eca9246a4408 = L.markerClusterGroup(
                 {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_69dc8825b0574b64971cb38777621d1f = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_4a36943b3c304753876a369d3a7f530c.setIcon(icon_69dc8825b0574b64971cb38777621d1f);
+            map_e9bb00c2186d406793237286cd04ea54.addLayer(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
         
     
-        var popup_5c8e11fab1134850a716da8465604a63 = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_c51aafe4a8fd42f1bcada66c1ed284c3 = $(`<div id="html_c51aafe4a8fd42f1bcada66c1ed284c3" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>1, rue de la Palud , Marseille</B><br><i><a href=./Datas/PDF/1-rue-de-le-palud-2018_02948-edited-2.pdf Target="_blank">Lien vers le pdf</a></i><br>- chutes, effondrement, fissures <br> - façade, escalier, mur<br></font></div>`)[0];
-            popup_5c8e11fab1134850a716da8465604a63.setContent(html_c51aafe4a8fd42f1bcada66c1ed284c3);
-        
-
-        marker_4a36943b3c304753876a369d3a7f530c.bindPopup(popup_5c8e11fab1134850a716da8465604a63)
-        ;
-
-        
-    
-    
-            var marker_e5c38e88d9c44d7ebaad2dcc517f7925 = L.marker(
-                [43.35478, 5.341558],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_f956df172f4341f198c876865838d570 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_e5c38e88d9c44d7ebaad2dcc517f7925.setIcon(icon_f956df172f4341f198c876865838d570);
-        
-    
-        var popup_94e2e492d6d24922b5f4c3b02255e389 = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_2cf756c4015042f687704496e0c576f2 = $(`<div id="html_2cf756c4015042f687704496e0c576f2" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>15/16, rue de Séon , Marseille</B><br><i><a href=./Datas/PDF/15-16-RUE-DE-SEON-13016_2019_00227.pdf Target="_blank">Lien vers le pdf</a></i><br>- dégradation, déstructuration <br> - façade, poutre<br></font></div>`)[0];
-            popup_94e2e492d6d24922b5f4c3b02255e389.setContent(html_2cf756c4015042f687704496e0c576f2);
-        
-
-        marker_e5c38e88d9c44d7ebaad2dcc517f7925.bindPopup(popup_94e2e492d6d24922b5f4c3b02255e389)
-        ;
-
-        
-    
-    
-            var marker_601d3d413dd64a39beb1dbe1e322a280 = L.marker(
-                [43.300756, 5.378043],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_578b0b00f2a24c98b284876d6f7b81f2 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_601d3d413dd64a39beb1dbe1e322a280.setIcon(icon_578b0b00f2a24c98b284876d6f7b81f2);
-        
-    
-        var popup_17a1b0d2996449c2b062e085bf5383d7 = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_da13e61895064ff692fe6374714f6552 = $(`<div id="html_da13e61895064ff692fe6374714f6552" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>15, rue de la Fare , Marseille</B><br><i><a href=./Datas/PDF/15-rue-de-la-fare-pi_2018_02950-edited-2.pdf Target="_blank">Lien vers le pdf</a></i><br>- chutes, effondrement, fissures, moisissures <br> - façade, toiture, escalier, cloison, mur<br></font></div>`)[0];
-            popup_17a1b0d2996449c2b062e085bf5383d7.setContent(html_da13e61895064ff692fe6374714f6552);
-        
-
-        marker_601d3d413dd64a39beb1dbe1e322a280.bindPopup(popup_17a1b0d2996449c2b062e085bf5383d7)
-        ;
-
-        
-    
-    
-            var marker_3fff97225877416d988cda6e68cd260d = L.marker(
-                [43.294197, 5.38056],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_947ba06457cd41cd9c64ef59c8f3f114 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_3fff97225877416d988cda6e68cd260d.setIcon(icon_947ba06457cd41cd9c64ef59c8f3f114);
-        
-    
-        var popup_a2d4ed3882d8410890521b15da80d0b4 = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_f358f8bb862049c8839de0d7aaffe46e = $(`<div id="html_f358f8bb862049c8839de0d7aaffe46e" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>17, rue Moustier , Marseille</B><br><i><a href=./Datas/PDF/17-rue-moustier-pi_2018_02954-edited-2.pdf Target="_blank">Lien vers le pdf</a></i><br>- déformation, détérioration, effondrement, fissures <br> - façade, escalier, plafond<br></font></div>`)[0];
-            popup_a2d4ed3882d8410890521b15da80d0b4.setContent(html_f358f8bb862049c8839de0d7aaffe46e);
-        
-
-        marker_3fff97225877416d988cda6e68cd260d.bindPopup(popup_a2d4ed3882d8410890521b15da80d0b4)
-        ;
-
-        
-    
-    
-            var marker_2a17d6ae29bd4f2a916d021f94bfec11 = L.marker(
-                [43.30172, 5.364596],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_6c5c373a5b194ad4aedefdd3fd5e9e95 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_2a17d6ae29bd4f2a916d021f94bfec11.setIcon(icon_6c5c373a5b194ad4aedefdd3fd5e9e95);
-        
-    
-        var popup_6d94d8fcafd94663acf01f78188eed17 = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_d17f405fe663466fbce8a3846ed3f381 = $(`<div id="html_d17f405fe663466fbce8a3846ed3f381" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>19bis, Quai de la Joliette , Marseille</B><br><i><a href=./Datas/PDF/19-BIS-QUAI-DE-LA-JOLIETTE-13001_2019_00481.pdf Target="_blank">Lien vers le pdf</a></i><br>- effondrement <br> - plafond<br></font></div>`)[0];
-            popup_6d94d8fcafd94663acf01f78188eed17.setContent(html_d17f405fe663466fbce8a3846ed3f381);
-        
-
-        marker_2a17d6ae29bd4f2a916d021f94bfec11.bindPopup(popup_6d94d8fcafd94663acf01f78188eed17)
-        ;
-
-        
-    
-    
-            var marker_359369f3cae0432b995c2db6c9b58561 = L.marker(
-                [43.297817, 5.366489],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_6955fb67f5d94573ad884313d3b2c69e = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_359369f3cae0432b995c2db6c9b58561.setIcon(icon_6955fb67f5d94573ad884313d3b2c69e);
-        
-    
-        var popup_49eb6c4ee0a4464b809feb7725e350f9 = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_b23ddd316d0043918e3b6c2cea475474 = $(`<div id="html_b23ddd316d0043918e3b6c2cea475474" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>2 rue Baussenque , Marseille</B><br><i><a href=./Datas/PDF/2-RUE-BAUSSENQUE-13002_2019-00623.pdf Target="_blank">Lien vers le pdf</a></i><br>- affaissement, fissures, humidité <br> - façade, toiture, escalier, cloison, plafond, plancher, mur<br></font></div>`)[0];
-            popup_49eb6c4ee0a4464b809feb7725e350f9.setContent(html_b23ddd316d0043918e3b6c2cea475474);
-        
-
-        marker_359369f3cae0432b995c2db6c9b58561.bindPopup(popup_49eb6c4ee0a4464b809feb7725e350f9)
-        ;
-
-        
-    
-    
-            var marker_25c7fc3b2619432ba787a9a0ea4e0c52 = L.marker(
-                [43.294574, 5.381825],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_1bf401caa79e4b5f80bc8e5396de5406 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_25c7fc3b2619432ba787a9a0ea4e0c52.setIcon(icon_1bf401caa79e4b5f80bc8e5396de5406);
-        
-    
-        var popup_2338b16bbf734234ba85cd31199f1f2a = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_d469302c81cd4145b93c3d6bb1bf2994 = $(`<div id="html_d469302c81cd4145b93c3d6bb1bf2994" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>24, rue Cours Lieutaud , Marseille</B><br><i><a href=./Datas/PDF/24-cours-lieutaud-pi_2018_02951-edited-2.pdf Target="_blank">Lien vers le pdf</a></i><br>- dégradation, fissures <br> - plafond, plancher, mur, balcon<br></font></div>`)[0];
-            popup_2338b16bbf734234ba85cd31199f1f2a.setContent(html_d469302c81cd4145b93c3d6bb1bf2994);
-        
-
-        marker_25c7fc3b2619432ba787a9a0ea4e0c52.bindPopup(popup_2338b16bbf734234ba85cd31199f1f2a)
-        ;
-
-        
-    
-    
-            var marker_63655f517f1d42f78fdc6ff3ef886d01 = L.marker(
-                [43.29605, 5.380183],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_e602240b5ebb474e963b770076019bb4 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_63655f517f1d42f78fdc6ff3ef886d01.setIcon(icon_e602240b5ebb474e963b770076019bb4);
-        
-    
-        var popup_cbcdb55b622c4f7cb0808fb371df2d47 = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_1e85b120a2874fd0b23db20b941df70e = $(`<div id="html_1e85b120a2874fd0b23db20b941df70e" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>24, rue Rodolphe Pollak , Marseille</B><br><i><a href=./Datas/PDF/24-rue-rodolphe-pollak-13001_2018_03024.pdf Target="_blank">Lien vers le pdf</a></i><br>- danger électrique, dégradation, effondrement, fragilité, moisissures <br> - balcon, escalier, plancher, poutre, corniche<br></font></div>`)[0];
-            popup_cbcdb55b622c4f7cb0808fb371df2d47.setContent(html_1e85b120a2874fd0b23db20b941df70e);
-        
-
-        marker_63655f517f1d42f78fdc6ff3ef886d01.bindPopup(popup_cbcdb55b622c4f7cb0808fb371df2d47)
-        ;
-
-        
-    
-    
-            var marker_cd0f7ccee4b84e579608457c6d433a2f = L.marker(
-                [43.29445, 5.381865],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_a1a1807a2e1f44549adba6ef05f5cddc = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_cd0f7ccee4b84e579608457c6d433a2f.setIcon(icon_a1a1807a2e1f44549adba6ef05f5cddc);
-        
-    
-        var popup_6bb88aa124c547a299ea0878f35f3a4f = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_a325f31e132540eb935621d2d8048452 = $(`<div id="html_a325f31e132540eb935621d2d8048452" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>26, cours Lieutaud, Marseille</B><br><i><a href=./Datas/PDF/26-cours-lieutaud-pi_2018_02949-edited-2.pdf Target="_blank">Lien vers le pdf</a></i><br>- corrosion, dégradation, fissures, fragilité <br> - balcon, plancher, mur, escalier<br></font></div>`)[0];
-            popup_6bb88aa124c547a299ea0878f35f3a4f.setContent(html_a325f31e132540eb935621d2d8048452);
-        
-
-        marker_cd0f7ccee4b84e579608457c6d433a2f.bindPopup(popup_6bb88aa124c547a299ea0878f35f3a4f)
-        ;
-
-        
-    
-    
-            var marker_5756919cdd7f4f9cba79f2c5e0c6d1fb = L.marker(
-                [43.305504, 5.402598],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_8cb576ed02144aa1a581d2ae3a6b7cfb = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_5756919cdd7f4f9cba79f2c5e0c6d1fb.setIcon(icon_8cb576ed02144aa1a581d2ae3a6b7cfb);
-        
-    
-        var popup_22a2db9a8bec4d0aaad4fd78611c5e83 = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_24cc4b27bb384f039295be84a3fa0ad2 = $(`<div id="html_24cc4b27bb384f039295be84a3fa0ad2" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>29, rue Davin , Marseille</B><br><i><a href=./Datas/PDF/29-RUE-DAVIN-13004_2018_03240.pdf Target="_blank">Lien vers le pdf</a></i><br>- affaissement, chutes, fissures, humidité <br> - escalier, cloison, plancher, mur<br></font></div>`)[0];
-            popup_22a2db9a8bec4d0aaad4fd78611c5e83.setContent(html_24cc4b27bb384f039295be84a3fa0ad2);
-        
-
-        marker_5756919cdd7f4f9cba79f2c5e0c6d1fb.bindPopup(popup_22a2db9a8bec4d0aaad4fd78611c5e83)
-        ;
-
-        
-    
-    
-            var marker_b8680602ebc140e59c12d76cc4c3d6d8 = L.marker(
-                [43.29479, 5.378969],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_8b1b4dafa5d6456496b6db60b76cba91 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_b8680602ebc140e59c12d76cc4c3d6d8.setIcon(icon_8b1b4dafa5d6456496b6db60b76cba91);
-        
-    
-        var popup_d39a6b8999b148cfaeaaa191745adc9c = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_92ffee689ddd41b097522491272bd452 = $(`<div id="html_92ffee689ddd41b097522491272bd452" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>3, rue de la Palud , Marseille</B><br><i><a href=./Datas/PDF/3-rue-de-la-palud-13001_2018_03020.pdf Target="_blank">Lien vers le pdf</a></i><br>- chutes, déstructuration, fissures <br> - façade, escalier, corniche<br></font></div>`)[0];
-            popup_d39a6b8999b148cfaeaaa191745adc9c.setContent(html_92ffee689ddd41b097522491272bd452);
-        
-
-        marker_b8680602ebc140e59c12d76cc4c3d6d8.bindPopup(popup_d39a6b8999b148cfaeaaa191745adc9c)
-        ;
-
-        
-    
-    
-            var marker_b99632afdfd74d10964cfc4bb0d60634 = L.marker(
-                [43.300712, 5.375728],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_ec7f169929d6436590e9815cae630fd8 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_b99632afdfd74d10964cfc4bb0d60634.setIcon(icon_ec7f169929d6436590e9815cae630fd8);
-        
-    
-        var popup_be4a39a5a110469c986619beccb036a9 = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_c177e68062914b1bb303994048ae7b4e = $(`<div id="html_c177e68062914b1bb303994048ae7b4e" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>3, rue Francis de Pressencé , Marseille</B><br><i><a href=./Datas/PDF/3-rue-Francis-de-Pressense-pi-13001_2018_03008-edited-2.pdf Target="_blank">Lien vers le pdf</a></i><br>- affaissement, dégradation, déstructuration, effondrement, étanchéité, fissures, fragilité, humidité, moisissures <br> - façade, toiture, plancher, poutre, charpente, corniche, balcon<br></font></div>`)[0];
-            popup_be4a39a5a110469c986619beccb036a9.setContent(html_c177e68062914b1bb303994048ae7b4e);
-        
-
-        marker_b99632afdfd74d10964cfc4bb0d60634.bindPopup(popup_be4a39a5a110469c986619beccb036a9)
-        ;
-
-        
-    
-    
-            var marker_0456916977d6449691fd26cf6f37347e = L.marker(
-                [43.325799, 5.374715],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_1e7e32586a5d44db837b56dad83356f5 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_0456916977d6449691fd26cf6f37347e.setIcon(icon_1e7e32586a5d44db837b56dad83356f5);
-        
-    
-        var popup_13b80013dcdb4b90afac819129324816 = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_551c156ace25486388941f7c6cfd4bcf = $(`<div id="html_551c156ace25486388941f7c6cfd4bcf" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>4, boulevard Louis GUICHOUX , Marseille</B><br><i><a href=./Datas/PDF/4-BOULEVARD-LOUIS-GUICHOUX-13014-2019_00622.pdf Target="_blank">Lien vers le pdf</a></i><br>- dégradation, fissures, humidité <br> - façade, escalier, plancher, mur<br></font></div>`)[0];
-            popup_13b80013dcdb4b90afac819129324816.setContent(html_551c156ace25486388941f7c6cfd4bcf);
-        
-
-        marker_0456916977d6449691fd26cf6f37347e.bindPopup(popup_13b80013dcdb4b90afac819129324816)
-        ;
-
-        
-    
-    
-            var marker_7fee7ecc635b4f32adc0fb8995e3ca75 = L.marker(
-                [43.299455, 5.376174],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_61800802b1cc4d8ebabd25a31bf87c2b = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_7fee7ecc635b4f32adc0fb8995e3ca75.setIcon(icon_61800802b1cc4d8ebabd25a31bf87c2b);
-        
-    
-        var popup_f16147184552406ab93293f2cd2d1f53 = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_87c9922422ae4a469ab77668e0e3972c = $(`<div id="html_87c9922422ae4a469ab77668e0e3972c" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>4, rue dAix, Marseille</B><br><i><a href=./Datas/PDF/4-rue-d-aix-13001-PI-2018_03012-edited-2.pdf Target="_blank">Lien vers le pdf</a></i><br>- dégradation, effondrement <br> - plafond, plancher<br></font></div>`)[0];
-            popup_f16147184552406ab93293f2cd2d1f53.setContent(html_87c9922422ae4a469ab77668e0e3972c);
-        
-
-        marker_7fee7ecc635b4f32adc0fb8995e3ca75.bindPopup(popup_f16147184552406ab93293f2cd2d1f53)
-        ;
-
-        
-    
-    
-            var marker_e4c379e3107d4a8884d9d9c6342a9a74 = L.marker(
-                [43.294474, 5.37553],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_4f0a5d3f649346d59fb80514419fc391 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_e4c379e3107d4a8884d9d9c6342a9a74.setIcon(icon_4f0a5d3f649346d59fb80514419fc391);
-        
-    
-        var popup_4ab1b74e71434b11886616a60ba3d994 = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_deec1b5c41a54fa48f529b39e1f15837 = $(`<div id="html_deec1b5c41a54fa48f529b39e1f15837" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>4, rue Pythéas , Marseille</B><br><i><a href=./Datas/PDF/4-rue-pytheas-arrete_pi_2018_02930-final.pdf Target="_blank">Lien vers le pdf</a></i><br>- affaissement, chutes, débris, détérioration, effondrement <br> - façade, escalier, plancher<br></font></div>`)[0];
-            popup_4ab1b74e71434b11886616a60ba3d994.setContent(html_deec1b5c41a54fa48f529b39e1f15837);
-        
-
-        marker_e4c379e3107d4a8884d9d9c6342a9a74.bindPopup(popup_4ab1b74e71434b11886616a60ba3d994)
-        ;
-
-        
-    
-    
-            var marker_967d7fb4bc5742fea746c582ec88b1f2 = L.marker(
-                [43.294193, 5.379158],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_4bfe46e140b64f93b5986fb771b179e5 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_967d7fb4bc5742fea746c582ec88b1f2.setIcon(icon_4bfe46e140b64f93b5986fb771b179e5);
-        
-    
-        var popup_cdbd84d0bbfc4eaa9f228d278a45b3c4 = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_c0431e4f0bd64c31996083cf2ffbdbc0 = $(`<div id="html_c0431e4f0bd64c31996083cf2ffbdbc0" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>41 rue de Rome , Marseille</B><br><i><a href=./Datas/PDF/41-rue-de-rome-pi_2018_02952-final.pdf Target="_blank">Lien vers le pdf</a></i><br>- affaissement, altération, effondrement <br> - plancher<br></font></div>`)[0];
-            popup_cdbd84d0bbfc4eaa9f228d278a45b3c4.setContent(html_c0431e4f0bd64c31996083cf2ffbdbc0);
-        
-
-        marker_967d7fb4bc5742fea746c582ec88b1f2.bindPopup(popup_cdbd84d0bbfc4eaa9f228d278a45b3c4)
-        ;
-
-        
-    
-    
-            var marker_84bfa689f8ee46cbb28a032ce13612b0 = L.marker(
+            var marker_9f917efcdedf4eb5aae35296a0f1b618 = L.marker(
                 [43.303674, 5.370717],
                 {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
         
     
-            var icon_5f58f45315304b4a92abb64ff804b93e = L.AwesomeMarkers.icon(
+            var icon_2e3e70aae2a94f1c9d46a5cd6b612936 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_84bfa689f8ee46cbb28a032ce13612b0.setIcon(icon_5f58f45315304b4a92abb64ff804b93e);
+            marker_9f917efcdedf4eb5aae35296a0f1b618.setIcon(icon_2e3e70aae2a94f1c9d46a5cd6b612936);
         
     
-        var popup_d36c44142589402c87854a24afa49097 = L.popup({"maxWidth": 600, "minWidth": 600});
+        var popup_fac08019d1e442e88c15cfed7f10852d = L.popup({"maxWidth": 600, "minWidth": 600});
 
         
-            var html_64db5d247d9d439794a41f00f21ab0da = $(`<div id="html_64db5d247d9d439794a41f00f21ab0da" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>43, rue Montolieu , Marseille</B><br><i><a href=./Datas/PDF/43-RUE-MONTOLIEU-13002_2019_00318.pdf Target="_blank">Lien vers le pdf</a></i><br>- danger électrique, fissures <br> - plancher<br></font></div>`)[0];
-            popup_d36c44142589402c87854a24afa49097.setContent(html_64db5d247d9d439794a41f00f21ab0da);
+            var html_03eb25eea8d44920b254e25f122f33d9 = $(`<div id="html_03eb25eea8d44920b254e25f122f33d9" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>43, rue Montolieu , Marseille</B><br><i><a href=./Datas/PDF/43-RUE-MONTOLIEU-13002_2019_00318.pdf Target="_blank">Lien vers le pdf</a></i><br>- danger électrique, fissures <br> - plancher<br></font></div>`)[0];
+            popup_fac08019d1e442e88c15cfed7f10852d.setContent(html_03eb25eea8d44920b254e25f122f33d9);
         
 
-        marker_84bfa689f8ee46cbb28a032ce13612b0.bindPopup(popup_d36c44142589402c87854a24afa49097)
+        marker_9f917efcdedf4eb5aae35296a0f1b618.bindPopup(popup_fac08019d1e442e88c15cfed7f10852d)
         ;
 
         
     
     
-            var marker_c1467fac71834ad8b9ddd6639504b288 = L.marker(
-                [43.303774, 5.370819],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_05f01cbff2cb498c809da022c30fdceb = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_c1467fac71834ad8b9ddd6639504b288.setIcon(icon_05f01cbff2cb498c809da022c30fdceb);
-        
-    
-        var popup_9fa3999bece04bee9f135991b07ad78f = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_ae1a56995c16407e99726d854a073a31 = $(`<div id="html_ae1a56995c16407e99726d854a073a31" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>48, rue Montolieu , Marseille</B><br><i><a href=./Datas/PDF/48-RUE-MONTOLIEU-13002_2019_00550.pdf Target="_blank">Lien vers le pdf</a></i><br>- chutes, déformation, déstructuration, effondrement, fissures <br> - façade, escalier, cloison, plancher<br></font></div>`)[0];
-            popup_9fa3999bece04bee9f135991b07ad78f.setContent(html_ae1a56995c16407e99726d854a073a31);
-        
-
-        marker_c1467fac71834ad8b9ddd6639504b288.bindPopup(popup_9fa3999bece04bee9f135991b07ad78f)
-        ;
-
-        
-    
-    
-            var marker_9b9e9c7cab5d4ecead535c4a510112f5 = L.marker(
-                [43.32501, 5.443858],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_2af75c87591d4a3eb94959659efb0789 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_9b9e9c7cab5d4ecead535c4a510112f5.setIcon(icon_2af75c87591d4a3eb94959659efb0789);
-        
-    
-        var popup_bc4412cef4874c66bc622a233adfd8a9 = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_66f895337d204e8984f085539714f7c1 = $(`<div id="html_66f895337d204e8984f085539714f7c1" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>57, Chemin des Martegaux , Marseille</B><br><i><a href=./Datas/PDF/57-CHEMIN-DES-MARTEGAUX_2019_00182.pdf Target="_blank">Lien vers le pdf</a></i><br>- dégradation, fissures <br> - façade, toiture, mur<br></font></div>`)[0];
-            popup_bc4412cef4874c66bc622a233adfd8a9.setContent(html_66f895337d204e8984f085539714f7c1);
-        
-
-        marker_9b9e9c7cab5d4ecead535c4a510112f5.bindPopup(popup_bc4412cef4874c66bc622a233adfd8a9)
-        ;
-
-        
-    
-    
-            var marker_0fb5ab3736ca466abf77f996b3e8f0bb = L.marker(
-                [43.299508, 5.370523],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_3e1d138f6e1f44a39f4a4fe673b8bd23 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_0fb5ab3736ca466abf77f996b3e8f0bb.setIcon(icon_3e1d138f6e1f44a39f4a4fe673b8bd23);
-        
-    
-        var popup_71c2cc82d65c4acbb81ea55f06d52e4c = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_3454c791f12c4b8e9d0fa53c88203483 = $(`<div id="html_3454c791f12c4b8e9d0fa53c88203483" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>7, rue Saint Antoine , Marseille</B><br><i><a href=./Datas/PDF/7-rue-de-st-antoine-13002_2019_00112.pdf Target="_blank">Lien vers le pdf</a></i><br>- chutes, dégradation, déstructuration, effondrement <br> - façade, escalier, plancher, mur<br></font></div>`)[0];
-            popup_71c2cc82d65c4acbb81ea55f06d52e4c.setContent(html_3454c791f12c4b8e9d0fa53c88203483);
-        
-
-        marker_0fb5ab3736ca466abf77f996b3e8f0bb.bindPopup(popup_71c2cc82d65c4acbb81ea55f06d52e4c)
-        ;
-
-        
-    
-    
-            var marker_93aeea5286ef42bba1386629325b6ae2 = L.marker(
+            var marker_146fa4d5b1b14a9c89fbcf717ed202aa = L.marker(
                 [43.31689, 5.386926],
                 {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
         
     
-            var icon_30308f1e435440e0b15d30a2920367ac = L.AwesomeMarkers.icon(
+            var icon_02f761e4a9cc4ad69159eab0e1b12519 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_93aeea5286ef42bba1386629325b6ae2.setIcon(icon_30308f1e435440e0b15d30a2920367ac);
+            marker_146fa4d5b1b14a9c89fbcf717ed202aa.setIcon(icon_02f761e4a9cc4ad69159eab0e1b12519);
         
     
-        var popup_fe14c72635474ff8973f8c1e7408033e = L.popup({"maxWidth": 600, "minWidth": 600});
+        var popup_a7bf2213413c43cd89153d3e0f178089 = L.popup({"maxWidth": 600, "minWidth": 600});
 
         
-            var html_9e494f746a4b418eadcb46e579efb89d = $(`<div id="html_9e494f746a4b418eadcb46e579efb89d" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>3 Traverse du Commandant , Marseille</B><br><i><a href=./Datas/PDF/7-traverse-du-commandant-13014_2019_02176.pdf Target="_blank">Lien vers le pdf</a></i><br>- déformation, fissures <br> - plancher, mur, balcon<br></font></div>`)[0];
-            popup_fe14c72635474ff8973f8c1e7408033e.setContent(html_9e494f746a4b418eadcb46e579efb89d);
+            var html_5248d06c17014b8e9a3c359b39738a46 = $(`<div id="html_5248d06c17014b8e9a3c359b39738a46" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>3 Traverse du Commandant , Marseille</B><br><i><a href=./Datas/PDF/7-traverse-du-commandant-13014_2019_02176.pdf Target="_blank">Lien vers le pdf</a></i><br>- déformation, fissures <br> - plancher, mur, balcon<br></font></div>`)[0];
+            popup_a7bf2213413c43cd89153d3e0f178089.setContent(html_5248d06c17014b8e9a3c359b39738a46);
         
 
-        marker_93aeea5286ef42bba1386629325b6ae2.bindPopup(popup_fe14c72635474ff8973f8c1e7408033e)
+        marker_146fa4d5b1b14a9c89fbcf717ed202aa.bindPopup(popup_a7bf2213413c43cd89153d3e0f178089)
         ;
 
         
     
     
-            var marker_584354bdf3ae4695be4ead714bc87cb0 = L.marker(
-                [43.297669, 5.365036],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_89bf8e5db0cc407d91c87aca1b873c7c = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_584354bdf3ae4695be4ead714bc87cb0.setIcon(icon_89bf8e5db0cc407d91c87aca1b873c7c);
-        
-    
-        var popup_2ed5a3cdc322489cb8997d4fc9068816 = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_24effbf0ce444816a36eec6c7d7c91b3 = $(`<div id="html_24effbf0ce444816a36eec6c7d7c91b3" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>71, rue Chateau Joly , Marseille</B><br><i><a href=./Datas/PDF/71-RUE-CHATEAU-JOLY-13002_2019_00753.pdf Target="_blank">Lien vers le pdf</a></i><br>- corrosion, effondrement, étanchéité, fissures, fragilité, humidité <br> - escalier, cloison, plafond, plancher, mur, balcon<br></font></div>`)[0];
-            popup_2ed5a3cdc322489cb8997d4fc9068816.setContent(html_24effbf0ce444816a36eec6c7d7c91b3);
-        
-
-        marker_584354bdf3ae4695be4ead714bc87cb0.bindPopup(popup_2ed5a3cdc322489cb8997d4fc9068816)
-        ;
-
-        
-    
-    
-            var marker_b27fcf90b53345809996b6c47ea44d26 = L.marker(
-                [43.324607, 5.373869],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_dd249712ca974a68b84711f79c3d3373 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_b27fcf90b53345809996b6c47ea44d26.setIcon(icon_dd249712ca974a68b84711f79c3d3373);
-        
-    
-        var popup_47cc4ec904de45678437346262816c0a = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_68853a26abb64d6aaff7f18c4da941bc = $(`<div id="html_68853a26abb64d6aaff7f18c4da941bc" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>86, Boulevard Danielle Casanova , Marseille</B><br><i><a href=./Datas/PDF/86-bd-d-casanova-13014_2019_01292.pdf Target="_blank">Lien vers le pdf</a></i><br>- effondrement, fissures, moisissures <br> - façade, toiture, escalier, plancher, poutre, charpente, mur<br></font></div>`)[0];
-            popup_47cc4ec904de45678437346262816c0a.setContent(html_68853a26abb64d6aaff7f18c4da941bc);
-        
-
-        marker_b27fcf90b53345809996b6c47ea44d26.bindPopup(popup_47cc4ec904de45678437346262816c0a)
-        ;
-
-        
-    
-    
-            var marker_0ba7e761fe2d42eda82aec78fa665a0e = L.marker(
-                [43.298716, 5.367962],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_229c76b2351145648bf365c1910fed7e = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_0ba7e761fe2d42eda82aec78fa665a0e.setIcon(icon_229c76b2351145648bf365c1910fed7e);
-        
-    
-        var popup_d825c9acc8d34bf597cbd4a1299b6cf9 = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_aa22310f3eb8475089830a236ed0ede8 = $(`<div id="html_aa22310f3eb8475089830a236ed0ede8" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>9, rue Michel SALVARELLI , Marseille</B><br><i><a href=./Datas/PDF/9-RUE-MICHEL-SALVARELLI-13002_2018_03333.pdf Target="_blank">Lien vers le pdf</a></i><br>- débris, effondrement, fissures <br> - façade, escalier, plancher, poutre<br></font></div>`)[0];
-            popup_d825c9acc8d34bf597cbd4a1299b6cf9.setContent(html_aa22310f3eb8475089830a236ed0ede8);
-        
-
-        marker_0ba7e761fe2d42eda82aec78fa665a0e.bindPopup(popup_d825c9acc8d34bf597cbd4a1299b6cf9)
-        ;
-
-        
-    
-    
-            var marker_1ca87355cc94422ca18489ac4c4f342b = L.marker(
-                [43.331828, 5.38578],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_4040dd9790694f78be82c41c7f163c50 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_1ca87355cc94422ca18489ac4c4f342b.setIcon(icon_4040dd9790694f78be82c41c7f163c50);
-        
-    
-        var popup_68762539fd79471fb1bf0c448b135fd7 = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_4403bf15d83f4d6ba3fc9d7688047897 = $(`<div id="html_4403bf15d83f4d6ba3fc9d7688047897" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>30, boulevard de la Station , Marseille</B><br><i><a href=./Datas/PDF/pgi_30-boulevard-de-la-station-13014_2019_03950_vdm.pdf Target="_blank">Lien vers le pdf</a></i><br>- affaissement, chutes, déformation, effondrement, fissures <br> - balcon, façade, toiture, cloison, plafond, plancher, mur<br></font></div>`)[0];
-            popup_68762539fd79471fb1bf0c448b135fd7.setContent(html_4403bf15d83f4d6ba3fc9d7688047897);
-        
-
-        marker_1ca87355cc94422ca18489ac4c4f342b.bindPopup(popup_68762539fd79471fb1bf0c448b135fd7)
-        ;
-
-        
-    
-    
-            var marker_1fae363881714b64be816fbf264ca6ea = L.marker(
-                [43.355441, 5.335281],
-                {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
-        
-    
-            var icon_65ab4dcf0aba452f89ad002ee6b5a604 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_1fae363881714b64be816fbf264ca6ea.setIcon(icon_65ab4dcf0aba452f89ad002ee6b5a604);
-        
-    
-        var popup_ac907df72d2945c6988c15a7aacab34f = L.popup({"maxWidth": 600, "minWidth": 600});
-
-        
-            var html_dab9a74483764af49c8177dd6623278b = $(`<div id="html_dab9a74483764af49c8177dd6623278b" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>6, traverse Ténériffe , Marseille</B><br><i><a href=./Datas/PDF/pgi_6-traverse-teneriffe-13016_2019_03387_vdm.pdf Target="_blank">Lien vers le pdf</a></i><br>- affaissement <br> - plancher, mur<br></font></div>`)[0];
-            popup_ac907df72d2945c6988c15a7aacab34f.setContent(html_dab9a74483764af49c8177dd6623278b);
-        
-
-        marker_1fae363881714b64be816fbf264ca6ea.bindPopup(popup_ac907df72d2945c6988c15a7aacab34f)
-        ;
-
-        
-    
-    
-            var marker_327b684243c0473bb9ca6c9f63a30623 = L.marker(
+            var marker_81212c8c93e74c12867cb94e25312106 = L.marker(
                 [43.325178, 5.375294],
                 {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
         
     
-            var icon_a62afb24956c4640b1a71e3a13ed6971 = L.AwesomeMarkers.icon(
+            var icon_508a2a36e36e4fd3917d0675eade419d = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_327b684243c0473bb9ca6c9f63a30623.setIcon(icon_a62afb24956c4640b1a71e3a13ed6971);
+            marker_81212c8c93e74c12867cb94e25312106.setIcon(icon_508a2a36e36e4fd3917d0675eade419d);
         
     
-        var popup_cb3408e8ec9f488fa715169548a83842 = L.popup({"maxWidth": 600, "minWidth": 600});
+        var popup_c767190f35554775bf598c55bd7dca45 = L.popup({"maxWidth": 600, "minWidth": 600});
 
         
-            var html_abb56e7dbe004965a7906ca80b2be0ab = $(`<div id="html_abb56e7dbe004965a7906ca80b2be0ab" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>20, 20bis et 22 boulevard Giraud , Marseille</B><br><i><a href=./Datas/PDF/20-20BIS-22-BOULEVARD-GIRAUD-13014_2018_03235.pdf Target="_blank">Lien vers le pdf</a></i><br>- corrosion, fissures, humidité <br> - balcon, façade, escalier, mur<br></font></div>`)[0];
-            popup_cb3408e8ec9f488fa715169548a83842.setContent(html_abb56e7dbe004965a7906ca80b2be0ab);
+            var html_288492163ef34ac79b5a531941816344 = $(`<div id="html_288492163ef34ac79b5a531941816344" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>20, 20bis et 22 boulevard Giraud , Marseille</B><br><i><a href=./Datas/PDF/20-20BIS-22-BOULEVARD-GIRAUD-13014_2018_03235.pdf Target="_blank">Lien vers le pdf</a></i><br>- corrosion, fissures, humidité <br> - balcon, façade, escalier, mur<br></font></div>`)[0];
+            popup_c767190f35554775bf598c55bd7dca45.setContent(html_288492163ef34ac79b5a531941816344);
         
 
-        marker_327b684243c0473bb9ca6c9f63a30623.bindPopup(popup_cb3408e8ec9f488fa715169548a83842)
+        marker_81212c8c93e74c12867cb94e25312106.bindPopup(popup_c767190f35554775bf598c55bd7dca45)
         ;
 
         
     
     
-            var marker_cb73eb84ae1144329007766390ccec44 = L.marker(
-                [43.356998, 5.343269],
+            var marker_50a5bf9c58224c1f8a7453a38a2a60b1 = L.marker(
+                [43.297669, 5.365036],
                 {}
-            ).addTo(map_62c25579290b429bbdc102c2e8800ab4);
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
         
     
-            var icon_89965bd5a85044c9adb9c40992255c39 = L.AwesomeMarkers.icon(
+            var icon_20e0f5326651498180478bbe8359a9dc = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_cb73eb84ae1144329007766390ccec44.setIcon(icon_89965bd5a85044c9adb9c40992255c39);
+            marker_50a5bf9c58224c1f8a7453a38a2a60b1.setIcon(icon_20e0f5326651498180478bbe8359a9dc);
         
     
-        var popup_2557898d81434d8c9406e727339ec478 = L.popup({"maxWidth": 600, "minWidth": 600});
+        var popup_9ae78d8081894d278b41f3846aad4c4a = L.popup({"maxWidth": 600, "minWidth": 600});
 
         
-            var html_edfd96a73561411eae70d6eadd7dbb4d = $(`<div id="html_edfd96a73561411eae70d6eadd7dbb4d" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>6, Place de lEglise Saint André , Marseille</B><br><i><a href=./Datas/PDF/6-PLACE-DE-L-EGLISE-SAINT-ANDRE-13016_2019_00650.pdf Target="_blank">Lien vers le pdf</a></i><br>- danger électrique <br> - façade, escalier, plancher, mur<br></font></div>`)[0];
-            popup_2557898d81434d8c9406e727339ec478.setContent(html_edfd96a73561411eae70d6eadd7dbb4d);
+            var html_09bd05cd2e294990902b858f4e171202 = $(`<div id="html_09bd05cd2e294990902b858f4e171202" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>71, rue Chateau Joly , Marseille</B><br><i><a href=./Datas/PDF/71-RUE-CHATEAU-JOLY-13002_2019_00753.pdf Target="_blank">Lien vers le pdf</a></i><br>- corrosion, effondrement, étanchéité, fissures, fragilité, humidité <br> - escalier, cloison, plafond, plancher, mur, balcon<br></font></div>`)[0];
+            popup_9ae78d8081894d278b41f3846aad4c4a.setContent(html_09bd05cd2e294990902b858f4e171202);
         
 
-        marker_cb73eb84ae1144329007766390ccec44.bindPopup(popup_2557898d81434d8c9406e727339ec478)
+        marker_50a5bf9c58224c1f8a7453a38a2a60b1.bindPopup(popup_9ae78d8081894d278b41f3846aad4c4a)
+        ;
+
+        
+    
+    
+            var marker_fae9bca719c14bc78085c63389e44382 = L.marker(
+                [43.331828, 5.38578],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_3f716e252ef24cea813848f43b5abc0f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fae9bca719c14bc78085c63389e44382.setIcon(icon_3f716e252ef24cea813848f43b5abc0f);
+        
+    
+        var popup_bdd1809216354e98a74edd2c74cceda9 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_ab00dd8917244c8d8ae7367742a1cd39 = $(`<div id="html_ab00dd8917244c8d8ae7367742a1cd39" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>30, boulevard de la Station , Marseille</B><br><i><a href=./Datas/PDF/pgi_30-boulevard-de-la-station-13014_2019_03950_vdm.pdf Target="_blank">Lien vers le pdf</a></i><br>- affaissement, chutes, déformation, effondrement, fissures <br> - balcon, façade, toiture, cloison, plafond, plancher, mur<br></font></div>`)[0];
+            popup_bdd1809216354e98a74edd2c74cceda9.setContent(html_ab00dd8917244c8d8ae7367742a1cd39);
+        
+
+        marker_fae9bca719c14bc78085c63389e44382.bindPopup(popup_bdd1809216354e98a74edd2c74cceda9)
+        ;
+
+        
+    
+    
+            var marker_e6b5396190f5469f8b4d776f3d3c9dd7 = L.marker(
+                [43.299455, 5.376174],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_78c50346dec44fbc958f1c34e14e538b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e6b5396190f5469f8b4d776f3d3c9dd7.setIcon(icon_78c50346dec44fbc958f1c34e14e538b);
+        
+    
+        var popup_07db7a282231476fb4a8948c378f99b6 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_290cf28ad3b64e1c9b15b6856fcacdd8 = $(`<div id="html_290cf28ad3b64e1c9b15b6856fcacdd8" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>4, rue d’Aix, Marseille</B><br><i><a href=./Datas/PDF/4-rue-d-aix-13001-PI-2018_03012-edited-2.pdf Target="_blank">Lien vers le pdf</a></i><br>- dégradation, effondrement <br> - plafond, plancher<br></font></div>`)[0];
+            popup_07db7a282231476fb4a8948c378f99b6.setContent(html_290cf28ad3b64e1c9b15b6856fcacdd8);
+        
+
+        marker_e6b5396190f5469f8b4d776f3d3c9dd7.bindPopup(popup_07db7a282231476fb4a8948c378f99b6)
+        ;
+
+        
+    
+    
+            var marker_8263bc3061b8473f8889eba0f83bac0f = L.marker(
+                [43.29445, 5.381865],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_0746f507aef644eb947aad5c335bdd8b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8263bc3061b8473f8889eba0f83bac0f.setIcon(icon_0746f507aef644eb947aad5c335bdd8b);
+        
+    
+        var popup_2ff888eb4ee145d5847cfed8e825ed25 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_a042c6f8281f4942a722f144da172895 = $(`<div id="html_a042c6f8281f4942a722f144da172895" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>26, cours Lieutaud, Marseille</B><br><i><a href=./Datas/PDF/26-cours-lieutaud-pi_2018_02949-edited-2.pdf Target="_blank">Lien vers le pdf</a></i><br>- corrosion, dégradation, fissures, fragilité <br> - balcon, plancher, mur, escalier<br></font></div>`)[0];
+            popup_2ff888eb4ee145d5847cfed8e825ed25.setContent(html_a042c6f8281f4942a722f144da172895);
+        
+
+        marker_8263bc3061b8473f8889eba0f83bac0f.bindPopup(popup_2ff888eb4ee145d5847cfed8e825ed25)
+        ;
+
+        
+    
+    
+            var marker_abe22484b866401992f4aeb65a399fb6 = L.marker(
+                [43.294474, 5.37553],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_f0a4ceadc7184821b1ed790b1db9a9e4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_abe22484b866401992f4aeb65a399fb6.setIcon(icon_f0a4ceadc7184821b1ed790b1db9a9e4);
+        
+    
+        var popup_99f3dc7ee61644ff8b446dd62b923ec6 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_29257248f1124dfc973594a111b797ac = $(`<div id="html_29257248f1124dfc973594a111b797ac" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>4, rue Pythéas , Marseille</B><br><i><a href=./Datas/PDF/4-rue-pytheas-arrete_pi_2018_02930-final.pdf Target="_blank">Lien vers le pdf</a></i><br>- affaissement, chutes, débris, détérioration, effondrement <br> - façade, escalier, plancher<br></font></div>`)[0];
+            popup_99f3dc7ee61644ff8b446dd62b923ec6.setContent(html_29257248f1124dfc973594a111b797ac);
+        
+
+        marker_abe22484b866401992f4aeb65a399fb6.bindPopup(popup_99f3dc7ee61644ff8b446dd62b923ec6)
+        ;
+
+        
+    
+    
+            var marker_7813bb92034246948cfd9731a79a060a = L.marker(
+                [43.325799, 5.374715],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_b703bfb0bd364fd9bc9609a86588a4b2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7813bb92034246948cfd9731a79a060a.setIcon(icon_b703bfb0bd364fd9bc9609a86588a4b2);
+        
+    
+        var popup_16a34795511042bc81ab5f1aeb2320df = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_ffde7d72fd8848988ae13016276104fb = $(`<div id="html_ffde7d72fd8848988ae13016276104fb" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>4, boulevard Louis GUICHOUX , Marseille</B><br><i><a href=./Datas/PDF/4-BOULEVARD-LOUIS-GUICHOUX-13014-2019_00622.pdf Target="_blank">Lien vers le pdf</a></i><br>- dégradation, fissures, humidité <br> - façade, escalier, plancher, mur<br></font></div>`)[0];
+            popup_16a34795511042bc81ab5f1aeb2320df.setContent(html_ffde7d72fd8848988ae13016276104fb);
+        
+
+        marker_7813bb92034246948cfd9731a79a060a.bindPopup(popup_16a34795511042bc81ab5f1aeb2320df)
+        ;
+
+        
+    
+    
+            var marker_0d2ef43c83174efa9602873743be4c0f = L.marker(
+                [43.32501, 5.443858],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_fad15a227cd2496b983f2359ff6bf44a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0d2ef43c83174efa9602873743be4c0f.setIcon(icon_fad15a227cd2496b983f2359ff6bf44a);
+        
+    
+        var popup_f8c196e19fea42f59649d29f5da11ca2 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_5d7adf29c73242f7a4562e939a69d59b = $(`<div id="html_5d7adf29c73242f7a4562e939a69d59b" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>57, Chemin des Martegaux , Marseille</B><br><i><a href=./Datas/PDF/57-CHEMIN-DES-MARTEGAUX_2019_00182.pdf Target="_blank">Lien vers le pdf</a></i><br>- dégradation, fissures <br> - façade, toiture, mur<br></font></div>`)[0];
+            popup_f8c196e19fea42f59649d29f5da11ca2.setContent(html_5d7adf29c73242f7a4562e939a69d59b);
+        
+
+        marker_0d2ef43c83174efa9602873743be4c0f.bindPopup(popup_f8c196e19fea42f59649d29f5da11ca2)
+        ;
+
+        
+    
+    
+            var marker_722b534cd2734eb49688b6c0a895ffeb = L.marker(
+                [43.324607, 5.373869],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_456c95cf1d154c64990cb05fd3922524 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_722b534cd2734eb49688b6c0a895ffeb.setIcon(icon_456c95cf1d154c64990cb05fd3922524);
+        
+    
+        var popup_0d7e47a5c8aa44e68a74b607c1c1f30c = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_782f4050e0d4445b95ee828e38c3a828 = $(`<div id="html_782f4050e0d4445b95ee828e38c3a828" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>86, Boulevard Danielle Casanova , Marseille</B><br><i><a href=./Datas/PDF/86-bd-d-casanova-13014_2019_01292.pdf Target="_blank">Lien vers le pdf</a></i><br>- effondrement, fissures, moisissures <br> - façade, toiture, escalier, plancher, poutre, charpente, mur<br></font></div>`)[0];
+            popup_0d7e47a5c8aa44e68a74b607c1c1f30c.setContent(html_782f4050e0d4445b95ee828e38c3a828);
+        
+
+        marker_722b534cd2734eb49688b6c0a895ffeb.bindPopup(popup_0d7e47a5c8aa44e68a74b607c1c1f30c)
+        ;
+
+        
+    
+    
+            var marker_6a8914f0ebf14373bbdf5d0d366788ad = L.marker(
+                [43.29605, 5.380183],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_82f0271cf41e4f479fcc62d02b250ca7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6a8914f0ebf14373bbdf5d0d366788ad.setIcon(icon_82f0271cf41e4f479fcc62d02b250ca7);
+        
+    
+        var popup_a143149f19e04340aac2c9c4e9705db9 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_8f0a6e4f95674b7e870ef272a6615228 = $(`<div id="html_8f0a6e4f95674b7e870ef272a6615228" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>24, rue Rodolphe Pollak , Marseille</B><br><i><a href=./Datas/PDF/24-rue-rodolphe-pollak-13001_2018_03024.pdf Target="_blank">Lien vers le pdf</a></i><br>- danger électrique, dégradation, effondrement, fragilité, moisissures <br> - balcon, escalier, plancher, poutre, corniche<br></font></div>`)[0];
+            popup_a143149f19e04340aac2c9c4e9705db9.setContent(html_8f0a6e4f95674b7e870ef272a6615228);
+        
+
+        marker_6a8914f0ebf14373bbdf5d0d366788ad.bindPopup(popup_a143149f19e04340aac2c9c4e9705db9)
+        ;
+
+        
+    
+    
+            var marker_ef172c691bc147d5b46b535ab626f36e = L.marker(
+                [43.356998, 5.343269],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_9a62628800c748539a4c3368e453665d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ef172c691bc147d5b46b535ab626f36e.setIcon(icon_9a62628800c748539a4c3368e453665d);
+        
+    
+        var popup_8a8f9448b472470ba41863f3da19e0ac = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_c6185c78475c408ea51827d4e0082c92 = $(`<div id="html_c6185c78475c408ea51827d4e0082c92" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>6, Place de l’Eglise Saint André , Marseille</B><br><i><a href=./Datas/PDF/6-PLACE-DE-L-EGLISE-SAINT-ANDRE-13016_2019_00650.pdf Target="_blank">Lien vers le pdf</a></i><br>- danger électrique <br> - façade, escalier, plancher, mur<br></font></div>`)[0];
+            popup_8a8f9448b472470ba41863f3da19e0ac.setContent(html_c6185c78475c408ea51827d4e0082c92);
+        
+
+        marker_ef172c691bc147d5b46b535ab626f36e.bindPopup(popup_8a8f9448b472470ba41863f3da19e0ac)
+        ;
+
+        
+    
+    
+            var marker_cf877a636a6142fbaa81d4eade74cae6 = L.marker(
+                [43.29479, 5.378969],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_7c191e3ea5e24e3a9dd52129df02d524 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_cf877a636a6142fbaa81d4eade74cae6.setIcon(icon_7c191e3ea5e24e3a9dd52129df02d524);
+        
+    
+        var popup_49282ba1407a45218af74ed79d4f7e39 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_814aee0457d644f481dc55284aa4c5bf = $(`<div id="html_814aee0457d644f481dc55284aa4c5bf" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>3, rue de la Palud , Marseille</B><br><i><a href=./Datas/PDF/3-rue-de-la-palud-13001_2018_03020.pdf Target="_blank">Lien vers le pdf</a></i><br>- chutes, déstructuration, fissures <br> - façade, escalier, corniche<br></font></div>`)[0];
+            popup_49282ba1407a45218af74ed79d4f7e39.setContent(html_814aee0457d644f481dc55284aa4c5bf);
+        
+
+        marker_cf877a636a6142fbaa81d4eade74cae6.bindPopup(popup_49282ba1407a45218af74ed79d4f7e39)
+        ;
+
+        
+    
+    
+            var marker_a8e34321ddd84b499a18889f570f6689 = L.marker(
+                [43.294193, 5.379158],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_fe08289e8e054743a87f1380a9d7334c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a8e34321ddd84b499a18889f570f6689.setIcon(icon_fe08289e8e054743a87f1380a9d7334c);
+        
+    
+        var popup_468b6d4a657c4a989b459aa60b96d3bc = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_3f280509982c4d23a0346898314d5a8d = $(`<div id="html_3f280509982c4d23a0346898314d5a8d" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>41 rue de Rome , Marseille</B><br><i><a href=./Datas/PDF/41-rue-de-rome-pi_2018_02952-final.pdf Target="_blank">Lien vers le pdf</a></i><br>- affaissement, altération, effondrement <br> - plancher<br></font></div>`)[0];
+            popup_468b6d4a657c4a989b459aa60b96d3bc.setContent(html_3f280509982c4d23a0346898314d5a8d);
+        
+
+        marker_a8e34321ddd84b499a18889f570f6689.bindPopup(popup_468b6d4a657c4a989b459aa60b96d3bc)
+        ;
+
+        
+    
+    
+            var marker_2c2d1176907446fa9b258fb6c3076e91 = L.marker(
+                [43.303774, 5.370819],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_8c54e047cb58480f841bf22a9a3ecf50 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2c2d1176907446fa9b258fb6c3076e91.setIcon(icon_8c54e047cb58480f841bf22a9a3ecf50);
+        
+    
+        var popup_28c26dc041b24af5a1532cc34e3aa2e7 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_c8f0ebdb3eda4bcda8dbf2f4aad13d27 = $(`<div id="html_c8f0ebdb3eda4bcda8dbf2f4aad13d27" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>48, rue Montolieu , Marseille</B><br><i><a href=./Datas/PDF/48-RUE-MONTOLIEU-13002_2019_00550.pdf Target="_blank">Lien vers le pdf</a></i><br>- chutes, déformation, déstructuration, effondrement, fissures <br> - façade, escalier, cloison, plancher<br></font></div>`)[0];
+            popup_28c26dc041b24af5a1532cc34e3aa2e7.setContent(html_c8f0ebdb3eda4bcda8dbf2f4aad13d27);
+        
+
+        marker_2c2d1176907446fa9b258fb6c3076e91.bindPopup(popup_28c26dc041b24af5a1532cc34e3aa2e7)
+        ;
+
+        
+    
+    
+            var marker_d5270738281d4e279f4f5a0ed3007512 = L.marker(
+                [43.299508, 5.370523],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_49a02f2049de4f12a326160ca746c8ed = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d5270738281d4e279f4f5a0ed3007512.setIcon(icon_49a02f2049de4f12a326160ca746c8ed);
+        
+    
+        var popup_5022759f7f394406a55d86c44880516e = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_3a9537d3b59f4be897aa543f09ffa018 = $(`<div id="html_3a9537d3b59f4be897aa543f09ffa018" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>7, rue Saint Antoine , Marseille</B><br><i><a href=./Datas/PDF/7-rue-de-st-antoine-13002_2019_00112.pdf Target="_blank">Lien vers le pdf</a></i><br>- chutes, dégradation, déstructuration, effondrement <br> - façade, escalier, plancher, mur<br></font></div>`)[0];
+            popup_5022759f7f394406a55d86c44880516e.setContent(html_3a9537d3b59f4be897aa543f09ffa018);
+        
+
+        marker_d5270738281d4e279f4f5a0ed3007512.bindPopup(popup_5022759f7f394406a55d86c44880516e)
+        ;
+
+        
+    
+    
+            var marker_ce7101065f554ac78f37561a971bd367 = L.marker(
+                [43.30172, 5.364596],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_bab197ddab9a4ab493d30749430342eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ce7101065f554ac78f37561a971bd367.setIcon(icon_bab197ddab9a4ab493d30749430342eb);
+        
+    
+        var popup_6bc10aee775f4270a29d2a3d4f8fc3ce = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_60d37ef86bf042fcbc7d0eca8bcc5bcf = $(`<div id="html_60d37ef86bf042fcbc7d0eca8bcc5bcf" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>19bis, Quai de la Joliette , Marseille</B><br><i><a href=./Datas/PDF/19-BIS-QUAI-DE-LA-JOLIETTE-13001_2019_00481.pdf Target="_blank">Lien vers le pdf</a></i><br>- effondrement <br> - plafond<br></font></div>`)[0];
+            popup_6bc10aee775f4270a29d2a3d4f8fc3ce.setContent(html_60d37ef86bf042fcbc7d0eca8bcc5bcf);
+        
+
+        marker_ce7101065f554ac78f37561a971bd367.bindPopup(popup_6bc10aee775f4270a29d2a3d4f8fc3ce)
+        ;
+
+        
+    
+    
+            var marker_8e2c47f0214a4b44b797435df8f26cfa = L.marker(
+                [43.305504, 5.402598],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_20692e5529c14d1d87a96adb9d4998fd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8e2c47f0214a4b44b797435df8f26cfa.setIcon(icon_20692e5529c14d1d87a96adb9d4998fd);
+        
+    
+        var popup_9760459590e6406e8089a22ddaf1f48b = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_f9875d0b97ea46b7aa9efd9f93e75f85 = $(`<div id="html_f9875d0b97ea46b7aa9efd9f93e75f85" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>29, rue Davin , Marseille</B><br><i><a href=./Datas/PDF/29-RUE-DAVIN-13004_2018_03240.pdf Target="_blank">Lien vers le pdf</a></i><br>- affaissement, chutes, fissures, humidité <br> - escalier, cloison, plancher, mur<br></font></div>`)[0];
+            popup_9760459590e6406e8089a22ddaf1f48b.setContent(html_f9875d0b97ea46b7aa9efd9f93e75f85);
+        
+
+        marker_8e2c47f0214a4b44b797435df8f26cfa.bindPopup(popup_9760459590e6406e8089a22ddaf1f48b)
+        ;
+
+        
+    
+    
+            var marker_7bd8ab58f9374f84add85321003c3dcc = L.marker(
+                [43.355441, 5.335281],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_b5d6c3ecd06744a198bd2faa51109f26 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7bd8ab58f9374f84add85321003c3dcc.setIcon(icon_b5d6c3ecd06744a198bd2faa51109f26);
+        
+    
+        var popup_e1868ec2b72941dca1ca386f27466ca4 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_188d3a542ebb4461bcb32eb7fecc9915 = $(`<div id="html_188d3a542ebb4461bcb32eb7fecc9915" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>6, traverse Ténériffe , Marseille</B><br><i><a href=./Datas/PDF/pgi_6-traverse-teneriffe-13016_2019_03387_vdm.pdf Target="_blank">Lien vers le pdf</a></i><br>- affaissement <br> - plancher, mur<br></font></div>`)[0];
+            popup_e1868ec2b72941dca1ca386f27466ca4.setContent(html_188d3a542ebb4461bcb32eb7fecc9915);
+        
+
+        marker_7bd8ab58f9374f84add85321003c3dcc.bindPopup(popup_e1868ec2b72941dca1ca386f27466ca4)
+        ;
+
+        
+    
+    
+            var marker_72b55e7232d340518e43cc6382b510cf = L.marker(
+                [43.298716, 5.367962],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_3713ebea1f0b4f01b87145a63331a1c7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_72b55e7232d340518e43cc6382b510cf.setIcon(icon_3713ebea1f0b4f01b87145a63331a1c7);
+        
+    
+        var popup_aef1d376c7bf4e53a0e9eaa5edfb8a17 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_881f7cde43684e958cb721e139498a90 = $(`<div id="html_881f7cde43684e958cb721e139498a90" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>9, rue Michel SALVARELLI , Marseille</B><br><i><a href=./Datas/PDF/9-RUE-MICHEL-SALVARELLI-13002_2018_03333.pdf Target="_blank">Lien vers le pdf</a></i><br>- débris, effondrement, fissures <br> - façade, escalier, plancher, poutre<br></font></div>`)[0];
+            popup_aef1d376c7bf4e53a0e9eaa5edfb8a17.setContent(html_881f7cde43684e958cb721e139498a90);
+        
+
+        marker_72b55e7232d340518e43cc6382b510cf.bindPopup(popup_aef1d376c7bf4e53a0e9eaa5edfb8a17)
+        ;
+
+        
+    
+    
+            var marker_684ed34072d54f24bad2c8b6afcc772a = L.marker(
+                [43.300756, 5.378043],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_b2bdaebb99444510a19c869740c8ee69 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_684ed34072d54f24bad2c8b6afcc772a.setIcon(icon_b2bdaebb99444510a19c869740c8ee69);
+        
+    
+        var popup_1bb8c29601df4749bbe7dfc4e203d814 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_8cf79d88c54845e6a6dd97466cae5e44 = $(`<div id="html_8cf79d88c54845e6a6dd97466cae5e44" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>15, rue de la Fare , Marseille</B><br><i><a href=./Datas/PDF/15-rue-de-la-fare-pi_2018_02950-edited-2.pdf Target="_blank">Lien vers le pdf</a></i><br>- chutes, effondrement, fissures, moisissures <br> - façade, toiture, escalier, cloison, mur<br></font></div>`)[0];
+            popup_1bb8c29601df4749bbe7dfc4e203d814.setContent(html_8cf79d88c54845e6a6dd97466cae5e44);
+        
+
+        marker_684ed34072d54f24bad2c8b6afcc772a.bindPopup(popup_1bb8c29601df4749bbe7dfc4e203d814)
+        ;
+
+        
+    
+    
+            var marker_963f461bb1ef4c37bb527f5d2fe6d8db = L.marker(
+                [43.35478, 5.341558],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_c7ef0f4582fc467ba8a6ddcd7772bebc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_963f461bb1ef4c37bb527f5d2fe6d8db.setIcon(icon_c7ef0f4582fc467ba8a6ddcd7772bebc);
+        
+    
+        var popup_a403aca4ce9e4741b5f05bc0ce73c606 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_834aed1b14d64cddad779a67d58d6242 = $(`<div id="html_834aed1b14d64cddad779a67d58d6242" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>15/16, rue de Séon , Marseille</B><br><i><a href=./Datas/PDF/15-16-RUE-DE-SEON-13016_2019_00227.pdf Target="_blank">Lien vers le pdf</a></i><br>- dégradation, déstructuration <br> - façade, poutre<br></font></div>`)[0];
+            popup_a403aca4ce9e4741b5f05bc0ce73c606.setContent(html_834aed1b14d64cddad779a67d58d6242);
+        
+
+        marker_963f461bb1ef4c37bb527f5d2fe6d8db.bindPopup(popup_a403aca4ce9e4741b5f05bc0ce73c606)
+        ;
+
+        
+    
+    
+            var marker_a113fbd011bc4355837112e40f600fa8 = L.marker(
+                [43.294574, 5.381825],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_f16c39cad5844271a7f57d2b083a3823 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a113fbd011bc4355837112e40f600fa8.setIcon(icon_f16c39cad5844271a7f57d2b083a3823);
+        
+    
+        var popup_b12752076b124946a4fca3691ea55fde = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_7722d989f11a42e98e97991c038be932 = $(`<div id="html_7722d989f11a42e98e97991c038be932" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>24, rue Cours Lieutaud , Marseille</B><br><i><a href=./Datas/PDF/24-cours-lieutaud-pi_2018_02951-edited-2.pdf Target="_blank">Lien vers le pdf</a></i><br>- dégradation, fissures <br> - plafond, plancher, mur, balcon<br></font></div>`)[0];
+            popup_b12752076b124946a4fca3691ea55fde.setContent(html_7722d989f11a42e98e97991c038be932);
+        
+
+        marker_a113fbd011bc4355837112e40f600fa8.bindPopup(popup_b12752076b124946a4fca3691ea55fde)
+        ;
+
+        
+    
+    
+            var marker_7bc6153c1d554f26af97a2c02288f512 = L.marker(
+                [43.294197, 5.38056],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_5041f59082264747a62de37730419eff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7bc6153c1d554f26af97a2c02288f512.setIcon(icon_5041f59082264747a62de37730419eff);
+        
+    
+        var popup_e18b24352856487d99f8f406c459c3c8 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_10aa4b5cb152432eb8731acef8e670e3 = $(`<div id="html_10aa4b5cb152432eb8731acef8e670e3" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>17, rue Moustier , Marseille</B><br><i><a href=./Datas/PDF/17-rue-moustier-pi_2018_02954-edited-2.pdf Target="_blank">Lien vers le pdf</a></i><br>- déformation, détérioration, effondrement, fissures <br> - façade, escalier, plafond<br></font></div>`)[0];
+            popup_e18b24352856487d99f8f406c459c3c8.setContent(html_10aa4b5cb152432eb8731acef8e670e3);
+        
+
+        marker_7bc6153c1d554f26af97a2c02288f512.bindPopup(popup_e18b24352856487d99f8f406c459c3c8)
+        ;
+
+        
+    
+    
+            var marker_4d8ef709af9642be8cf5d32ecd94afdd = L.marker(
+                [43.294829, 5.37892],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_9a17bb6e226d44b5a95516b87325e280 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4d8ef709af9642be8cf5d32ecd94afdd.setIcon(icon_9a17bb6e226d44b5a95516b87325e280);
+        
+    
+        var popup_2f6e8df8c9e24553ac34e90fdef525fe = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_9b9b444d592a405188977dc99a421ec0 = $(`<div id="html_9b9b444d592a405188977dc99a421ec0" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>1, rue de la Palud , Marseille</B><br><i><a href=./Datas/PDF/1-rue-de-le-palud-2018_02948-edited-2.pdf Target="_blank">Lien vers le pdf</a></i><br>- chutes, effondrement, fissures <br> - façade, escalier, mur<br></font></div>`)[0];
+            popup_2f6e8df8c9e24553ac34e90fdef525fe.setContent(html_9b9b444d592a405188977dc99a421ec0);
+        
+
+        marker_4d8ef709af9642be8cf5d32ecd94afdd.bindPopup(popup_2f6e8df8c9e24553ac34e90fdef525fe)
+        ;
+
+        
+    
+    
+            var marker_f644353fd1704d21a3b1b1b0f8072337 = L.marker(
+                [43.297817, 5.366489],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_50b2f34a0ecb4624a04d8a34b5766919 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f644353fd1704d21a3b1b1b0f8072337.setIcon(icon_50b2f34a0ecb4624a04d8a34b5766919);
+        
+    
+        var popup_171581cfa953440f84a1da9bc1dcd47f = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_d5f225f3a64e42e5a45b6908f91ea280 = $(`<div id="html_d5f225f3a64e42e5a45b6908f91ea280" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>2 rue Baussenque , Marseille</B><br><i><a href=./Datas/PDF/2-RUE-BAUSSENQUE-13002_2019-00623.pdf Target="_blank">Lien vers le pdf</a></i><br>- affaissement, fissures, humidité <br> - façade, toiture, escalier, cloison, plafond, plancher, mur<br></font></div>`)[0];
+            popup_171581cfa953440f84a1da9bc1dcd47f.setContent(html_d5f225f3a64e42e5a45b6908f91ea280);
+        
+
+        marker_f644353fd1704d21a3b1b1b0f8072337.bindPopup(popup_171581cfa953440f84a1da9bc1dcd47f)
+        ;
+
+        
+    
+    
+            var marker_0a26edf47d984502a33422f5e7f9d143 = L.marker(
+                [43.300712, 5.375728],
+                {}
+            ).addTo(marker_cluster_2d648d794cda45a8a8a6eca9246a4408);
+        
+    
+            var icon_67bcc885e6024d33a802408f2c2a4bb7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0a26edf47d984502a33422f5e7f9d143.setIcon(icon_67bcc885e6024d33a802408f2c2a4bb7);
+        
+    
+        var popup_c984fd3f1ec7459fb3406c75341232ce = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_987bd2f87c434720865a5be4625755c5 = $(`<div id="html_987bd2f87c434720865a5be4625755c5" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>3, rue Francis de Pressencé , Marseille</B><br><i><a href=./Datas/PDF/3-rue-Francis-de-Pressense-pi-13001_2018_03008-edited-2.pdf Target="_blank">Lien vers le pdf</a></i><br>- affaissement, dégradation, déstructuration, effondrement, étanchéité, fissures, fragilité, humidité, moisissures <br> - façade, toiture, plancher, poutre, charpente, corniche, balcon<br></font></div>`)[0];
+            popup_c984fd3f1ec7459fb3406c75341232ce.setContent(html_987bd2f87c434720865a5be4625755c5);
+        
+
+        marker_0a26edf47d984502a33422f5e7f9d143.bindPopup(popup_c984fd3f1ec7459fb3406c75341232ce)
         ;
 
         

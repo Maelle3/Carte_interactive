@@ -13,7 +13,7 @@ import recuperation as rec
 #     return pd.read_csv(bdd)
 
 def ouverture_bdd():
-    with open('data.json', encoding='latin-1') as json_data:
+    with open('data.json', encoding='utf-8') as json_data:
         data_dict = json.load(json_data)
     return data_dict
 
@@ -23,7 +23,7 @@ def ajout_ligne(id, pdf, adresse, pathologies):
     db[id] = [{"adresse": adresse, "longitude": geo.geocode(adresse)[0], "lattitude": geo.geocode(adresse)[1],
                "pathologies": pathologies, "classification_pathologies": rec.classification_pathologie(pathologies),
                "classification_lieux": rec.classification_lieu(pathologies), "pdf":  pdf}]
-    with open('data.json', 'w', encoding='latin-1') as f:
+    with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(db, f, ensure_ascii=False)
     return None
 

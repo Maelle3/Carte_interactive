@@ -20,6 +20,6 @@ def image_to_txt():
         nom = nom_liste[0]
         if nom+".txt" not in os.listdir("./Datas/TXT"):
             texte = pdf_to_image("./Datas/PDF/" + i)
-            fichier = open("./Datas/TXT/" + nom + ".txt", "w")
+            fichier = open("./Datas/TXT/" + nom + ".txt", "w", encoding = "utf-8")
             fichier.write(texte)
             fichier.close()

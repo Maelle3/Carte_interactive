@@ -11,7 +11,7 @@ def creation_carte():
 
 def creation_marker(carte, x, y, message):
     popup = folium.Popup(message, max_width=600, min_width=600)
-    return folium.Marker([x, y], popup=popup, icon=folium.Icon(icon='info-sign')).add_to(carte)
+    return folium.Marker([x, y], popup=popup, icon=folium.Icon(icon='home', icon_color = "white")).add_to(carte)
 
 
 def adresses():
@@ -35,6 +35,8 @@ def message():
     liste_adresse = adresses()
     db = database.ouverture_bdd()
     liste = []
+    liste_patho = []
+    liste_lieu = []
     for adresse in liste_adresse:
         char = '<font size="+1"><B>' + adresse + "</B><br>"
         liste_key = []
@@ -46,6 +48,8 @@ def message():
                             + '</i><br>'
                     char += return_string(value[0]["classification_pathologies"]) + " <br> " \
                             + return_string(value[0]["classification_lieux"]) + "<br>"
+                    liste_patho.append(value[0]["classification_pathologies"])
+                    liste_lieu.append(value[0]["classification_lieux"])
         char += '</font>'
         liste.append(char)
-    return liste
+    return liste, liste_patho, liste_lieu

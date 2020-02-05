@@ -24,7 +24,7 @@ for i in os.listdir("./Datas/TXT"):
     id = rec.recup_id(path)
     if id not in json2:
         database.ajout_ligne(id, i.partition(".txt")[0] + ".pdf", rec.recup_adresse(path) + ", Marseille",
-                             rec.recup_pathologie(path))
+                             rec.recup_pathologie(path), rec.recup_date(path))
 
 c = carte.creation_carte()
 

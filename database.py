@@ -18,11 +18,11 @@ def ouverture_bdd():
     return data_dict
 
 
-def ajout_ligne(id, pdf, adresse, pathologies):
+def ajout_ligne(id, pdf, adresse, pathologies, date):
     db = ouverture_bdd()
     db[id] = [{"adresse": adresse, "longitude": geo.geocode(adresse)[0], "lattitude": geo.geocode(adresse)[1],
                "pathologies": pathologies, "classification_pathologies": rec.classification_pathologie(pathologies),
-               "classification_lieux": rec.classification_lieu(pathologies), "pdf":  pdf}]
+               "classification_lieux": rec.classification_lieu(pathologies), "pdf":  pdf, "date": date}]
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(db, f, ensure_ascii=False)
     return None

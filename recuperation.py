@@ -15,6 +15,12 @@ def recup_pathologie(texte):
     res = str(fichier.read()).partition("pathologies suivantes :")[2].partition("Considérant")[0]
     return res
 
+
+def recup_date(texte):
+    fichier = open(texte, "r", encoding="utf-8")
+    res = str(fichier.read()).partition("le")[2].partition("\n")[0]
+    return res
+
 #################
 # Il reste à gérer les bas de page
 ##################
@@ -27,6 +33,7 @@ def ajout_class(string1, string2, classification, pathologie):
     if string1 in pathologie:
         if string2 not in classification:
             classification.append(string2)
+    return None
 
 
 def classification_pathologie(pathologie):

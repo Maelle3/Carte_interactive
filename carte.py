@@ -11,7 +11,7 @@ def creation_carte():
 
 def creation_marker(carte, x, y, message):
     popup = folium.Popup(message, max_width=600, min_width=600)
-    return folium.Marker([x, y], popup=popup, icon=folium.Icon(icon='info-sign')).add_to(carte)
+    return folium.Marker([x, y], popup=popup, icon=folium.Icon(icon='home', icon_color='white')).add_to(carte)
 
 
 def adresses():
@@ -43,7 +43,8 @@ def message():
                 if key not in liste_key:
                     liste_key.append(key)
                     char += '<i>' + '<a href=./Datas/PDF/' + value[0]["pdf"] + ' Target="_blank">Lien vers le pdf</a>' \
-                            + '</i><br>'
+                            + '</i>' + value[0]["date"] +  '<br>'
+
                     char += return_string(value[0]["classification_pathologies"]) + " <br> " \
                             + return_string(value[0]["classification_lieux"]) + "<br>"
         char += '</font>'

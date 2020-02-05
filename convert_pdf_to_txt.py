@@ -3,14 +3,14 @@ import pytesseract
 from pdf2image import convert_from_path
 
 # � adapter en fonction de l'ordinateur utilis�
-#pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 
 def pdf_to_image(pdf_path):
     images = convert_from_path(pdf_path)
     text = ""
     for i, image in enumerate(images):
-        text = text + pytesseract.image_to_string(image, lang='eng')
+        text = text + pytesseract.image_to_string(image, lang='fra')
     return text
 
 

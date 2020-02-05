@@ -18,7 +18,7 @@ def recup_pathologie(texte):
 
 def recup_date(texte):
     fichier = open(texte, "r", encoding="utf-8")
-    res = str(fichier.read()).partition("le")[2].partition("\n")[0]
+    res = str(fichier.read()).partition("le ")[2].partition("\n")[0]
     return res
 
 #################

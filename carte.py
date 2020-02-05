@@ -43,7 +43,7 @@ def message():
                 if key not in liste_key:
                     liste_key.append(key)
                     char += '<i>' + '<a href=./Datas/PDF/' + value[0]["pdf"] + ' Target="_blank">Lien vers le pdf</a>' \
-                            + '</i>' + value[0]["date"] +  '<br>'
+                            + '  </i>' + value[0]["date"] + '<br>'
 
                     char += return_string(value[0]["classification_pathologies"]) + " <br> " \
                             + return_string(value[0]["classification_lieux"]) + "<br>"

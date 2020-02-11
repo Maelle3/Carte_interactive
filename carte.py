@@ -36,17 +36,29 @@ def message():
     db = database.ouverture_bdd()
     liste = []
     for adresse in liste_adresse:
-        char = '<font size="+1"><B>' + adresse + "</B><br>"
+        char = '<font size="+1"><B>' + adresse + "</B><br><br>"
         liste_key = []
+        liste_key_date = []
+        liste_date = []
         for key, value in db.items():
             if value[0]["adresse"] == adresse:
                 if key not in liste_key:
                     liste_key.append(key)
-                    char += '<i>' + '<a href=./Datas/PDF/' + value[0]["pdf"] + ' Target="_blank">Lien vers le pdf</a>' \
-                            + '  </i>' + value[0]["date"] + '<br>'
+                    liste_key_date.append([key, value[0]["date"]])
+                    liste_date.append(value[0]["date"])
+        liste_date.sort(reverse=True)
+        sorted_list = []
+        for i in liste_date:
+            for k in liste_key_date:
+                if k[1] == i:
+                    sorted_list.append(k)
+        for couple in sorted_list:
+            char += '<i>' + '<a href=./Datas/PDF/' + db[couple[0]][0][
+                "pdf"] + ' Target="_blank">Lien vers le pdf</a>' + '</i> ' + db[couple[0]][0]["date"] + '<br>'
+            char += return_string(db[couple[0]][0]["classification_pathologies"]) + " <br> " \
+                + return_string(db[couple[0]][0]["classification_lieux"]) + "<br><br>"
 
-                    char += return_string(value[0]["classification_pathologies"]) + " <br> " \
-                            + return_string(value[0]["classification_lieux"]) + "<br>"
         char += '</font>'
         liste.append(char)
+
     return liste

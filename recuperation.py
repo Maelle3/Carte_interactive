@@ -61,6 +61,7 @@ def classification_pathologie(pathologie):
     ajout_class("stabl", "effondrement", classification, pathologie)
     ajout_class("tanch", "étanchéité", classification, pathologie)
     ajout_class("issu", "fissures", classification, pathologie)
+    ajout_class("ézarde", "fissures", classification, pathologie)
     ajout_class("ragil", "fragilité", classification, pathologie)
     ajout_class("aible", "fragilité", classification, pathologie)
     ajout_class("umid", "humidité", classification, pathologie)

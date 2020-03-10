@@ -15,32 +15,41 @@ from folium.plugins import MarkerCluster
 - gérer les exceptions (2 adresses, mains levées etc)
 """
 
-
-conv.image_to_txt()
+db_csv = conv.pdf_to_txt()
 json2 = database.ouverture_bdd()
 
-for i in os.listdir("./Datas/TXT"):
-    path = "./Datas/TXT/" + i
-    id = rec.recup_id(path)
-    if id not in json2:
-        database.ajout_ligne(id, i.partition(".txt")[0] + ".pdf", rec.recup_adresse(path) + ", Marseille",
-                             rec.recup_pathologie(path), rec.recup_date(path))
-
+# for i in range(len(db_csv)):
+for i in range(10):
+    if not db_csv.loc[i].erreurs:
+        path = "./Datas/TXT/" + db_csv.loc[i]["nom_txt"]
+        id = rec.recup_id(path)
+        if id not in json2:
+            cat = database.calcul_categorie(i, db_csv)
+            if cat == "Arrêtés de péril":
+                pathologies = rec.recup_pathologie(path, db_csv, i)
+                if not db_csv.loc[i].erreurs:
+                    database.ajout_ligne_peril(id, db_csv.loc[i].url, db_csv.loc[i].adresse + ", Marseille",
+                                               pathologies, rec.recup_date(path))
+            else:
+                database.ajout_ligne_autre(cat, id, db_csv.loc[i].url, db_csv.loc[i].adresse + ", Marseille",
+                                           rec.recup_date(path))
+#
 c = carte.creation_carte()
-
+#
 mcg = folium.plugins.MarkerCluster(control=False)
 c.add_child(mcg)
-
+#
 liste_adresses = carte.adresses()
-liste_messages = carte.message()
 
-
+liste_messages = carte.message(liste_adresses)
+#
+#
 for i in range(len(liste_adresses)):
     carte.creation_marker(mcg, geo.geocode(liste_adresses[i])[0], geo.geocode(liste_adresses[i])[1], liste_messages[i])
-
-
+#
+#
 c.save('carte.html')
-
-
-webbrowser.open("file://"+os.getcwd()+'/carte.html')
-
+#
+#
+webbrowser.open("file://" + os.getcwd() + '/carte.html')
+#

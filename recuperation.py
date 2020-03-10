@@ -1,3 +1,6 @@
+import pandas
+
+
 def recup_id(texte):
     fichier = open(texte, "r", encoding="utf-8")
     res = str(fichier.read()).partition("ID : ")[2].partition("\n")[0]
@@ -10,23 +13,28 @@ def recup_adresse(texte):
     return res
 
 
-def recup_pathologie(texte):
+def recup_pathologie(texte, db_csv, i):
     fichier = open(texte, "r", encoding="utf-8")
-    res = str(fichier.read()).partition("pathologies suivantes :")[2].partition("Considérant")[0]
-    return res
+    if "pathologies suivantes :" in fichier.read():
+        # fichier.close()
+        # fichier = open(texte, "r", encoding="utf-8")
+        fichier.seek(0)
+        res = str(fichier.read()).partition("pathologies suivantes :")[2].partition("Considérant")[0]
+        fichier.close()
+        return res
+    else:
+        db_csv.loc[i, 'erreurs'] = True
+        error = pandas.read_csv("Datas/erreurs.csv")
+        error.loc[len(error)] = ["Problème pathologies"] + list(db_csv.loc[i])
+        error.to_csv("Datas/erreurs.csv", encoding='utf-8', index=False)
+        db_csv.to_csv('arretes.csv', encoding='utf-8', index=False)
+        return None
 
 
 def recup_date(texte):
     fichier = open(texte, "r", encoding="utf-8")
     res = str(fichier.read()).partition("le ")[2].partition("\n")[0]
     return res
-
-#################
-# Il reste à gérer les bas de page
-##################
-
-# for i in os.listdir("./Datas/TXT"):
-#     print(recup_pathologie("./Datas/TXT/" + i))
 
 
 def ajout_class(string1, string2, classification, pathologie):
@@ -87,6 +95,3 @@ def classification_lieu(pathologie):
     ajout_class("lafond", "plafond", classification, pathologie)
     ajout_class("errass", "balcon", classification, pathologie)
     return classification
-
-# for i in os.listdir("./Datas/TXT"):
-#      print(classification_lieu(recup_pathologie("./Datas/TXT/" + i )))

@@ -1,5 +1,7 @@
+# -*- coding: utf-8 -*-
 import folium
 import database
+
 
 lat_marseille = 43.2969500
 lon_marseille = 5.3810700
@@ -31,8 +33,7 @@ def return_string(liste):
     return str
 
 
-def message():
-    liste_adresse = adresses()
+def message(liste_adresse):
     db = database.ouverture_bdd()
     liste = []
     for adresse in liste_adresse:
@@ -46,19 +47,25 @@ def message():
                     liste_key.append(key)
                     liste_key_date.append([key, value[0]["date"]])
                     liste_date.append(value[0]["date"])
-        liste_date.sort(reverse=True)
+        # liste_date.sort(reverse=True)
+        liste_date.reverse()
         sorted_list = []
         for i in liste_date:
             for k in liste_key_date:
                 if k[1] == i:
                     sorted_list.append(k)
         for couple in sorted_list:
-            char += '<i>' + '<a href=./Datas/PDF/' + db[couple[0]][0][
-                "pdf"] + ' Target="_blank">Lien vers le pdf</a>' + '</i> ' + db[couple[0]][0]["date"] + '<br>'
-            char += return_string(db[couple[0]][0]["classification_pathologies"]) + " <br> " \
-                + return_string(db[couple[0]][0]["classification_lieux"]) + "<br><br>"
-
+            cat = db[couple[0]][0]["categorie"]
+            char += '<U>' + cat + '</U><br>'
+            char += '<i>' + '<a href=' + db[couple[0]][0]["url"] + ' Target="_blank">Lien vers le pdf</a>' + '</i> '\
+                        + db[couple[0]][0]["date"] + '<br>'
+            if cat == 'Arrêtés de péril':
+                char += return_string(db[couple[0]][0]["classification_pathologies"]) + " <br> " + return_string(
+                        db[couple[0]][0]["classification_lieux"]) + "<br>"
+            char += '<br>'
         char += '</font>'
         liste.append(char)
 
     return liste
+
+# rajouter return categorie pour la couleur

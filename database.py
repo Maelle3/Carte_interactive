@@ -1,4 +1,3 @@
-# import pandas as pd
 import geocode as geo
 import json
 import recuperation as rec
@@ -8,27 +7,49 @@ import recuperation as rec
 # 'classification_pathologies'=["affaissemnt", "altération", "risque de chutes", "fissures", "fissures", "débris",
 # "affaissement", "basculement d'escalier", "risque d'effondrement"]
 
-
-# def ouverture_bdd(bdd):
-#     return pd.read_csv(bdd)
-
 def ouverture_bdd():
     with open('data.json', encoding='utf-8') as json_data:
         data_dict = json.load(json_data)
     return data_dict
 
 
-def ajout_ligne(id, pdf, adresse, pathologies, date):
+def calcul_categorie(i, db):
+    if db.loc[i].classe != 'Arrêtés de péril imminent, de Main Levée et de Réintégration partielle de la ville de Marseille':
+        categorie = db.loc[i].classe
+    else:
+        url_split = db.loc[i].url.split("/")
+        cat_partielle = url_split[-2]
+        if cat_partielle == "Arretes-peril":
+            if "odificatif" in db.loc[i]['nom_doc']:
+                categorie = "Arrêtés de péril modificatif"
+            else:
+                categorie = "Arrêtés de péril"
+        else:
+            if "artiel" in db.loc[i]['nom_doc']:
+                categorie = "Arrêtés de Main Levée Partielle"
+            else:
+                categorie = "Arrêtés de Main Levée"
+    return categorie
+
+
+def ajout_ligne_peril(id, url, adresse, pathologies, date):
     db = ouverture_bdd()
-    db[id] = [{"adresse": adresse, "longitude": geo.geocode(adresse)[0], "lattitude": geo.geocode(adresse)[1],
-               "pathologies": pathologies, "classification_pathologies": rec.classification_pathologie(pathologies),
-               "classification_lieux": rec.classification_lieu(pathologies), "pdf":  pdf, "date": date}]
+    db[id] = [{"categorie": "Arrêtés de péril", "adresse": adresse, "longitude": geo.geocode(adresse)[0],
+               "lattitude": geo.geocode(adresse)[1], "pathologies": pathologies,
+               "classification_pathologies": rec.classification_pathologie(pathologies),
+               "classification_lieux": rec.classification_lieu(pathologies), "url":  url, "date": date}]
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(db, f, ensure_ascii=False)
     return None
 
-# def affiche_bdd(bdd):
-#     return ouverture_bdd(bdd)
+
+def ajout_ligne_autre(categorie, id, url, adresse, date):
+    db = ouverture_bdd()
+    db[id] = [{"categorie": categorie, "adresse": adresse, "longitude": geo.geocode(adresse)[0],
+               "lattitude": geo.geocode(adresse)[1], "url":  url, "date": date}]
+    with open('data.json', 'w', encoding='utf-8') as f:
+        json.dump(db, f, ensure_ascii=False)
+    return None
 
 
 def get_coordonnees_url(url):
@@ -40,35 +61,3 @@ def get_coordonnees_url(url):
             i += 1
         else:
             return db.loc[i].lon, db.loc[i].lat
-
-
-# def get_coordonnées_adresse(bdd, adresse):
-#     db = ouverture_bdd(bdd)
-#     i = 0
-#     adresse_found = False
-#     while not adresse_found:
-#         if db.loc[i].adresse != adresse:
-#             i += 1
-#         else:
-#             return db.loc[i].lon, db.loc[i].lat
-
-
-# def get_url_adresse(bdd, adresse):
-#     db = ouverture_bdd(bdd)
-#     i = 0
-#     adresse_found = False
-#     while not adresse_found:
-#         if db.loc[i].adresse != adresse:
-#             i += 1
-#         else:
-#             return db.loc[i].url
-
-# data = {}
-# data2 = {"addresse" : "adresse1", "longitude" : 1, "lattitude" : 1, "classification" : ["fissures", "effondrement"]}
-# data["id1"] = [data2]
-# data3 = {"addresse" : "bonjour", "longitude" : 2, "lattitude" : 2, "classification" : ["moisissures", "effondrement"]}
-# data["id2"]  = [data3];
-#
-#
-# with open('data.json', 'w') as f:
-#     json.dump(data, f)

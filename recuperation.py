@@ -16,8 +16,6 @@ def recup_adresse(texte):
 def recup_pathologie(texte, db_csv, i):
     fichier = open(texte, "r", encoding="utf-8")
     if "pathologies suivantes :" in fichier.read():
-        # fichier.close()
-        # fichier = open(texte, "r", encoding="utf-8")
         fichier.seek(0)
         res = str(fichier.read()).partition("pathologies suivantes :")[2].partition("Considérant")[0]
         fichier.close()
@@ -56,6 +54,7 @@ def classification_pathologie(pathologie):
     ajout_class("ébris", "débris", classification, pathologie)
     ajout_class("éform", "déformation", classification, pathologie)
     ajout_class("égrad", "dégradation", classification, pathologie)
+    ajout_class("ésord", "désordre", classification, pathologie)
     ajout_class("éstruc", "déstructuration", classification, pathologie)
     ajout_class("étérior", "détérioration", classification, pathologie)
     ajout_class("ffondr", "effondrement", classification, pathologie)
@@ -65,11 +64,9 @@ def classification_pathologie(pathologie):
     ajout_class("ragil", "fragilité", classification, pathologie)
     ajout_class("aible", "fragilité", classification, pathologie)
     ajout_class("umid", "humidité", classification, pathologie)
+    ajout_class("nstab", "instabilité", classification, pathologie)
     ajout_class("oisi", "moisissures", classification, pathologie)
     return classification
-
-# for i in os.listdir("./Datas/TXT"):
-#     print(classification_pathologie(recup_pathologie("./Datas/TXT/" + i )))
 
 
 def classification_lieu(pathologie):

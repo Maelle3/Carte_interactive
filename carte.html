@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_7a4f45d2a1064836987409aba056111f {
+                #map_131594116bda4bf5aa8f837c7225da47 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -38,13 +38,13 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_7a4f45d2a1064836987409aba056111f" ></div>
+            <div class="folium-map" id="map_131594116bda4bf5aa8f837c7225da47" ></div>
         
 </body>
 <script>    
     
-            var map_7a4f45d2a1064836987409aba056111f = L.map(
-                "map_7a4f45d2a1064836987409aba056111f",
+            var map_131594116bda4bf5aa8f837c7225da47 = L.map(
+                "map_131594116bda4bf5aa8f837c7225da47",
                 {
                     center: [43.29695, 5.38107],
                     crs: L.CRS.EPSG3857,
@@ -58,188 +58,1313 @@
 
         
     
-            var tile_layer_14c844948ff64e98bb25c7e4bb41f558 = L.tileLayer(
+            var tile_layer_3dde0dcbcca949f385d6bf6652d91eba = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 11, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_7a4f45d2a1064836987409aba056111f);
+            ).addTo(map_131594116bda4bf5aa8f837c7225da47);
         
     
-            var marker_cluster_fc37e1eae5fc461d8e1023e03ecd3229 = L.markerClusterGroup(
+            var marker_cluster_d91defbf3e484754875f3fd8882212b6 = L.markerClusterGroup(
                 {}
             );
-            map_7a4f45d2a1064836987409aba056111f.addLayer(marker_cluster_fc37e1eae5fc461d8e1023e03ecd3229);
+            map_131594116bda4bf5aa8f837c7225da47.addLayer(marker_cluster_d91defbf3e484754875f3fd8882212b6);
         
     
-            var marker_cde9e8b0b1ab405f81a78d2fb01a44d5 = L.marker(
+            var marker_35fe1a3d897846e09705d030ad9422df = L.marker(
                 [43.294193, 5.379158],
                 {}
-            ).addTo(marker_cluster_fc37e1eae5fc461d8e1023e03ecd3229);
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
         
     
-            var icon_26c5593616cc4ae791ae4867bf516438 = L.AwesomeMarkers.icon(
+            var icon_489430f48ba942f9899a83d68de082bd = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_cde9e8b0b1ab405f81a78d2fb01a44d5.setIcon(icon_26c5593616cc4ae791ae4867bf516438);
+            marker_35fe1a3d897846e09705d030ad9422df.setIcon(icon_489430f48ba942f9899a83d68de082bd);
         
     
-        var popup_4ecbe1d8c2774a8090c0777f7e736435 = L.popup({"maxWidth": 600, "minWidth": 600});
+        var popup_045125ca02214fa39e023145ec47068b = L.popup({"maxWidth": 600, "minWidth": 600});
 
         
-            var html_69ed99d224754988880e223bd47b33c5 = $(`<div id="html_69ed99d224754988880e223bd47b33c5" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>41 rue de Rome, Marseille</B><br><br><U>Arrêtés de péril modificatif</U><br><i><a href=http://logement-urbanisme.marseille.fr/sites/default/files/contenu/logement/Arretes-peril/41-rue-de-rome-13001_2018_03462_modificatif-du-41-rue-de-rome.pdf Target="_blank">Lien vers le pdf</a></i> 23/12/2018<br><br><U>Arrêtés de péril</U><br><i><a href=http://logement-urbanisme.marseille.fr/sites/default/files/contenu/logement/Arretes-peril/41-rue-de-rome-pi_2018_02952-final.pdf Target="_blank">Lien vers le pdf</a></i> 17/11/2018<br>- affaissement, altération, effondrement <br> - plancher<br><br></font></div>`)[0];
-            popup_4ecbe1d8c2774a8090c0777f7e736435.setContent(html_69ed99d224754988880e223bd47b33c5);
+            var html_6c017b08e6fd465ab08a0b73b8dc0613 = $(`<div id="html_6c017b08e6fd465ab08a0b73b8dc0613" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>41 rue de Rome, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://logement-urbanisme.marseille.fr/sites/default/files/contenu/logement/Arretes-peril/41-rue-de-rome-pi_2018_02952-final.pdf Target="_blank">Lien vers le pdf</a></i> 17/11/2018<br>- affaissement, altération, effondrement <br> - plancher<br><br></font></div>`)[0];
+            popup_045125ca02214fa39e023145ec47068b.setContent(html_6c017b08e6fd465ab08a0b73b8dc0613);
         
 
-        marker_cde9e8b0b1ab405f81a78d2fb01a44d5.bindPopup(popup_4ecbe1d8c2774a8090c0777f7e736435)
+        marker_35fe1a3d897846e09705d030ad9422df.bindPopup(popup_045125ca02214fa39e023145ec47068b)
         ;
 
         
     
     
-            var marker_57be18e2b4c44c5c87823a0b591c028e = L.marker(
+            var marker_4f639db9363941879482f7ee5974cbef = L.marker(
+                [43.295085, 5.377999],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_4ca0d799a25b4f24a33ec6cfdf1c07aa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4f639db9363941879482f7ee5974cbef.setIcon(icon_4ca0d799a25b4f24a33ec6cfdf1c07aa);
+        
+    
+        var popup_9eda4c2034554860adc88d70c2996d18 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_050ab68d11874ddbb0fd8a287cf6c560 = $(`<div id="html_050ab68d11874ddbb0fd8a287cf6c560" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>24 rue Vacon, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ML-24-rue-Vacon-13001_2018_03193.pdf Target="_blank">Lien vers le pdf</a></i> 06/12/2018<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/24-rue-Vacon-13001_2018_03023.pdf Target="_blank">Lien vers le pdf</a></i> : 25/11/2018<br>- instabilité <br> - escalier<br><br></font></div>`)[0];
+            popup_9eda4c2034554860adc88d70c2996d18.setContent(html_050ab68d11874ddbb0fd8a287cf6c560);
+        
+
+        marker_4f639db9363941879482f7ee5974cbef.bindPopup(popup_9eda4c2034554860adc88d70c2996d18)
+        ;
+
+        
+    
+    
+            var marker_952a1519303c45c9af34a9a0abf94cb6 = L.marker(
                 [43.294829, 5.37892],
                 {}
-            ).addTo(marker_cluster_fc37e1eae5fc461d8e1023e03ecd3229);
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
         
     
-            var icon_d55a7c84f146422ba53c6fd79a815999 = L.AwesomeMarkers.icon(
+            var icon_b65b7a9c8f504e16ac63a3d63f2e8259 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_57be18e2b4c44c5c87823a0b591c028e.setIcon(icon_d55a7c84f146422ba53c6fd79a815999);
+            marker_952a1519303c45c9af34a9a0abf94cb6.setIcon(icon_b65b7a9c8f504e16ac63a3d63f2e8259);
         
     
-        var popup_a39bd0b44dbc47dc8ad665f77c7f970f = L.popup({"maxWidth": 600, "minWidth": 600});
+        var popup_e44ed930175a4196a35952641c0c2bd6 = L.popup({"maxWidth": 600, "minWidth": 600});
 
         
-            var html_ac5ea5686a7549119f1697223cf1d1b7 = $(`<div id="html_ac5ea5686a7549119f1697223cf1d1b7" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>1 rue de la Palud, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/1-rue-de-le-palud-2018_02948-edited-2.pdf Target="_blank">Lien vers le pdf</a></i> 16/11/2018<br>- chutes, effondrement, fissures <br> - façade, escalier, mur<br><br></font></div>`)[0];
-            popup_a39bd0b44dbc47dc8ad665f77c7f970f.setContent(html_ac5ea5686a7549119f1697223cf1d1b7);
+            var html_d3fe6602765641549a4f11155c8d51ce = $(`<div id="html_d3fe6602765641549a4f11155c8d51ce" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>1 rue de la Palud, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/1-rue-de-le-palud-2018_02948-edited-2.pdf Target="_blank">Lien vers le pdf</a></i> 16/11/2018<br>- chutes, effondrement, fissures, instabilité <br> - façade, escalier, mur<br><br></font></div>`)[0];
+            popup_e44ed930175a4196a35952641c0c2bd6.setContent(html_d3fe6602765641549a4f11155c8d51ce);
         
 
-        marker_57be18e2b4c44c5c87823a0b591c028e.bindPopup(popup_a39bd0b44dbc47dc8ad665f77c7f970f)
+        marker_952a1519303c45c9af34a9a0abf94cb6.bindPopup(popup_e44ed930175a4196a35952641c0c2bd6)
         ;
 
         
     
     
-            var marker_5a5f94bb60614b9f82bc0f6bbcf902f5 = L.marker(
+            var marker_2cafc1a324814e0bbc80899248ed5c89 = L.marker(
                 [43.294474, 5.37553],
                 {}
-            ).addTo(marker_cluster_fc37e1eae5fc461d8e1023e03ecd3229);
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
         
     
-            var icon_445571e0812c487d95dde800023099bb = L.AwesomeMarkers.icon(
+            var icon_f6e21df1d69d432eaf8d735b1f9579d0 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_5a5f94bb60614b9f82bc0f6bbcf902f5.setIcon(icon_445571e0812c487d95dde800023099bb);
+            marker_2cafc1a324814e0bbc80899248ed5c89.setIcon(icon_f6e21df1d69d432eaf8d735b1f9579d0);
         
     
-        var popup_7b1b518b3f3c4fe1876b3a4fb1b02c24 = L.popup({"maxWidth": 600, "minWidth": 600});
+        var popup_f468b973453947e3a3f17a7182eeb733 = L.popup({"maxWidth": 600, "minWidth": 600});
 
         
-            var html_b5c6987a478144ba8256c97af616658f = $(`<div id="html_b5c6987a478144ba8256c97af616658f" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>4 rue Pytheas, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/4-rue-pytheas-arrete_pi_2018_02930-final.pdf Target="_blank">Lien vers le pdf</a></i> 14/11/2018<br>- affaissement, chutes, débris, détérioration, effondrement <br> - façade, escalier, plancher<br><br></font></div>`)[0];
-            popup_7b1b518b3f3c4fe1876b3a4fb1b02c24.setContent(html_b5c6987a478144ba8256c97af616658f);
+            var html_abb4b1e8834848d5921a120835ef6f4e = $(`<div id="html_abb4b1e8834848d5921a120835ef6f4e" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>4 rue Pytheas, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/4-rue-pytheas-arrete_pi_2018_02930-final.pdf Target="_blank">Lien vers le pdf</a></i> 14/11/2018<br>- affaissement, chutes, débris, détérioration, effondrement <br> - façade, escalier, plancher<br><br></font></div>`)[0];
+            popup_f468b973453947e3a3f17a7182eeb733.setContent(html_abb4b1e8834848d5921a120835ef6f4e);
         
 
-        marker_5a5f94bb60614b9f82bc0f6bbcf902f5.bindPopup(popup_7b1b518b3f3c4fe1876b3a4fb1b02c24)
+        marker_2cafc1a324814e0bbc80899248ed5c89.bindPopup(popup_f468b973453947e3a3f17a7182eeb733)
         ;
 
         
     
     
-            var marker_6ab301097ba8484dad5efb790d7afdcb = L.marker(
+            var marker_bda522d8381b4b30a13d2f048c23b99c = L.marker(
                 [43.300756, 5.378043],
                 {}
-            ).addTo(marker_cluster_fc37e1eae5fc461d8e1023e03ecd3229);
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
         
     
-            var icon_f24fc75d27ab4876bf80cb24acec8e14 = L.AwesomeMarkers.icon(
+            var icon_e7b789b94f2d4c14b2395b7790de581f = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_6ab301097ba8484dad5efb790d7afdcb.setIcon(icon_f24fc75d27ab4876bf80cb24acec8e14);
+            marker_bda522d8381b4b30a13d2f048c23b99c.setIcon(icon_e7b789b94f2d4c14b2395b7790de581f);
         
     
-        var popup_ec90f457440c4bf2817835f25371e70d = L.popup({"maxWidth": 600, "minWidth": 600});
+        var popup_96a8f6be4e3f4d77bcfd8b04e04f8fb7 = L.popup({"maxWidth": 600, "minWidth": 600});
 
         
-            var html_6b3343a9d153435c9e544dc16a6321b6 = $(`<div id="html_6b3343a9d153435c9e544dc16a6321b6" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>15 rue de la Fare, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/15-rue-la-fare-13001_ML_2019_00228.pdf Target="_blank">Lien vers le pdf</a></i> 21/01/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://logement-urbanisme.marseille.fr/sites/default/files/contenu/logement/Arretes-peril/15-rue-de-la-fare-pi_2018_02950-edited-2.pdf Target="_blank">Lien vers le pdf</a></i> 17/11/2018<br>- chutes, effondrement, fissures, moisissures <br> - façade, toiture, escalier, cloison, mur<br><br></font></div>`)[0];
-            popup_ec90f457440c4bf2817835f25371e70d.setContent(html_6b3343a9d153435c9e544dc16a6321b6);
+            var html_750adf7677274210882d866b5b8db471 = $(`<div id="html_750adf7677274210882d866b5b8db471" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>15 rue de la Fare, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/15-rue-la-fare-13001_ML_2019_00228.pdf Target="_blank">Lien vers le pdf</a></i> 21/01/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://logement-urbanisme.marseille.fr/sites/default/files/contenu/logement/Arretes-peril/15-rue-de-la-fare-pi_2018_02950-edited-2.pdf Target="_blank">Lien vers le pdf</a></i> 17/11/2018<br>- chutes, effondrement, fissures, moisissures <br> - façade, toiture, escalier, cloison, mur<br><br></font></div>`)[0];
+            popup_96a8f6be4e3f4d77bcfd8b04e04f8fb7.setContent(html_750adf7677274210882d866b5b8db471);
         
 
-        marker_6ab301097ba8484dad5efb790d7afdcb.bindPopup(popup_ec90f457440c4bf2817835f25371e70d)
+        marker_bda522d8381b4b30a13d2f048c23b99c.bindPopup(popup_96a8f6be4e3f4d77bcfd8b04e04f8fb7)
         ;
 
         
     
     
-            var marker_5dd2f70f842e42929e4e371d127b19bc = L.marker(
+            var marker_a12bfed7e16e4492b6b194c9242ed885 = L.marker(
                 [43.294197, 5.38056],
                 {}
-            ).addTo(marker_cluster_fc37e1eae5fc461d8e1023e03ecd3229);
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
         
     
-            var icon_6c8e742c33cf453cb5252f7570a5087d = L.AwesomeMarkers.icon(
+            var icon_6e67d7f5e1404653abd1efd23fd0be25 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_5dd2f70f842e42929e4e371d127b19bc.setIcon(icon_6c8e742c33cf453cb5252f7570a5087d);
+            marker_a12bfed7e16e4492b6b194c9242ed885.setIcon(icon_6e67d7f5e1404653abd1efd23fd0be25);
         
     
-        var popup_a22ca1b172db4e3b8b99b00e2aa767d1 = L.popup({"maxWidth": 600, "minWidth": 600});
+        var popup_895186251ad24442933a198b60e1557a = L.popup({"maxWidth": 600, "minWidth": 600});
 
         
-            var html_d1b8d3d7eca140bf9c5063d08a353a95 = $(`<div id="html_d1b8d3d7eca140bf9c5063d08a353a95" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>17 rue Moustier, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ml-17-rue-moustier-13001-2018-03449.pdf Target="_blank">Lien vers le pdf</a></i> 20/12/2018<br><br><U>Arrêtés de Main Levée Partielle</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ML_partielle-17-rue-Moustier-13001_2018_03312.pdf Target="_blank">Lien vers le pdf</a></i> 13/12/2018<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/17-rue-moustier-pi_2018_02954-edited-2.pdf Target="_blank">Lien vers le pdf</a></i> 17/11/2018<br>- déformation, détérioration, effondrement, fissures <br> - façade, escalier, plafond<br><br></font></div>`)[0];
-            popup_a22ca1b172db4e3b8b99b00e2aa767d1.setContent(html_d1b8d3d7eca140bf9c5063d08a353a95);
+            var html_bbb01cc0a5774bec9cc522ade255e9b3 = $(`<div id="html_bbb01cc0a5774bec9cc522ade255e9b3" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>17 rue Moustier, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ml-17-rue-moustier-13001-2018-03449.pdf Target="_blank">Lien vers le pdf</a></i> 20/12/2018<br><br><U>Arrêtés de Main Levée Partielle</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ML_partielle-17-rue-Moustier-13001_2018_03312.pdf Target="_blank">Lien vers le pdf</a></i> 13/12/2018<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/17-rue-moustier-pi_2018_02954-edited-2.pdf Target="_blank">Lien vers le pdf</a></i> 17/11/2018<br>- déformation, détérioration, effondrement, fissures <br> - façade, escalier, plafond<br><br></font></div>`)[0];
+            popup_895186251ad24442933a198b60e1557a.setContent(html_bbb01cc0a5774bec9cc522ade255e9b3);
         
 
-        marker_5dd2f70f842e42929e4e371d127b19bc.bindPopup(popup_a22ca1b172db4e3b8b99b00e2aa767d1)
+        marker_a12bfed7e16e4492b6b194c9242ed885.bindPopup(popup_895186251ad24442933a198b60e1557a)
         ;
 
         
     
     
-            var marker_5df018b51fd84ea29ca3788cdf368f2a = L.marker(
+            var marker_01953df0f636432b943d268ea6fa6120 = L.marker(
                 [43.294574, 5.381825],
                 {}
-            ).addTo(marker_cluster_fc37e1eae5fc461d8e1023e03ecd3229);
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
         
     
-            var icon_f50c355d31bc46bc90c4ad7337d98401 = L.AwesomeMarkers.icon(
+            var icon_1d5826460653410cb1c8aba8fbc94250 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_5df018b51fd84ea29ca3788cdf368f2a.setIcon(icon_f50c355d31bc46bc90c4ad7337d98401);
+            marker_01953df0f636432b943d268ea6fa6120.setIcon(icon_1d5826460653410cb1c8aba8fbc94250);
         
     
-        var popup_9bc43c1496ac4a5aa3b5d83e0bc799a2 = L.popup({"maxWidth": 600, "minWidth": 600});
+        var popup_e53625fc798c4495a06aebf5c7bc4a06 = L.popup({"maxWidth": 600, "minWidth": 600});
 
         
-            var html_52e2736480dc41bda195cdfca8e65181 = $(`<div id="html_52e2736480dc41bda195cdfca8e65181" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>24 cours Lieutaud, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ml_24-cours-lieutaud-13001-_2019_03548_vdm.pdf Target="_blank">Lien vers le pdf</a></i> 15/10/2019<br><br><U>Arrêtés de péril modificatif</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/24-COURS-LIEUTAUD-13001_PGI_MODIFICATIF_2019%2000776.pdf Target="_blank">Lien vers le pdf</a></i> 05/03/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/24-cours-lieutaud-pi_2018_02951-edited-2.pdf Target="_blank">Lien vers le pdf</a></i> 17/11/2018<br>- dégradation, fissures <br> - plafond, plancher, mur, balcon<br><br></font></div>`)[0];
-            popup_9bc43c1496ac4a5aa3b5d83e0bc799a2.setContent(html_52e2736480dc41bda195cdfca8e65181);
+            var html_bf66357f7fc34351997170544178306a = $(`<div id="html_bf66357f7fc34351997170544178306a" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>24 cours Lieutaud, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ml_24-cours-lieutaud-13001-_2019_03548_vdm.pdf Target="_blank">Lien vers le pdf</a></i> 15/10/2019<br><br><U>Arrêtés de péril modificatif</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/24-COURS-LIEUTAUD-13001_PGI_MODIFICATIF_2019%2000776.pdf Target="_blank">Lien vers le pdf</a></i> 05/03/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/24-cours-lieutaud-pi_2018_02951-edited-2.pdf Target="_blank">Lien vers le pdf</a></i> 17/11/2018<br>- dégradation, fissures <br> - plafond, plancher, mur, balcon<br><br></font></div>`)[0];
+            popup_e53625fc798c4495a06aebf5c7bc4a06.setContent(html_bf66357f7fc34351997170544178306a);
         
 
-        marker_5df018b51fd84ea29ca3788cdf368f2a.bindPopup(popup_9bc43c1496ac4a5aa3b5d83e0bc799a2)
+        marker_01953df0f636432b943d268ea6fa6120.bindPopup(popup_e53625fc798c4495a06aebf5c7bc4a06)
         ;
 
         
     
     
-            var marker_4a05f0ac058e4ab9947cba8fc36d036a = L.marker(
+            var marker_d1e28d5356a4479eb965243384ad9b31 = L.marker(
                 [43.29445, 5.381865],
                 {}
-            ).addTo(marker_cluster_fc37e1eae5fc461d8e1023e03ecd3229);
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
         
     
-            var icon_6a2c2ad3898c4944a878228ad093e00b = L.AwesomeMarkers.icon(
+            var icon_a085ef8cc40248bab58d5ef0c5345268 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_4a05f0ac058e4ab9947cba8fc36d036a.setIcon(icon_6a2c2ad3898c4944a878228ad093e00b);
+            marker_d1e28d5356a4479eb965243384ad9b31.setIcon(icon_a085ef8cc40248bab58d5ef0c5345268);
         
     
-        var popup_2452c5f6e5c84c339e331078130c009c = L.popup({"maxWidth": 600, "minWidth": 600});
+        var popup_91008b262ccf4606bf1602dd8da8d8d7 = L.popup({"maxWidth": 600, "minWidth": 600});
 
         
-            var html_de9b5904f12c4137a9039b0356306e4f = $(`<div id="html_de9b5904f12c4137a9039b0356306e4f" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>26 cours Lieutaud, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/26-cours-lieutaud-pi_2018_02949-edited-2.pdf Target="_blank">Lien vers le pdf</a></i> 17/11/2018<br>- corrosion, dégradation, fissures, fragilité <br> - balcon, plancher, mur, escalier<br><br></font></div>`)[0];
-            popup_2452c5f6e5c84c339e331078130c009c.setContent(html_de9b5904f12c4137a9039b0356306e4f);
+            var html_4ac438fa00934dd1b514c8e5b8f1230c = $(`<div id="html_4ac438fa00934dd1b514c8e5b8f1230c" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>26 cours Lieutaud, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/26-cours-lieutaud-pi_2018_02949-edited-2.pdf Target="_blank">Lien vers le pdf</a></i> 17/11/2018<br>- corrosion, dégradation, fissures, fragilité <br> - balcon, plancher, mur, escalier<br><br></font></div>`)[0];
+            popup_91008b262ccf4606bf1602dd8da8d8d7.setContent(html_4ac438fa00934dd1b514c8e5b8f1230c);
         
 
-        marker_4a05f0ac058e4ab9947cba8fc36d036a.bindPopup(popup_2452c5f6e5c84c339e331078130c009c)
+        marker_d1e28d5356a4479eb965243384ad9b31.bindPopup(popup_91008b262ccf4606bf1602dd8da8d8d7)
+        ;
+
+        
+    
+    
+            var marker_d8784c5c007c4a15b45377109026a844 = L.marker(
+                [43.300712, 5.375728],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_874fcb71f9fd42d184bccead6d88c430 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d8784c5c007c4a15b45377109026a844.setIcon(icon_874fcb71f9fd42d184bccead6d88c430);
+        
+    
+        var popup_7117e48d331048ccbe8b4d6230217625 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_481619762bcb4f56a4e68b1d091d68dc = $(`<div id="html_481619762bcb4f56a4e68b1d091d68dc" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>3 rue Francis de Pressensé, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://logement-urbanisme.marseille.fr/sites/default/files/contenu/logement/Arretes-peril/3-rue-Francis-de-Pressense-pi-13001_2018_03008-edited-2.pdf Target="_blank">Lien vers le pdf</a></i> 22/11/2018<br>- affaissement, dégradation, désordre, déstructuration, effondrement, étanchéité, fissures, fragilité, humidité, moisissures <br> - façade, toiture, plancher, poutre, charpente, corniche, balcon<br><br></font></div>`)[0];
+            popup_7117e48d331048ccbe8b4d6230217625.setContent(html_481619762bcb4f56a4e68b1d091d68dc);
+        
+
+        marker_d8784c5c007c4a15b45377109026a844.bindPopup(popup_7117e48d331048ccbe8b4d6230217625)
+        ;
+
+        
+    
+    
+            var marker_c3b9a386a90b46b5b82fc43dad4adbc7 = L.marker(
+                [43.299455, 5.376174],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_d300a8a2caaf4ba4b0cfa116a41a5f72 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c3b9a386a90b46b5b82fc43dad4adbc7.setIcon(icon_d300a8a2caaf4ba4b0cfa116a41a5f72);
+        
+    
+        var popup_853a85f30e9e453a8d8e9e28172754f6 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_2a4df62766ce4db2a3e4508b4190f577 = $(`<div id="html_2a4df62766ce4db2a3e4508b4190f577" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>4 rue d'Aix, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/4-rue-d-aix-13001-PI-2018_03012-edited-2.pdf Target="_blank">Lien vers le pdf</a></i> 23/11/2018<br>- dégradation, effondrement <br> - plafond, plancher<br><br></font></div>`)[0];
+            popup_853a85f30e9e453a8d8e9e28172754f6.setContent(html_2a4df62766ce4db2a3e4508b4190f577);
+        
+
+        marker_c3b9a386a90b46b5b82fc43dad4adbc7.bindPopup(popup_853a85f30e9e453a8d8e9e28172754f6)
+        ;
+
+        
+    
+    
+            var marker_0a6426aaae124c85bedc25d885cb39df = L.marker(
+                [43.29479, 5.378969],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_80b9dccb7a544b4f99cee819c7935b50 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0a6426aaae124c85bedc25d885cb39df.setIcon(icon_80b9dccb7a544b4f99cee819c7935b50);
+        
+    
+        var popup_5324943995904c4c9af217097ba07283 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_d5c0d71ece0b4978a366aa6e70510efd = $(`<div id="html_d5c0d71ece0b4978a366aa6e70510efd" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>3 rue de la Palud, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/3-rue-de-la-palud-13001_2018_03020.pdf Target="_blank">Lien vers le pdf</a></i> 25/11/2018<br>- chutes, déstructuration, fissures <br> - façade, escalier, fenêtre, corniche<br><br></font></div>`)[0];
+            popup_5324943995904c4c9af217097ba07283.setContent(html_d5c0d71ece0b4978a366aa6e70510efd);
+        
+
+        marker_0a6426aaae124c85bedc25d885cb39df.bindPopup(popup_5324943995904c4c9af217097ba07283)
+        ;
+
+        
+    
+    
+            var marker_1e8503e2c39345a4a35c52839c1c6b70 = L.marker(
+                [43.29605, 5.380183],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_a5054d74fcee4ab9a2d9fa281a47c136 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1e8503e2c39345a4a35c52839c1c6b70.setIcon(icon_a5054d74fcee4ab9a2d9fa281a47c136);
+        
+    
+        var popup_86d3417e44d64feeafed37199eaf1330 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_e9488e95526143858cdbeabd33160479 = $(`<div id="html_e9488e95526143858cdbeabd33160479" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>24 rue Rodolphe Pollak, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ml_24-rue-rodolphe-pollak-13001_2020_00135_vdm.pdf Target="_blank">Lien vers le pdf</a></i> 17/01/2020<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/24-rue-rodolphe-pollak-13001_2018_03024.pdf Target="_blank">Lien vers le pdf</a></i> 25/11/2018<br>- danger électrique, dégradation, effondrement, fragilité, moisissures <br> - balcon, escalier, plancher, poutre, corniche<br><br></font></div>`)[0];
+            popup_86d3417e44d64feeafed37199eaf1330.setContent(html_e9488e95526143858cdbeabd33160479);
+        
+
+        marker_1e8503e2c39345a4a35c52839c1c6b70.bindPopup(popup_86d3417e44d64feeafed37199eaf1330)
+        ;
+
+        
+    
+    
+            var marker_3c30003f45e54135bf30a87c0641bc5d = L.marker(
+                [43.296651, 5.381078],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_91e49d80578b440eb6f93ede0fb4d4d6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3c30003f45e54135bf30a87c0641bc5d.setIcon(icon_91e49d80578b440eb6f93ede0fb4d4d6);
+        
+    
+        var popup_1f3b7c2158af46b089db06df86f1a13f = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_1889305b50bc4763be54f50d584a6b0d = $(`<div id="html_1889305b50bc4763be54f50d584a6b0d" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>20 boulevard Garibaldi, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ml-20-bd-garibaldi-13001-ml_2019_03215.pdf Target="_blank">Lien vers le pdf</a></i> 19/09/2019<br><br></font></div>`)[0];
+            popup_1f3b7c2158af46b089db06df86f1a13f.setContent(html_1889305b50bc4763be54f50d584a6b0d);
+        
+
+        marker_3c30003f45e54135bf30a87c0641bc5d.bindPopup(popup_1f3b7c2158af46b089db06df86f1a13f)
+        ;
+
+        
+    
+    
+            var marker_22c9af78a59d49cf83c95bef2516a96c = L.marker(
+                [43.294619, 5.381411],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_1e46a1c980af44b98e2f5f2c7627a4d2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_22c9af78a59d49cf83c95bef2516a96c.setIcon(icon_1e46a1c980af44b98e2f5f2c7627a4d2);
+        
+    
+        var popup_2dbfad5ec2e543448a42bf85463c445d = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_16c3c5797aef4461b3f5891ca0741c21 = $(`<div id="html_16c3c5797aef4461b3f5891ca0741c21" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>18 rue Jean Roque, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ml_18-rue-jean-roque-13001-2019_03539_vdm.pdf Target="_blank">Lien vers le pdf</a></i> 15/10/2019<br><br><U>Arrêtés de péril modificatif</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/18-RUE-JEAN-ROQUE-13001_PGI_MODIFICATIF_2019_00788.pdf Target="_blank">Lien vers le pdf</a></i> 05/03/2019<br><br></font></div>`)[0];
+            popup_2dbfad5ec2e543448a42bf85463c445d.setContent(html_16c3c5797aef4461b3f5891ca0741c21);
+        
+
+        marker_22c9af78a59d49cf83c95bef2516a96c.bindPopup(popup_2dbfad5ec2e543448a42bf85463c445d)
+        ;
+
+        
+    
+    
+            var marker_a353f9a748ed4cf5acba6b9bfaf46dd4 = L.marker(
+                [43.299554, 5.377349],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_0678a186160e4640abb51be7be5e5d44 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a353f9a748ed4cf5acba6b9bfaf46dd4.setIcon(icon_0678a186160e4640abb51be7be5e5d44);
+        
+    
+        var popup_b880422d398c4cc88b417727e3fa6edb = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_167e956ab2bc4a7e81901dad4615b622 = $(`<div id="html_167e956ab2bc4a7e81901dad4615b622" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>19 rue Nationale, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/19-rue-NATIONALE-13001_2018_03096.pdf Target="_blank">Lien vers le pdf</a></i> 29/11/2018<br>- chutes, corrosion, danger électrique, désordre, effondrement, fissures, instabilité <br> - façade, toiture, escalier, fenêtre<br><br></font></div>`)[0];
+            popup_b880422d398c4cc88b417727e3fa6edb.setContent(html_167e956ab2bc4a7e81901dad4615b622);
+        
+
+        marker_a353f9a748ed4cf5acba6b9bfaf46dd4.bindPopup(popup_b880422d398c4cc88b417727e3fa6edb)
+        ;
+
+        
+    
+    
+            var marker_73a7d3b6e07b4333a5d31a6457fd9987 = L.marker(
+                [43.293892, 5.374415],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_7183a708d4c7499fa5dfebd5473c7eeb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_73a7d3b6e07b4333a5d31a6457fd9987.setIcon(icon_7183a708d4c7499fa5dfebd5473c7eeb);
+        
+    
+        var popup_89f539958ccb46a1b83adcf0c541b65d = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_fcf4f58ed3d94837ba6afce1d4a961b0 = $(`<div id="html_fcf4f58ed3d94837ba6afce1d4a961b0" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>1 cours Jean Ballard, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/1-COURS-JEAN-BALLARD-13001_2018_03228.pdf Target="_blank">Lien vers le pdf</a></i> 07/12/2018<br>- chutes, corrosion, déformation, étanchéité, fissures, fragilité, moisissures <br> - balcon, façade, escalier, plancher, poutre<br><br></font></div>`)[0];
+            popup_89f539958ccb46a1b83adcf0c541b65d.setContent(html_fcf4f58ed3d94837ba6afce1d4a961b0);
+        
+
+        marker_73a7d3b6e07b4333a5d31a6457fd9987.bindPopup(popup_89f539958ccb46a1b83adcf0c541b65d)
+        ;
+
+        
+    
+    
+            var marker_c01e227bbda94e5990780f0399b73b03 = L.marker(
+                [43.299396, 5.381524],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_5d404722e2ae4e04a3a5f68fbbd6af15 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c01e227bbda94e5990780f0399b73b03.setIcon(icon_5d404722e2ae4e04a3a5f68fbbd6af15);
+        
+    
+        var popup_65bcbd6e62ed44f4afce2d78ff437da9 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_f68dfebaf3ea47629082a8a9f366d98a = $(`<div id="html_f68dfebaf3ea47629082a8a9f366d98a" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>1 rue Lafayette, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/1-RUE-LAFAYETTE-13001_ML_2019_00279.pdf Target="_blank">Lien vers le pdf</a></i> 24/01/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/1-rue-lafayette-13001_2018_03290.pdf Target="_blank">Lien vers le pdf</a></i> 11/12/2018<br>- chutes, dégradation, effondrement, fissures <br> - façade, escalier, plafond, plancher, fenêtre, mur, corniche<br><br></font></div>`)[0];
+            popup_65bcbd6e62ed44f4afce2d78ff437da9.setContent(html_f68dfebaf3ea47629082a8a9f366d98a);
+        
+
+        marker_c01e227bbda94e5990780f0399b73b03.bindPopup(popup_65bcbd6e62ed44f4afce2d78ff437da9)
+        ;
+
+        
+    
+    
+            var marker_412ca22656f24449b16c74e2c3590d6e = L.marker(
+                [43.293946, 5.381397],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_fe4c50f8f96d44f483fc8225aae9d7ad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_412ca22656f24449b16c74e2c3590d6e.setIcon(icon_fe4c50f8f96d44f483fc8225aae9d7ad);
+        
+    
+        var popup_c670c9bbf8d44464b9d1b02cc5e1d352 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_3b3e79def2424c6f95f143b9ad3d36a8 = $(`<div id="html_3b3e79def2424c6f95f143b9ad3d36a8" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>71 rue d'Aubagne, Marseille</B><br><br><U>Arrêtés de péril modificatif</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/71-rue-d-aubagne-13001_2019_00271.pdf Target="_blank">Lien vers le pdf</a></i> 23/01/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/71-rue-d-aubagne-13001_2018_03263.pdf Target="_blank">Lien vers le pdf</a></i> 12/12/2018<br>- effondrement, instabilité <br> - mur<br><br></font></div>`)[0];
+            popup_c670c9bbf8d44464b9d1b02cc5e1d352.setContent(html_3b3e79def2424c6f95f143b9ad3d36a8);
+        
+
+        marker_412ca22656f24449b16c74e2c3590d6e.bindPopup(popup_c670c9bbf8d44464b9d1b02cc5e1d352)
+        ;
+
+        
+    
+    
+            var marker_efef338d8df3426586a9d8eed2a8afd2 = L.marker(
+                [43.29381, 5.381571],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_edd00551462a44e2a47bd16611548da2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_efef338d8df3426586a9d8eed2a8afd2.setIcon(icon_edd00551462a44e2a47bd16611548da2);
+        
+    
+        var popup_3bf8b378b77942bc9269d331ea4e2eaf = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_28d8f44e4c684aa9a657fc007477ea61 = $(`<div id="html_28d8f44e4c684aa9a657fc007477ea61" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>79 rue d'Aubagne, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/79-rue-d-aubagne-13001_2018_03310.pdf Target="_blank">Lien vers le pdf</a></i> 12/12/2018<br>- fissures <br> - façade<br><br></font></div>`)[0];
+            popup_3bf8b378b77942bc9269d331ea4e2eaf.setContent(html_28d8f44e4c684aa9a657fc007477ea61);
+        
+
+        marker_efef338d8df3426586a9d8eed2a8afd2.bindPopup(popup_3bf8b378b77942bc9269d331ea4e2eaf)
+        ;
+
+        
+    
+    
+            var marker_df8a39789cab4f81aa72b0c80463f179 = L.marker(
+                [43.293779, 5.381611],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_4c6c65b318014e439ed2c480dbc817e2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_df8a39789cab4f81aa72b0c80463f179.setIcon(icon_4c6c65b318014e439ed2c480dbc817e2);
+        
+    
+        var popup_759a4db533a544ac9c458790f53eddab = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_e8d043e7c2ea415daab634e24f46f126 = $(`<div id="html_e8d043e7c2ea415daab634e24f46f126" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>81 rue d'Aubagne, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/81-rue-d-aubagne-13001_2018_03308.pdf Target="_blank">Lien vers le pdf</a></i> 12/12/2018<br>- dégradation, fissures <br> - façade, escalier, plancher, fenêtre, poutre<br><br></font></div>`)[0];
+            popup_759a4db533a544ac9c458790f53eddab.setContent(html_e8d043e7c2ea415daab634e24f46f126);
+        
+
+        marker_df8a39789cab4f81aa72b0c80463f179.bindPopup(popup_759a4db533a544ac9c458790f53eddab)
+        ;
+
+        
+    
+    
+            var marker_bfea09c423fb4b0d9ac3b0d9f90b355c = L.marker(
+                [43.293743, 5.381657],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_02e3ee24c0b04838a4e918a2c70851d3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bfea09c423fb4b0d9ac3b0d9f90b355c.setIcon(icon_02e3ee24c0b04838a4e918a2c70851d3);
+        
+    
+        var popup_6b34816c0c504dc0be7f92ee6301860a = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_b6fe231135fe403cbf14cc41a7eab449 = $(`<div id="html_b6fe231135fe403cbf14cc41a7eab449" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>83 rue d'Aubagne, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/83-rue-d-aubagne-13001_2018_03309.pdf Target="_blank">Lien vers le pdf</a></i> 12/12/2018<br>- déformation, fissures, moisissures <br> - façade, escalier, plancher, mur<br><br></font></div>`)[0];
+            popup_6b34816c0c504dc0be7f92ee6301860a.setContent(html_b6fe231135fe403cbf14cc41a7eab449);
+        
+
+        marker_bfea09c423fb4b0d9ac3b0d9f90b355c.bindPopup(popup_6b34816c0c504dc0be7f92ee6301860a)
+        ;
+
+        
+    
+    
+            var marker_1471744e95114dcd94db255a251172f4 = L.marker(
+                [43.294892, 5.381022],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_faf6429bbf584e7b928e299b27985cbf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1471744e95114dcd94db255a251172f4.setIcon(icon_faf6429bbf584e7b928e299b27985cbf);
+        
+    
+        var popup_2e350b28730645f7b22d12ebc3672646 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_e7f6330eb9b6402986662e8b12116c0d = $(`<div id="html_e7f6330eb9b6402986662e8b12116c0d" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>12 rue Chateauredon, Marseille</B><br><br><U>Arrêtés de péril modificatif</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/12-rue-chateauredon-13001_2020-01-13_pgi_modif_00053.pdf Target="_blank">Lien vers le pdf</a></i> 17/01/2020<br><br><U>Arrêtés de Main Levée Partielle</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/12-RUE-CHATEAUREDON-13001_ML_PARTIELLE_2019_00604.pdf Target="_blank">Lien vers le pdf</a></i> 20/02/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/12-RUE-CHATEAUREDON-13001_2018-03349.pdf Target="_blank">Lien vers le pdf</a></i> 14/12/2018<br>- affaissement, fissures <br> - façade, escalier<br><br></font></div>`)[0];
+            popup_2e350b28730645f7b22d12ebc3672646.setContent(html_e7f6330eb9b6402986662e8b12116c0d);
+        
+
+        marker_1471744e95114dcd94db255a251172f4.bindPopup(popup_2e350b28730645f7b22d12ebc3672646)
+        ;
+
+        
+    
+    
+            var marker_6f6abac9f20b4b13ae8f3a41369200ab = L.marker(
+                [43.30061, 5.377448],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_265e5f3fcf4e470b9ebf0c1e33220f05 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6f6abac9f20b4b13ae8f3a41369200ab.setIcon(icon_265e5f3fcf4e470b9ebf0c1e33220f05);
+        
+    
+        var popup_e6a48054c1124aefab7eccfbf1391152 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_a690e969f92646588655606b957c3309 = $(`<div id="html_a690e969f92646588655606b957c3309" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>21 rue des Petites Maries, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/21-RUE-DES-PETITES-MARIES-13001_ML_2019_00499.pdf Target="_blank">Lien vers le pdf</a></i> 12/02/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/21-RUE-DES-PETITES-MARIES-13001_2018_03366.pdf Target="_blank">Lien vers le pdf</a></i> 17/12/2018<br>- désordre <br> - escalier<br><br></font></div>`)[0];
+            popup_e6a48054c1124aefab7eccfbf1391152.setContent(html_a690e969f92646588655606b957c3309);
+        
+
+        marker_6f6abac9f20b4b13ae8f3a41369200ab.bindPopup(popup_e6a48054c1124aefab7eccfbf1391152)
+        ;
+
+        
+    
+    
+            var marker_74dd175f01ee4cbabdc67a7e01febe23 = L.marker(
+                [43.299552, 5.384324],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_0ac03eb2b80842429ce50e2f0511a939 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_74dd175f01ee4cbabdc67a7e01febe23.setIcon(icon_0ac03eb2b80842429ce50e2f0511a939);
+        
+    
+        var popup_2e50036e386b45a08ce29bed89e64958 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_972f66aa51394be9b7526e0b612c899d = $(`<div id="html_972f66aa51394be9b7526e0b612c899d" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>15 rue Saint-Bazile, Marseille</B><br><br><U>Arrêtés de Main Levée Partielle</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/mlp_15-rue-saint-bazile-13001_pgi_2020_00184_vdm.pdf Target="_blank">Lien vers le pdf</a></i> 24/01/2020<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/15-RUE-SAINT-BAZILE-13001_2018_03368.pdf Target="_blank">Lien vers le pdf</a></i> 17/12/2018<br>- affaissement, corrosion, déformation, dégradation, détérioration, fissures <br> - balcon, toiture, escalier, plancher, mur<br><br></font></div>`)[0];
+            popup_2e50036e386b45a08ce29bed89e64958.setContent(html_972f66aa51394be9b7526e0b612c899d);
+        
+
+        marker_74dd175f01ee4cbabdc67a7e01febe23.bindPopup(popup_2e50036e386b45a08ce29bed89e64958)
+        ;
+
+        
+    
+    
+            var marker_c795bd3c5b624997978db38200952933 = L.marker(
+                [43.298513, 5.378867],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_c8a7b14938a64e30ac248a62de998aff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c795bd3c5b624997978db38200952933.setIcon(icon_c8a7b14938a64e30ac248a62de998aff);
+        
+    
+        var popup_33515cc4fd194faca887a297bbe0efcb = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_7cfa9128f7c94cba8884e8914c025673 = $(`<div id="html_7cfa9128f7c94cba8884e8914c025673" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>38 rue du Tapis Vert, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/38-RUE-DU-TAPIS-VERT-13001_ML_2019_00426.pdf Target="_blank">Lien vers le pdf</a></i> 05/02/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/38-RUE-DU-TAPIS-VERT-13001_2018_03386.pdf Target="_blank">Lien vers le pdf</a></i> 17/12/2018<br>- affaissement, chutes, dégradation, fissures <br> - façade, toiture, escalier, plancher<br><br></font></div>`)[0];
+            popup_33515cc4fd194faca887a297bbe0efcb.setContent(html_7cfa9128f7c94cba8884e8914c025673);
+        
+
+        marker_c795bd3c5b624997978db38200952933.bindPopup(popup_33515cc4fd194faca887a297bbe0efcb)
+        ;
+
+        
+    
+    
+            var marker_5438fa22b429446597842cdea86beb12 = L.marker(
+                [43.298464, 5.381112],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_801fe3c502b5438fbabda44604e83c4d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5438fa22b429446597842cdea86beb12.setIcon(icon_801fe3c502b5438fbabda44604e83c4d);
+        
+    
+        var popup_0b46b573796e40e5a3fef20dafbf1f17 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_feba3c188bdf4c16a1b57ca708e04206 = $(`<div id="html_feba3c188bdf4c16a1b57ca708e04206" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>12a boulevard Dugommier, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ML_12A-BOULEVARD-DUGOMMIER-13001_2019_00839.pdf Target="_blank">Lien vers le pdf</a></i> 08/03/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/12A-BOULEVARD-DUGOMMIER-13001_2018_03384.pdf Target="_blank">Lien vers le pdf</a></i> 17/12/2018<br>- chutes, effondrement, fissures, instabilité <br> - escalier<br><br></font></div>`)[0];
+            popup_0b46b573796e40e5a3fef20dafbf1f17.setContent(html_feba3c188bdf4c16a1b57ca708e04206);
+        
+
+        marker_5438fa22b429446597842cdea86beb12.bindPopup(popup_0b46b573796e40e5a3fef20dafbf1f17)
+        ;
+
+        
+    
+    
+            var marker_cd9ad2697dfa4b0e9526c05e6fc7950b = L.marker(
+                [43.294003, 5.37587],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_7a76581bf2f34c39913ce97324d77453 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_cd9ad2697dfa4b0e9526c05e6fc7950b.setIcon(icon_7a76581bf2f34c39913ce97324d77453);
+        
+    
+        var popup_7d013f7229d84124b088bbbf1826bbc7 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_9013cd8ee9c24e3da0bf14ca416fc222 = $(`<div id="html_9013cd8ee9c24e3da0bf14ca416fc222" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>10 rue Glandèves / 22 rue Saint-Saëns, Marseille</B><br><br><U>Arrêtés de Main Levée Partielle</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/10-RUE-GLANDEVES_22-RUE-SAINT-SAENS-13001_ML_2019_00408.pdf Target="_blank">Lien vers le pdf</a></i> 04/02/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/10-RUE-GLANDEVES_22-RUE-SAINT-SAENS_2018_03372.pdf Target="_blank">Lien vers le pdf</a></i> 17/12/2018<br>- fissures, humidité <br> - façade, escalier<br><br></font></div>`)[0];
+            popup_7d013f7229d84124b088bbbf1826bbc7.setContent(html_9013cd8ee9c24e3da0bf14ca416fc222);
+        
+
+        marker_cd9ad2697dfa4b0e9526c05e6fc7950b.bindPopup(popup_7d013f7229d84124b088bbbf1826bbc7)
+        ;
+
+        
+    
+    
+            var marker_831c37ae9d29447fad40f75fefc316ee = L.marker(
+                [43.300559, 5.378065],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_fe7afeab319e4158be0db92c32156c27 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_831c37ae9d29447fad40f75fefc316ee.setIcon(icon_fe7afeab319e4158be0db92c32156c27);
+        
+    
+        var popup_021199b16bce4369a0905be6179a9aa3 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_43b7ada5327f4f7d8768ef14420955e6 = $(`<div id="html_43b7ada5327f4f7d8768ef14420955e6" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>9 rue de la Fare, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ml_9-rue-de-la-fare-13001_2019_01225.pdf Target="_blank">Lien vers le pdf</a></i> 10/04/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/9-RUE-DE-LA-FARE-13001_2018_03378.pdf Target="_blank">Lien vers le pdf</a></i> 17/12/2018<br>- fissures <br> - escalier, cloison, plancher, poutre<br><br></font></div>`)[0];
+            popup_021199b16bce4369a0905be6179a9aa3.setContent(html_43b7ada5327f4f7d8768ef14420955e6);
+        
+
+        marker_831c37ae9d29447fad40f75fefc316ee.bindPopup(popup_021199b16bce4369a0905be6179a9aa3)
+        ;
+
+        
+    
+    
+            var marker_5418526fae8b4e00a9bda455265bee6b = L.marker(
+                [43.300271, 5.377729],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_e7b8e8f960594ef4b7d10705db618221 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5418526fae8b4e00a9bda455265bee6b.setIcon(icon_e7b8e8f960594ef4b7d10705db618221);
+        
+    
+        var popup_f5c2d6e4db114015a0c99211edf7fa38 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_2b0c71d149824c4b9d0f2c4f7b55ced8 = $(`<div id="html_2b0c71d149824c4b9d0f2c4f7b55ced8" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>25 rue des Dominicaines, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/25-RUE-DES-DOMINICAINES-13001_2018_03393.pdf Target="_blank">Lien vers le pdf</a></i> 17/12/2018<br>- corrosion, effondrement, fissures <br> - escalier, plancher, poutre<br><br></font></div>`)[0];
+            popup_f5c2d6e4db114015a0c99211edf7fa38.setContent(html_2b0c71d149824c4b9d0f2c4f7b55ced8);
+        
+
+        marker_5418526fae8b4e00a9bda455265bee6b.bindPopup(popup_f5c2d6e4db114015a0c99211edf7fa38)
+        ;
+
+        
+    
+    
+            var marker_55baee26ffd840c0a568996837b55307 = L.marker(
+                [43.299609, 5.386691],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_f9945d94a86943b8959861c6e9fbc6b0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_55baee26ffd840c0a568996837b55307.setIcon(icon_f9945d94a86943b8959861c6e9fbc6b0);
+        
+    
+        var popup_28e758e81e6040d692545f3e2cff9802 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_c6d534564bbb4fab86b89265a0c2318e = $(`<div id="html_c6d534564bbb4fab86b89265a0c2318e" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>25 boulevard de la Libération, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ml-25-bd-de-la-liberation-13001_2019_03883.pdf Target="_blank">Lien vers le pdf</a></i> 18/11/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/25-BD-DE-LA-LIBERATION-13001_2018_03394.pdf Target="_blank">Lien vers le pdf</a></i> 17/12/2018<br>- dégradation, déstructuration, effondrement, fissures, instabilité <br> - façade, escalier, cloison, plancher<br><br></font></div>`)[0];
+            popup_28e758e81e6040d692545f3e2cff9802.setContent(html_c6d534564bbb4fab86b89265a0c2318e);
+        
+
+        marker_55baee26ffd840c0a568996837b55307.bindPopup(popup_28e758e81e6040d692545f3e2cff9802)
+        ;
+
+        
+    
+    
+            var marker_bee3a19b12744922b943be3cc51e0081 = L.marker(
+                [43.299244, 5.379977],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_e43496ab02ea467dac04b194978c8ac7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bee3a19b12744922b943be3cc51e0081.setIcon(icon_e43496ab02ea467dac04b194978c8ac7);
+        
+    
+        var popup_6b191c87214140e78ca501406e1c59de = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_6a0ba3ffbd9f4c9bbfeacf9f44bc5cd3 = $(`<div id="html_6a0ba3ffbd9f4c9bbfeacf9f44bc5cd3" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>76 rue nationale, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/76-rue-nationale-13001-2018-pi_2018_03447.pdf Target="_blank">Lien vers le pdf</a></i> 20/12/2018<br>- chutes, effondrement, fissures, instabilité <br> - façade, toiture, escalier<br><br></font></div>`)[0];
+            popup_6b191c87214140e78ca501406e1c59de.setContent(html_6a0ba3ffbd9f4c9bbfeacf9f44bc5cd3);
+        
+
+        marker_bee3a19b12744922b943be3cc51e0081.bindPopup(popup_6b191c87214140e78ca501406e1c59de)
+        ;
+
+        
+    
+    
+            var marker_640bed2402254fb78d67a917d2fcb4c7 = L.marker(
+                [43.299745, 5.384258],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_7308e27db4764cfeac1e5d2a892d46d1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_640bed2402254fb78d67a917d2fcb4c7.setIcon(icon_7308e27db4764cfeac1e5d2a892d46d1);
+        
+    
+        var popup_b62991b2d3484549a3b9715ffafc4f32 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_ad712f8e99bc486489cf3b2914eb2316 = $(`<div id="html_ad712f8e99bc486489cf3b2914eb2316" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>1 Traverse Saint-Bazile, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ml_1-traverse-saint-bazile-13001_2019_02632.pdf Target="_blank">Lien vers le pdf</a></i> 13/08/2019<br><br><U>Arrêtés de Main Levée Partielle</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ml-partielle_1-traverse-saint-bazile-13001_2019_02562.pdf Target="_blank">Lien vers le pdf</a></i> 25/07/2019<br><br></font></div>`)[0];
+            popup_b62991b2d3484549a3b9715ffafc4f32.setContent(html_ad712f8e99bc486489cf3b2914eb2316);
+        
+
+        marker_640bed2402254fb78d67a917d2fcb4c7.bindPopup(popup_b62991b2d3484549a3b9715ffafc4f32)
+        ;
+
+        
+    
+    
+            var marker_fdbca39504ee4bb489e77ddf521d0605 = L.marker(
+                [43.298552, 5.378704],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_7cf0f511242c4757a83d0bdfb99d2a73 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fdbca39504ee4bb489e77ddf521d0605.setIcon(icon_7cf0f511242c4757a83d0bdfb99d2a73);
+        
+    
+        var popup_b3ad513c937f4195ade8250aa3fcc1f8 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_eb3196f56fde44349558acd36fb55b40 = $(`<div id="html_eb3196f56fde44349558acd36fb55b40" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>29 rue Tapis Vert, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ml_29-rue-tapis-vert-13001_2019_02225.pdf Target="_blank">Lien vers le pdf</a></i> 03/07/2019<br><br></font></div>`)[0];
+            popup_b3ad513c937f4195ade8250aa3fcc1f8.setContent(html_eb3196f56fde44349558acd36fb55b40);
+        
+
+        marker_fdbca39504ee4bb489e77ddf521d0605.bindPopup(popup_b3ad513c937f4195ade8250aa3fcc1f8)
+        ;
+
+        
+    
+    
+            var marker_d3c8195da79a44bca8b2bac8192bfbf9 = L.marker(
+                [43.297468, 5.385437],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_4d07e5d926844f969e8c930c932c4778 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d3c8195da79a44bca8b2bac8192bfbf9.setIcon(icon_4d07e5d926844f969e8c930c932c4778);
+        
+    
+        var popup_2f79473dd46846e5a477aab5534d8206 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_2f0f589d46f54b37af3d1fe0d49ade57 = $(`<div id="html_2f0f589d46f54b37af3d1fe0d49ade57" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>31, 33 rue Adolphe Thiers, Marseille</B><br><br><U>Arrêtés de Main Levée Partielle</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ML_PARTIELLE_31-33-rue-adolphe-thiers-13001_2019_00356.pdf Target="_blank">Lien vers le pdf</a></i> 29/01/2019<br><br></font></div>`)[0];
+            popup_2f79473dd46846e5a477aab5534d8206.setContent(html_2f0f589d46f54b37af3d1fe0d49ade57);
+        
+
+        marker_d3c8195da79a44bca8b2bac8192bfbf9.bindPopup(popup_2f79473dd46846e5a477aab5534d8206)
+        ;
+
+        
+    
+    
+            var marker_63e9c0b5787e49daac13b0932bb0a46a = L.marker(
+                [43.301232, 5.391186],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_873e17d6efa04b8982dd264a0505623d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_63e9c0b5787e49daac13b0932bb0a46a.setIcon(icon_873e17d6efa04b8982dd264a0505623d);
+        
+    
+        var popup_83bfe6b4a8ab4752b4fbf27fc03a2d92 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_155b0f137c6a4b3397b23b7e1d8092cb = $(`<div id="html_155b0f137c6a4b3397b23b7e1d8092cb" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>1 Bis Rue D'Isoard, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/1-bis-rue-d-isoard-13001_2018_03506.pdf Target="_blank">Lien vers le pdf</a></i> 28/12/2018<br>- affaissement, chutes, déformation, effondrement, fissures, instabilité, moisissures <br> - escalier, plancher, charpente, mur<br><br></font></div>`)[0];
+            popup_83bfe6b4a8ab4752b4fbf27fc03a2d92.setContent(html_155b0f137c6a4b3397b23b7e1d8092cb);
+        
+
+        marker_63e9c0b5787e49daac13b0932bb0a46a.bindPopup(popup_83bfe6b4a8ab4752b4fbf27fc03a2d92)
+        ;
+
+        
+    
+    
+            var marker_86a79e4c41dd41cc8afb3f504fe681b1 = L.marker(
+                [43.295108, 5.381185],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_5400e79298ae41e0a96ccb7ffcc19fae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_86a79e4c41dd41cc8afb3f504fe681b1.setIcon(icon_5400e79298ae41e0a96ccb7ffcc19fae);
+        
+    
+        var popup_0f474ecb1ec04f6bb0dc8d16875f9d0a = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_124faa17cd8349159730cf3b63e8a8c3 = $(`<div id="html_124faa17cd8349159730cf3b63e8a8c3" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>20 rue Chateauredon, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ML_20-RUE-CHATEAUREDON-13001_2019_00728.pdf Target="_blank">Lien vers le pdf</a></i> 04/03/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/20-rue-chateauredon-13002_2018_03519.pdf Target="_blank">Lien vers le pdf</a></i> 31/12/2018<br>- affaissement, danger électrique, fragilité <br> - balcon, escalier, plancher, poutre<br><br></font></div>`)[0];
+            popup_0f474ecb1ec04f6bb0dc8d16875f9d0a.setContent(html_124faa17cd8349159730cf3b63e8a8c3);
+        
+
+        marker_86a79e4c41dd41cc8afb3f504fe681b1.bindPopup(popup_0f474ecb1ec04f6bb0dc8d16875f9d0a)
+        ;
+
+        
+    
+    
+            var marker_93ee9ebca4f244529d4442c8c8b14c28 = L.marker(
+                [43.299773, 5.375995],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_fa1226c33dec4613987fd5c645aaf043 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_93ee9ebca4f244529d4442c8c8b14c28.setIcon(icon_fa1226c33dec4613987fd5c645aaf043);
+        
+    
+        var popup_15c93dec36b94d58ae62c2f687f02648 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_4f80efa02b144f928722c073ef66fc04 = $(`<div id="html_4f80efa02b144f928722c073ef66fc04" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>18 rue d'Aix, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/18-rue-d-aix-13001_ml_2019_01088.pdf Target="_blank">Lien vers le pdf</a></i> 29/03/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/18-rue-d-aix-13001-pi_2019_00041.pdf Target="_blank">Lien vers le pdf</a></i> 05/01/2019<br>- effondrement, fissures, instabilité <br> - façade, toiture, plafond, plancher, fenêtre, mur, corniche<br><br></font></div>`)[0];
+            popup_15c93dec36b94d58ae62c2f687f02648.setContent(html_4f80efa02b144f928722c073ef66fc04);
+        
+
+        marker_93ee9ebca4f244529d4442c8c8b14c28.bindPopup(popup_15c93dec36b94d58ae62c2f687f02648)
+        ;
+
+        
+    
+    
+            var marker_dbd8aa90ca4149f08c335e57cd5083fb = L.marker(
+                [43.29471, 5.380268],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_44e4abd208ef40bea104e97e2400c3de = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_dbd8aa90ca4149f08c335e57cd5083fb.setIcon(icon_44e4abd208ef40bea104e97e2400c3de);
+        
+    
+        var popup_932887a9264e4c19a444f57f137989ab = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_e043d2392d074781bfb91e3b577c377a = $(`<div id="html_e043d2392d074781bfb91e3b577c377a" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>42 rue d'Aubagne, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/42-rue-d-aubagne-13001_2019_00113.pdf Target="_blank">Lien vers le pdf</a></i> 14/01/2019<br>- déstructuration, fissures <br> - façade, escalier<br><br></font></div>`)[0];
+            popup_932887a9264e4c19a444f57f137989ab.setContent(html_e043d2392d074781bfb91e3b577c377a);
+        
+
+        marker_dbd8aa90ca4149f08c335e57cd5083fb.bindPopup(popup_932887a9264e4c19a444f57f137989ab)
+        ;
+
+        
+    
+    
+            var marker_ccf745f3fb834b5dbba7ccd927389d15 = L.marker(
+                [43.293276, 5.382118],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_ab689ac6136748b8abed034c253ad0b9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ccf745f3fb834b5dbba7ccd927389d15.setIcon(icon_ab689ac6136748b8abed034c253ad0b9);
+        
+    
+        var popup_c552611f3fa543aeac348af6248f4173 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_da450873df0f4241be063606ce572753 = $(`<div id="html_da450873df0f4241be063606ce572753" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>60 A rue d'Aubagne, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ml-60a-rue-d-aubagne-_2019-01455_vdm.pdf Target="_blank">Lien vers le pdf</a></i> 10/05/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/60a-rue-aubagne-13001_2019_00181.pdf Target="_blank">Lien vers le pdf</a></i> 16/01/2019<br>- chutes, désordre, fissures, moisissures <br> - façade, toiture<br><br></font></div>`)[0];
+            popup_c552611f3fa543aeac348af6248f4173.setContent(html_da450873df0f4241be063606ce572753);
+        
+
+        marker_ccf745f3fb834b5dbba7ccd927389d15.bindPopup(popup_c552611f3fa543aeac348af6248f4173)
+        ;
+
+        
+    
+    
+            var marker_34b1cd8dc90745b988996177a178ac3d = L.marker(
+                [43.29412, 5.380951],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_28267b8d1cbf416bb07f39493a5a2d73 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_34b1cd8dc90745b988996177a178ac3d.setIcon(icon_28267b8d1cbf416bb07f39493a5a2d73);
+        
+    
+        var popup_76596438cc0a43789a77ab64794affc2 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_4ad0109a3c5342569459587c7190c235 = $(`<div id="html_4ad0109a3c5342569459587c7190c235" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>62 rue d'Aubagne, Marseille</B><br><br><U>Arrêtés de Main Levée Partielle</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ml_partielle_62-rue-d-aubagne-13001_2019_01531.pdf Target="_blank">Lien vers le pdf</a></i> 13/05/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/62-RUE-D-AUBAGNE-13001_2019_00180.pdf Target="_blank">Lien vers le pdf</a></i> 16/01/2019<br>- chutes, déformation, désordre, fissures <br> - façade, toiture, escalier, mur, corniche<br><br></font></div>`)[0];
+            popup_76596438cc0a43789a77ab64794affc2.setContent(html_4ad0109a3c5342569459587c7190c235);
+        
+
+        marker_34b1cd8dc90745b988996177a178ac3d.bindPopup(popup_76596438cc0a43789a77ab64794affc2)
+        ;
+
+        
+    
+    
+            var marker_1b77ca6b3e414762b87e488a8abd0d68 = L.marker(
+                [43.294751, 5.380216],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_730a638aed8c4ab48cc77765d6294a78 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1b77ca6b3e414762b87e488a8abd0d68.setIcon(icon_730a638aed8c4ab48cc77765d6294a78);
+        
+    
+        var popup_991510fe0ab84544b135cf981eb27a6c = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_fce4292f3fa74180b4decdf45dc0103a = $(`<div id="html_fce4292f3fa74180b4decdf45dc0103a" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>40 rue d'Aubagne, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/40-rue-daubagne-13001_2019_00202.pdf Target="_blank">Lien vers le pdf</a></i> 17/01/2019<br><br></font></div>`)[0];
+            popup_991510fe0ab84544b135cf981eb27a6c.setContent(html_fce4292f3fa74180b4decdf45dc0103a);
+        
+
+        marker_1b77ca6b3e414762b87e488a8abd0d68.bindPopup(popup_991510fe0ab84544b135cf981eb27a6c)
+        ;
+
+        
+    
+    
+            var marker_53fc65695baa48c5990888ce68f27a0b = L.marker(
+                [43.297532, 5.385431],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_64878ddd63c44e7e9571c7738cc8d621 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_53fc65695baa48c5990888ce68f27a0b.setIcon(icon_64878ddd63c44e7e9571c7738cc8d621);
+        
+    
+        var popup_e59301914349466b998e42c86adbafcc = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_fd006f3ffeaf4ff5beb0604e2e58a4bb = $(`<div id="html_fd006f3ffeaf4ff5beb0604e2e58a4bb" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>29 rue Adolphe Thiers, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/29-RUE-ADOLPHE-THIERS_ML_2019_00427.pdf Target="_blank">Lien vers le pdf</a></i> 05/02/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/29-RUE-ADOLPHE-THIERS-13001_2019_00226.pdf Target="_blank">Lien vers le pdf</a></i> 21/01/2019<br>- affaissement, dégradation, étanchéité, fissures <br> - toiture, escalier, cloison, plafond, plancher<br><br></font></div>`)[0];
+            popup_e59301914349466b998e42c86adbafcc.setContent(html_fd006f3ffeaf4ff5beb0604e2e58a4bb);
+        
+
+        marker_53fc65695baa48c5990888ce68f27a0b.bindPopup(popup_e59301914349466b998e42c86adbafcc)
+        ;
+
+        
+    
+    
+            var marker_412f097d10e14421a33814dc4e64dc73 = L.marker(
+                [43.29644, 5.379544],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_4abb208d0fbf46358860946175747bc5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_412f097d10e14421a33814dc4e64dc73.setIcon(icon_4abb208d0fbf46358860946175747bc5);
+        
+    
+        var popup_1bddc80ff782496dadfd521bb91d7172 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_423304106be64abab4473f0d09a1c445 = $(`<div id="html_423304106be64abab4473f0d09a1c445" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>2 place du Marché des Capucins, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ML_2-PLACE-DU-MARCHE-DS-CAPUCINS-13001_2019_00791.pdf Target="_blank">Lien vers le pdf</a></i> 06/03/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/2-PLACE-DU-MARCHE-DES-CAPUCINS-13001_2019_00217.pdf Target="_blank">Lien vers le pdf</a></i> 18/01/2019<br>- effondrement, fissures <br> - toiture, escalier, cloison<br><br></font></div>`)[0];
+            popup_1bddc80ff782496dadfd521bb91d7172.setContent(html_423304106be64abab4473f0d09a1c445);
+        
+
+        marker_412f097d10e14421a33814dc4e64dc73.bindPopup(popup_1bddc80ff782496dadfd521bb91d7172)
+        ;
+
+        
+    
+    
+            var marker_17d8a5e9d8f04d45ac5b496fb0b51424 = L.marker(
+                [43.299206, 5.383958],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_fb5c365aa7934ebaa372e8c6b43fb53c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_17d8a5e9d8f04d45ac5b496fb0b51424.setIcon(icon_fb5c365aa7934ebaa372e8c6b43fb53c);
+        
+    
+        var popup_3377d675e58244b5b8594d54c509da87 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_d87a2f174a154261a067aee2b08e4d2d = $(`<div id="html_d87a2f174a154261a067aee2b08e4d2d" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>55 allées Léon Gambetta, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/55-ALLEES-LEON-GAMBETTA_2019_00221.pdf Target="_blank">Lien vers le pdf</a></i> 21/01/2019<br>- fissures <br> - toiture, fenêtre<br><br></font></div>`)[0];
+            popup_3377d675e58244b5b8594d54c509da87.setContent(html_d87a2f174a154261a067aee2b08e4d2d);
+        
+
+        marker_17d8a5e9d8f04d45ac5b496fb0b51424.bindPopup(popup_3377d675e58244b5b8594d54c509da87)
+        ;
+
+        
+    
+    
+            var marker_5329e5b7367a4cfab50556c9c3c5b117 = L.marker(
+                [43.294094, 5.381037],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_ffe25d0ac4e94c59b5c85e02942ad83e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5329e5b7367a4cfab50556c9c3c5b117.setIcon(icon_ffe25d0ac4e94c59b5c85e02942ad83e);
+        
+    
+        var popup_7130bc77301f4535bc9fe8a60edc5d58 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_bb9f1008ae8f42c8bef39d56f70892fa = $(`<div id="html_bb9f1008ae8f42c8bef39d56f70892fa" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>64 rue d'Aubagne, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/64-RUE-D-AUBAGNE-13001_2019_00223.pdf Target="_blank">Lien vers le pdf</a></i> 21/01/2019<br>- chutes, dégradation, effondrement, fissures <br> - balcon, escalier, plancher, charpente, mur<br><br></font></div>`)[0];
+            popup_7130bc77301f4535bc9fe8a60edc5d58.setContent(html_bb9f1008ae8f42c8bef39d56f70892fa);
+        
+
+        marker_5329e5b7367a4cfab50556c9c3c5b117.bindPopup(popup_7130bc77301f4535bc9fe8a60edc5d58)
+        ;
+
+        
+    
+    
+            var marker_5d3f7087b24b4897a98eaae025f25aed = L.marker(
+                [43.293467, 5.380336],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_0a08d87fbbda45abb7dc3bac2e23f37a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5d3f7087b24b4897a98eaae025f25aed.setIcon(icon_0a08d87fbbda45abb7dc3bac2e23f37a);
+        
+    
+        var popup_880175f1a922420b95f40c9ba524ddf7 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_8bfe3f46480d41d280c4e302842ad470 = $(`<div id="html_8bfe3f46480d41d280c4e302842ad470" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>39-41-43 rue de la Palud / 1 Domaine VENTRE, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-deconstruction/ARRETE_MODIFICATIF_DE_DECONSTRUCTION-41-43-rue-de-la-palud-13001_2019_00459.pdf Target="_blank">Lien vers le pdf</a></i> 07/02/2019<br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-deconstruction/ARRETE-DE-DECONSTRUCTION-41-43-RUE-DE-LA-PALUD_2019_00375.pdf Target="_blank">Lien vers le pdf</a></i> 31/01/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/39-41-43-RUE-DE-LA-PALUD-1-Domaine-VENTRE-13001_2019_00276.pdf Target="_blank">Lien vers le pdf</a></i> 24/01/2019<br>- affaissement, chutes, déformation, dégradation, détérioration, effondrement, étanchéité, fissures, moisissures <br> - balcon, façade, toiture, escalier, cloison, plafond, plancher, poutre, mur<br><br></font></div>`)[0];
+            popup_880175f1a922420b95f40c9ba524ddf7.setContent(html_8bfe3f46480d41d280c4e302842ad470);
+        
+
+        marker_5d3f7087b24b4897a98eaae025f25aed.bindPopup(popup_880175f1a922420b95f40c9ba524ddf7)
+        ;
+
+        
+    
+    
+            var marker_b2e04a961b1144baa9df1ba0e7a90945 = L.marker(
+                [43.291685, 5.374745],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_c6b2e967a22c4a29b642740d24d79bc4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b2e04a961b1144baa9df1ba0e7a90945.setIcon(icon_c6b2e967a22c4a29b642740d24d79bc4);
+        
+    
+        var popup_2670629528c846bfbcb5b30bb96dda7e = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_4931706c8f3f4586919033c67d0ee33f = $(`<div id="html_4931706c8f3f4586919033c67d0ee33f" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>68 rue de Grignan, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/68-RUE-DE-GRIGNAN-13001_ML2019_00316.pdf Target="_blank">Lien vers le pdf</a></i> 28/01/2019<br><br></font></div>`)[0];
+            popup_2670629528c846bfbcb5b30bb96dda7e.setContent(html_4931706c8f3f4586919033c67d0ee33f);
+        
+
+        marker_b2e04a961b1144baa9df1ba0e7a90945.bindPopup(popup_2670629528c846bfbcb5b30bb96dda7e)
+        ;
+
+        
+    
+    
+            var marker_847f3bfefbc44b4b8791de3c2392b041 = L.marker(
+                [43.298686, 5.385223],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_bc50bd68af994a4db41ba109148f74d1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_847f3bfefbc44b4b8791de3c2392b041.setIcon(icon_bc50bd68af994a4db41ba109148f74d1);
+        
+    
+        var popup_9487227b644e4ccdb71cf03a4b202a8e = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_5b3a71a98497479bb7ad01fea4083327 = $(`<div id="html_5b3a71a98497479bb7ad01fea4083327" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>Immeuble 174 La Canebière / 2 rue Adolphe Thiers, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ml_174-la-canebiere_2-rue-adolphe-thiers-13001_2019_04060_vdm.pdf Target="_blank">Lien vers le pdf</a></i> 02/12/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/IMMEUBLE-174-LA%20CANEBIERE_2-RUE-ADOLPHE-THIERS_2019_00320.pdf Target="_blank">Lien vers le pdf</a></i> 28/01/2019<br>- affaissement, désordre, effondrement <br> - escalier, plancher, poutre<br><br></font></div>`)[0];
+            popup_9487227b644e4ccdb71cf03a4b202a8e.setContent(html_5b3a71a98497479bb7ad01fea4083327);
+        
+
+        marker_847f3bfefbc44b4b8791de3c2392b041.bindPopup(popup_9487227b644e4ccdb71cf03a4b202a8e)
+        ;
+
+        
+    
+    
+            var marker_44f5a3c8aba8434f83b1a78bd56c1be5 = L.marker(
+                [43.298092, 5.379902],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_b421d4b1f42a480dae2b79f16c642fee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_44f5a3c8aba8434f83b1a78bd56c1be5.setIcon(icon_b421d4b1f42a480dae2b79f16c642fee);
+        
+    
+        var popup_4eb08a4307a544a48e92b3c3c3380c90 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_7608a5ca7f12405fa0e097bad304bdac = $(`<div id="html_7608a5ca7f12405fa0e097bad304bdac" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>37 rue Thubaneau, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/37-RUE-THUBANEAU-13001_2019_00324.pdf Target="_blank">Lien vers le pdf</a></i> 28/01/2019<br>- affaissement, altération, chutes, effondrement, fissures <br> - toiture, escalier, plancher, poutre, mur<br><br></font></div>`)[0];
+            popup_4eb08a4307a544a48e92b3c3c3380c90.setContent(html_7608a5ca7f12405fa0e097bad304bdac);
+        
+
+        marker_44f5a3c8aba8434f83b1a78bd56c1be5.bindPopup(popup_4eb08a4307a544a48e92b3c3c3380c90)
+        ;
+
+        
+    
+    
+            var marker_b06b9890b70e4253b33262ce46831dad = L.marker(
+                [43.296478, 5.379273],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_b6ffdc8c96dd4b56a1266fd01603a340 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b06b9890b70e4253b33262ce46831dad.setIcon(icon_b6ffdc8c96dd4b56a1266fd01603a340);
+        
+    
+        var popup_be59acbb67fa4e0d8f69070f7b85d1f0 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_77d6f8dcd40c4f389f3a7eebcd0364e5 = $(`<div id="html_77d6f8dcd40c4f389f3a7eebcd0364e5" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>22 rue des Feuillants, Marseille</B><br><br><U>Arrêtés de Main Levée</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Mains_Levees/ml_22-rue-des-feuillants-13001_2019_01823.pdf Target="_blank">Lien vers le pdf</a></i> 29/05/2019<br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/22-RUE-DES-FEUILLANTS-13001_2019_00355.pdf Target="_blank">Lien vers le pdf</a></i> 29/01/2019<br>- danger électrique, effondrement, fissures, instabilité <br> - façade, toiture, escalier, plafond, plancher, mur<br><br></font></div>`)[0];
+            popup_be59acbb67fa4e0d8f69070f7b85d1f0.setContent(html_77d6f8dcd40c4f389f3a7eebcd0364e5);
+        
+
+        marker_b06b9890b70e4253b33262ce46831dad.bindPopup(popup_be59acbb67fa4e0d8f69070f7b85d1f0)
+        ;
+
+        
+    
+    
+            var marker_91d74359bbad4495b629f8e4749b0775 = L.marker(
+                [43.293161, 5.375595],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_8400695476a34dd2a76a081c171009b5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_91d74359bbad4495b629f8e4749b0775.setIcon(icon_8400695476a34dd2a76a081c171009b5);
+        
+    
+        var popup_f04df529aa3f4385952f6c9f5af1cfed = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_03a05c63a01049699133694aa1e59464 = $(`<div id="html_03a05c63a01049699133694aa1e59464" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>20 rue Corneille, Marseille</B><br><br><U>Arrêtés de péril modificatif</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/20-RUE-CORNEILLE-13001_2019_00544.pdf Target="_blank">Lien vers le pdf</a></i> 15/02/2019<br><br></font></div>`)[0];
+            popup_f04df529aa3f4385952f6c9f5af1cfed.setContent(html_03a05c63a01049699133694aa1e59464);
+        
+
+        marker_91d74359bbad4495b629f8e4749b0775.bindPopup(popup_f04df529aa3f4385952f6c9f5af1cfed)
+        ;
+
+        
+    
+    
+            var marker_3cddeb36e6be481f8682f0c5f1124f28 = L.marker(
+                [43.293893, 5.381313],
+                {}
+            ).addTo(marker_cluster_d91defbf3e484754875f3fd8882212b6);
+        
+    
+            var icon_b9e2d2a0463d45a5bdf01def7bfd86e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3cddeb36e6be481f8682f0c5f1124f28.setIcon(icon_b9e2d2a0463d45a5bdf01def7bfd86e5);
+        
+    
+        var popup_4b54fcded7f74a33abcd00f929e8a3c2 = L.popup({"maxWidth": 600, "minWidth": 600});
+
+        
+            var html_cf247691615d4ba3b4d5f4953f827beb = $(`<div id="html_cf247691615d4ba3b4d5f4953f827beb" style="width: 100.0%; height: 100.0%;"><font size="+1"><B>74 rue d'Aubagne, Marseille</B><br><br><U>Arrêtés de péril</U><br><i><a href=http://marseille.fr/sites/default/files/contenu/logement/Arretes-peril/74-RUE-D-AUBAGNE-13001_2019_00410.pdf Target="_blank">Lien vers le pdf</a></i> 04/02/2019<br>- dégradation, désordre, déstructuration, fissures <br> - balcon, escalier, cloison, plafond, plancher, mur<br><br></font></div>`)[0];
+            popup_4b54fcded7f74a33abcd00f929e8a3c2.setContent(html_cf247691615d4ba3b4d5f4953f827beb);
+        
+
+        marker_3cddeb36e6be481f8682f0c5f1124f28.bindPopup(popup_4b54fcded7f74a33abcd00f929e8a3c2)
         ;
 
         

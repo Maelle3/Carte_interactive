@@ -19,7 +19,7 @@ db_csv = conv.pdf_to_txt()
 json2 = database.ouverture_bdd()
 
 # for i in range(len(db_csv)):
-for i in range(10):
+for i in range(30):
     if not db_csv.loc[i].erreurs:
         path = "./Datas/TXT/" + db_csv.loc[i]["nom_txt"]
         id = rec.recup_id(path)

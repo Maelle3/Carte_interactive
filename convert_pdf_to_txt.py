@@ -19,7 +19,7 @@ def pdf_to_image(pdf_path):
 def pdf_to_txt():
     db_csv = pandas.read_csv("arretes.csv", encoding='utf-8')
     # for i in range(len(db)):
-    for i in range(10):
+    for i in range(30):
         url = db_csv.loc[i].url
         url_split = url.split("/")
         nom = url_split[-1].split(".")[0]

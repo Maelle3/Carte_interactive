@@ -26,9 +26,9 @@ def calcul_categorie(i, db):
                 categorie = "Arrêtés de péril"
         else:
             if "artiel" in db.loc[i]['nom_doc']:
-                categorie = "Arrêtés de Main Levée Partielle"
+                categorie = "Arrêtés de main levée partielle"
             else:
-                categorie = "Arrêtés de Main Levée"
+                categorie = "Arrêtés de main levée"
     return categorie
 
 

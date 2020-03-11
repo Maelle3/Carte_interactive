@@ -18,8 +18,8 @@ from folium.plugins import MarkerCluster
 db_csv = conv.pdf_to_txt()
 json2 = database.ouverture_bdd()
 
-# for i in range(len(db_csv)):
-for i in range(125):
+#for i in range(len(db_csv)):
+for i in range(580):
     if not db_csv.loc[i].erreurs:
         path = "./Datas/TXT/" + db_csv.loc[i]["nom_txt"]
         id = rec.recup_id(path)
@@ -36,7 +36,17 @@ for i in range(125):
 #
 c = carte.creation_carte()
 #
-mcg = folium.plugins.MarkerCluster(control=False)
+
+icon_create_function = """
+    function(cluster) {
+    var childCount = cluster.getChildCount(); 
+    var c = ' marker-cluster-medium';
+
+
+    return new L.DivIcon({ html: '<link rel="stylesheet" href="./cluster.css"/><div><span> ' + childCount + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
+    }
+    """
+mcg = folium.plugins.MarkerCluster(control=False, icon_create_function=icon_create_function)
 c.add_child(mcg)
 #
 liste_adresses = carte.adresses()
@@ -47,6 +57,9 @@ liste_messages = carte.message(liste_adresses)
 for i in range(len(liste_adresses)):
     carte.creation_marker(mcg, geo.geocode(liste_adresses[i])[0], geo.geocode(liste_adresses[i])[1], liste_messages[i])
 #
+legend = carte.ajout_legend()
+
+c.get_root().add_child(legend)
 #
 c.save('carte.html')
 #

@@ -5,23 +5,23 @@ import pandas
 import requests
 
 # À adapter en fonction de l'ordinateur utilisé
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-# tessdata_dir_config = r'--tessdata-dir "/Users/maelle/Downloads/tesseract-ocr-setup-3.05.01/tessdata/"'
+#pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+tessdata_dir_config = r'--tessdata-dir "/Users/maelle/Downloads/tesseract-ocr-setup-3.05.01/tessdata/"'
 
 
 def pdf_to_image(pdf_path):
     images = convert_from_path(pdf_path)
     text = ""
     for i, image in enumerate(images):
-        text = text + pytesseract.image_to_string(image, lang='fra') #jeremy
-        # text = text + pytesseract.image_to_string(image, lang='fra', config=tessdata_dir_config) #maelle
+        #text = text + pytesseract.image_to_string(image, lang='fra') #jeremy
+        text = text + pytesseract.image_to_string(image, lang='fra', config=tessdata_dir_config) #maelle
     return text
 
 
 def pdf_to_txt():
     db_csv = pandas.read_csv("arretes.csv", encoding='utf-8')
-    # for i in range(len(db)):
-    for i in range(125):
+    #for i in range(len(db_csv)):
+    for i in range(580):
         url = db_csv.loc[i].url
         url_split = url.split("/")
         nom = url_split[-1].split(".")[0]

@@ -30,10 +30,21 @@ def recup_pathologie(texte, db_csv, i):
         return None
 
 
-def recup_date(texte):
+def recup_date(texte, db_csv, i):
     fichier = open(texte, "r", encoding="utf-8")
-    res = str(fichier.read()).partition("le ")[2].partition("\n")[0]
-    return res
+    if "Envoyé en préfecture le" in fichier.read():
+        fichier.seek(0)
+        res = str(fichier.read()).partition("le ")[2].partition("\n")[0]
+        fichier.close()
+        return res
+    else:
+        db_csv.loc[i, 'erreurs'] = True
+        error = pandas.read_csv("Datas/erreurs.csv")
+        error.loc[len(error)] = ["Problème date"] + list(db_csv.loc[i])
+        error.to_csv("Datas/erreurs.csv", encoding='utf-8', index=False)
+        db_csv.to_csv('arretes.csv', encoding='utf-8', index=False)
+        return None
+
 
 
 def ajout_class(string1, string2, classification, pathologie):

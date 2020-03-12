@@ -25,15 +25,17 @@ for i in range(580):
         id = rec.recup_id(path)
         if id not in json2:
             cat = database.calcul_categorie(i, db_csv)
+            date = rec.recup_date(path, db_csv, i)
             if cat == "Arrêtés de péril":
                 pathologies = rec.recup_pathologie(path, db_csv, i)
+
                 if not db_csv.loc[i].erreurs:
                     conv.changement_url(i, db_csv.loc[i].url, db_csv)
                     database.ajout_ligne_peril(id, db_csv.loc[i].url, db_csv.loc[i].adresse + ", Marseille",
-                                               pathologies, rec.recup_date(path))
+                                               pathologies, date)
             else:
                 database.ajout_ligne_autre(cat, id, db_csv.loc[i].url, db_csv.loc[i].adresse + ", Marseille",
-                                           rec.recup_date(path))
+                                           date)
 db_csv.to_csv("arretes.csv", index=False, encoding='utf-8')
 #
 c = carte.creation_carte()

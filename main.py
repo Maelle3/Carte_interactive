@@ -7,6 +7,7 @@ import recuperation as rec
 import webbrowser
 import folium
 from folium.plugins import MarkerCluster
+import pandas
 
 """Ce qu'il reste à faire:
 - ajouter des pdfs
@@ -18,8 +19,8 @@ from folium.plugins import MarkerCluster
 db_csv = conv.pdf_to_txt()
 json2 = database.ouverture_bdd()
 
-#for i in range(len(db_csv)):
-for i in range(580):
+# for i in range(580):
+for i in range(len(db_csv)):
     if not db_csv.loc[i].erreurs:
         path = "./Datas/TXT/" + db_csv.loc[i]["nom_txt"]
         id = rec.recup_id(path)
@@ -31,17 +32,31 @@ for i in range(580):
 
                 if not db_csv.loc[i].erreurs:
                     conv.changement_url(i, db_csv.loc[i].url, db_csv)
-                    database.ajout_ligne_peril(id, db_csv.loc[i].url, db_csv.loc[i].adresse + ", Marseille",
+                    try:
+                        database.ajout_ligne_peril(id, db_csv.loc[i].url, db_csv.loc[i].adresse + ", Marseille",
                                                pathologies, date)
+                    except:
+                        db_csv.loc[i, 'erreurs'] = True
+                        error = pandas.read_csv("Datas/erreurs.csv")
+                        error.loc[len(error)] = ["Problème adresse"] + list(db_csv.loc[i])
+                        error.to_csv("Datas/erreurs.csv", encoding='utf-8', index=False)
+                        db_csv.to_csv('arretes.csv', encoding='utf-8', index=False)
             else:
-                database.ajout_ligne_autre(cat, id, db_csv.loc[i].url, db_csv.loc[i].adresse + ", Marseille",
+                try:
+                    database.ajout_ligne_autre(cat, id, db_csv.loc[i].url, db_csv.loc[i].adresse + ", Marseille",
                                            date)
+                except:
+                    db_csv.loc[i, 'erreurs'] = True
+                    error = pandas.read_csv("Datas/erreurs.csv")
+                    error.loc[len(error)] = ["Problème adresse"] + list(db_csv.loc[i])
+                    error.to_csv("Datas/erreurs.csv", encoding='utf-8', index=False)
+                    db_csv.to_csv('arretes.csv', encoding='utf-8', index=False)
 db_csv.to_csv("arretes.csv", index=False, encoding='utf-8')
 #
 c = carte.creation_carte()
 #
 
-icon_create_function = """
+icon_create_function = """ 
     function(cluster) {
     var childCount = cluster.getChildCount(); 
     var c = ' marker-cluster-medium';
@@ -55,7 +70,7 @@ c.add_child(mcg)
 #
 liste_adresses = carte.adresses()
 
-liste_messages = carte.message(liste_adresses)
+liste_messages = carte.message(liste_adresses, db_csv)
 #
 #
 for i in range(len(liste_adresses)):

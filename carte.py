@@ -2,7 +2,7 @@
 import folium
 import database
 from branca.element import Template, MacroElement
-
+import pandas
 
 lat_marseille = 43.2969500
 lon_marseille = 5.3810700
@@ -48,7 +48,7 @@ def return_string(liste):
     return str
 
 
-def message(liste_adresse):
+def message(liste_adresse, db_csv):
     db = database.ouverture_bdd()
     liste = []
     for adresse in liste_adresse:
@@ -73,8 +73,16 @@ def message(liste_adresse):
         for couple in sorted_list:
             cat = db[couple[0]][0]["categorie"]
             char += '<U>' + cat + '</U><br>'
-            char += '<i>' + '<a href=' + db[couple[0]][0]["url"] + ' Target="_blank">Lien vers le pdf</a>' + '</i> '\
-                        + db[couple[0]][0]["date"] + '<br>'
+            try:
+                char += '<i>' + '<a href=' + db[couple[0]][0]["url"] + ' Target="_blank">Lien vers le pdf</a>' + '</i> '\
+                            + db[couple[0]][0]["date"] + '<br>'
+            except:
+                indice = db_csv.loc[db_csv['url'] == db[couple[0]][0]["url"]].index.tolist()[0]
+                db_csv.loc[indice, 'erreurs'] = True
+                error = pandas.read_csv("Datas/erreurs.csv")
+                error.loc[len(error)] = ["Problème date"] + list(db_csv.loc[indice])
+                error.to_csv("Datas/erreurs.csv", encoding='utf-8', index=False)
+                db_csv.to_csv('arretes.csv', encoding='utf-8', index=False)
             if cat == 'Arrêtés de péril':
                 try:
                     char += return_string(db[couple[0]][0]["classification_pathologies"]) + " <br> " + return_string(

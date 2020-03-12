@@ -46,7 +46,6 @@ def recup_date(texte, db_csv, i):
         return None
 
 
-
 def ajout_class(string1, string2, classification, pathologie):
     if string1 in pathologie:
         if string2 not in classification:

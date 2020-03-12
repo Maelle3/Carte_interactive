@@ -25,11 +25,8 @@ def pdf_to_txt():
         url = db_csv.loc[i].url
         url_split = url.split("/")
         nom = url_split[-1].split(".")[0]
+        changement_url(i, url, db_csv)
         if nom + ".txt" not in os.listdir("./Datas/TXT") and not db_csv.loc[i].erreurs:
-            if url_split[2] == 'logement-urbanisme.marseille.fr':
-                url_split[2] = "marseille.fr"
-                url = "/".join(url_split)
-                db_csv.loc[i, "url"] = url
             try:
                 myfile = requests.get(url)
                 open('./Datas/PDF/' + nom+".pdf", 'wb').write(myfile.content)
@@ -50,3 +47,16 @@ def pdf_to_txt():
         db_csv.loc[i, "nom_txt"] = nom + ".txt"
     db_csv.to_csv("arretes.csv", index=False, encoding='utf-8')
     return db_csv
+
+
+def changement_url(i, url, db):
+    url_split = url.split("/")
+    if url_split[2] == 'logement-urbanisme.marseille.fr':
+        url_split[2] = "marseille.fr"
+        url = "/".join(url_split)
+        db.loc[i, "url"] = url
+    elif url_split[4] == 'logement-urbanisme':
+        url_split.pop(3)
+        url = "/".join(url_split)
+        db.loc[i, "url"] = url
+    return None

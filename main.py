@@ -28,11 +28,13 @@ for i in range(580):
             if cat == "Arrêtés de péril":
                 pathologies = rec.recup_pathologie(path, db_csv, i)
                 if not db_csv.loc[i].erreurs:
+                    conv.changement_url(i, db_csv.loc[i].url, db_csv)
                     database.ajout_ligne_peril(id, db_csv.loc[i].url, db_csv.loc[i].adresse + ", Marseille",
                                                pathologies, rec.recup_date(path))
             else:
                 database.ajout_ligne_autre(cat, id, db_csv.loc[i].url, db_csv.loc[i].adresse + ", Marseille",
                                            rec.recup_date(path))
+db_csv.to_csv("arretes.csv", index=False, encoding='utf-8')
 #
 c = carte.creation_carte()
 #

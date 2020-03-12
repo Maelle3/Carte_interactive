@@ -25,20 +25,27 @@ def pdf_to_txt():
         url = db_csv.loc[i].url
         url_split = url.split("/")
         nom = url_split[-1].split(".")[0]
-        changement_url(i, url, db_csv)
-        if nom + ".txt" not in os.listdir("./Datas/TXT") and not db_csv.loc[i].erreurs:
+        if nom + ".txt" not in os.listdir("./Datas/TXT"):
             try:
+                changement_url(i, url, db_csv)
                 myfile = requests.get(url)
                 open('./Datas/PDF/' + nom+".pdf", 'wb').write(myfile.content)
                 texte = pdf_to_image("./Datas/PDF/"+nom+".pdf")
                 fichier = open("./Datas/TXT/" + nom + ".txt", "w", encoding="utf-8")
                 fichier.write(texte)
                 fichier.close()
+                if db_csv.loc[i].erreurs:
+                    db_csv.loc[i, 'erreurs'] = False
+                    error = pandas.read_csv("Datas/erreurs.csv")
+                    indice = error.loc[error['url'] == url].index.item()
+                    error.drop(indice, 0, inplace=True)
+                    error.to_csv("Datas/erreurs.csv", encoding='utf-8', index=False)
             except:
-                db_csv.loc[i, 'erreurs'] = True
-                error = pandas.read_csv("Datas/erreurs.csv")
-                error.loc[len(error)] = ["Problème URL"] + list(db_csv.loc[i])
-                error.to_csv("Datas/erreurs.csv", encoding='utf-8', index=False)
+                if db_csv.loc[i, 'erreurs'] == False:
+                    db_csv.loc[i, 'erreurs'] = True
+                    error = pandas.read_csv("Datas/erreurs.csv")
+                    error.loc[len(error)] = ["Problème URL"] + list(db_csv.loc[i])
+                    error.to_csv("Datas/erreurs.csv", encoding='utf-8', index=False)
 
             try:
                 os.remove("./Datas/PDF/" + nom + ".pdf")

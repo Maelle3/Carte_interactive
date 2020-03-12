@@ -15,11 +15,12 @@ def recup_adresse(texte):
 
 def recup_pathologie(texte, db_csv, i):
     fichier = open(texte, "r", encoding="utf-8")
-    if "pathologies suivantes :" in fichier.read():
+    if "pathologies suivantes" in fichier.read():
         fichier.seek(0)
-        res = str(fichier.read()).partition("pathologies suivantes :")[2].partition("Considérant")[0]
+        res = str(fichier.read()).partition("pathologies suivantes")[2].partition("Considérant")[0]
         fichier.close()
         return res
+
     else:
         db_csv.loc[i, 'erreurs'] = True
         error = pandas.read_csv("Datas/erreurs.csv")

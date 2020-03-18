@@ -50,8 +50,6 @@ icon_create_function = """
     function(cluster) {
     var childCount = cluster.getChildCount(); 
     var c = ' marker-cluster-medium';
-
-
     return new L.DivIcon({ html: '<link rel="stylesheet" href="./cluster.css"/><div><span> ' + childCount + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
     }
     """

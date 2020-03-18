@@ -28,7 +28,7 @@ palette["Diagnostics d'ouvrages"] = "purple"
 
 def creation_marker(carte, x, y, message):
     popup = folium.Popup(message[0], max_width=600, min_width=600)
-    return folium.Marker([x, y], popup=popup, icon=folium.Icon(icon='home', icon_color='white', color=palette[message[1]])).add_to(carte)
+    return folium.vector_layers.Circle([x, y], radius=4, fill=True, popup=popup, color=palette[message[1]]).add_to(carte)
 
 
 def adresses():

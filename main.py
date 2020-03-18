@@ -1,3 +1,7 @@
+#######
+### 2 endroits à modifier en fonction de MARKER ou POINT
+######
+
 import geocode as geo
 import carte
 import database
@@ -51,8 +55,12 @@ icon_create_function = """
     return new L.DivIcon({ html: '<link rel="stylesheet" href="./cluster.css"/><div><span> ' + childCount + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
     }
     """
-#mcg = folium.plugins.MarkerCluster(control=False, icon_create_function=icon_create_function)
-#c.add_child(mcg)
+
+#########
+###Il faut que ce soit décommenté pour Markers et commenté pour Points
+mcg = folium.plugins.MarkerCluster(control=False, icon_create_function=icon_create_function)
+c.add_child(mcg)
+########
 
 liste_adresses = carte.adresses()
 
@@ -60,8 +68,12 @@ liste_messages = carte.message(liste_adresses, db_csv)
 
 
 for i in range(len(liste_adresses)):
-    carte.creation_marker(c, geo.geocode(liste_adresses[i])[0], geo.geocode(liste_adresses[i])[1], liste_messages[i])
-
+    ##########
+    ### Pour Marker:
+    carte.creation_marker(mcg, geo.geocode(liste_adresses[i])[0], geo.geocode(liste_adresses[i])[1], liste_messages[i])
+    ### Pour Points:
+    #carte.creation_marker(c, geo.geocode(liste_adresses[i])[0], geo.geocode(liste_adresses[i])[1], liste_messages[i])
+    #########
 
 legend = carte.ajout_legend()
 

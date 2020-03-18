@@ -51,8 +51,8 @@ icon_create_function = """
     return new L.DivIcon({ html: '<link rel="stylesheet" href="./cluster.css"/><div><span> ' + childCount + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
     }
     """
-mcg = folium.plugins.MarkerCluster(control=False, icon_create_function=icon_create_function)
-c.add_child(mcg)
+#mcg = folium.plugins.MarkerCluster(control=False, icon_create_function=icon_create_function)
+#c.add_child(mcg)
 
 liste_adresses = carte.adresses()
 
@@ -60,7 +60,7 @@ liste_messages = carte.message(liste_adresses, db_csv)
 
 
 for i in range(len(liste_adresses)):
-    carte.creation_marker(mcg, geo.geocode(liste_adresses[i])[0], geo.geocode(liste_adresses[i])[1], liste_messages[i])
+    carte.creation_marker(c, geo.geocode(liste_adresses[i])[0], geo.geocode(liste_adresses[i])[1], liste_messages[i])
 
 
 legend = carte.ajout_legend()

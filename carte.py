@@ -21,6 +21,8 @@ palette["Arrêtés d'insécurité imminente des équipements communs"] = "lightr
 palette["Arrêtés d'évacuation et de réintégration"] = "orange"
 palette["Arrêtés de périmètres de sécurité sur voie publique"] = "beige"
 palette["Arrêtés de police générale"] = "beige"
+#palette["Arrêtés de périmètres de sécurité sur voie publique"] = "#FFDAB9"
+#palette["Arrêtés de police générale"] = "#FFDAB9"
 palette["Arrêtés de main levée partielle"] = "lightgreen"
 palette["Arrêtés de main levée"] = "green"
 palette["Diagnostics d'ouvrages"] = "purple"
@@ -29,7 +31,7 @@ palette["Diagnostics d'ouvrages"] = "purple"
 def creation_marker(carte, x, y, message):
     popup = folium.Popup(message[0], max_width=600, min_width=600)
     return folium.Marker([x, y], popup=popup, icon=folium.Icon(icon='home', icon_color='white', color=palette[message[1]])).add_to(carte)
-
+    #return folium.vector_layers.Circle([x, y], radius=4, fill=True,fill_opacity=0.5, popup=popup, color=palette[message[1]]).add_to(carte)
 
 def adresses():
     db = database.ouverture_bdd()
@@ -138,8 +140,8 @@ def ajout_legend():
         <li><span style='background:red;opacity:0.7;'></span>Arrêtés de péril modificatif</li>
         <li><span style='background:salmon;opacity:0.7;'></span>Arrêtés d'insécurité imminente des équipements communs</li>
         <li><span style='background:orange;opacity:0.7;'></span>Arrêtés d'évacuation et de réintégration</li>
-        <li><span style='background:beige;opacity:0.7;'></span>Arrêtés de périmètres de sécurité sur voie publique</li>
-        <li><span style='background:beige;opacity:0.7;'></span>Arrêtés de police générale </li>
+        <li><span style='background:#FFDAB9;opacity:0.7;'></span>Arrêtés de périmètres de sécurité sur voie publique</li>
+        <li><span style='background:#FFDAB9;opacity:0.7;'></span>Arrêtés de police générale </li>
         <li><span style='background:lightgreen;opacity:0.7;'></span>Arrêtés de main levée partielle </li>
         <li><span style='background:green;opacity:0.7;'></span>Arrêtés de main levée </li>
         <li><span style='background:purple;opacity:0.7;'></span>Diagnostics d'ouvrages </li>

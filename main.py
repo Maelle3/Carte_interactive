@@ -7,21 +7,12 @@ import recuperation as rec
 import webbrowser
 import folium
 from folium.plugins import MarkerCluster
-import pandas
+from gestion_erreurs import ajout_erreur
 
-"""Ce qu'il reste à faire:
-- ajouter des pdfs
-- ajouter un système de filtre
-- gérer le problèmes de footer
-- gérer les exceptions (2 adresses, mains levées etc)
-"""
-
-#test repush
 
 db_csv = conv.pdf_to_txt()
 json2 = database.ouverture_bdd()
 
-# for i in range(580):
 for i in range(len(db_csv)):
     if not db_csv.loc[i].erreurs:
         path = "./Datas/TXT/" + db_csv.loc[i]["nom_txt"]
@@ -38,25 +29,18 @@ for i in range(len(db_csv)):
                         database.ajout_ligne_peril(id, db_csv.loc[i].url, db_csv.loc[i].adresse + ", Marseille",
                                                pathologies, date)
                     except:
-                        db_csv.loc[i, 'erreurs'] = True
-                        error = pandas.read_csv("Datas/erreurs.csv")
-                        error.loc[len(error)] = ["Problème adresse"] + list(db_csv.loc[i])
-                        error.to_csv("Datas/erreurs.csv", encoding='utf-8', index=False)
-                        db_csv.to_csv('arretes.csv', encoding='utf-8', index=False)
+                        ajout_erreur(db_csv, i, "Problème adresse")
             else:
                 try:
                     database.ajout_ligne_autre(cat, id, db_csv.loc[i].url, db_csv.loc[i].adresse + ", Marseille",
                                            date)
                 except:
-                    db_csv.loc[i, 'erreurs'] = True
-                    error = pandas.read_csv("Datas/erreurs.csv")
-                    error.loc[len(error)] = ["Problème adresse"] + list(db_csv.loc[i])
-                    error.to_csv("Datas/erreurs.csv", encoding='utf-8', index=False)
-                    db_csv.to_csv('arretes.csv', encoding='utf-8', index=False)
+                    ajout_erreur(db_csv, i, "Problème adresse")
+
 db_csv.to_csv("arretes.csv", index=False, encoding='utf-8')
-#
+
 c = carte.creation_carte()
-#
+
 
 icon_create_function = """ 
     function(cluster) {
@@ -69,21 +53,23 @@ icon_create_function = """
     """
 mcg = folium.plugins.MarkerCluster(control=False, icon_create_function=icon_create_function)
 c.add_child(mcg)
-#
+
 liste_adresses = carte.adresses()
 
 liste_messages = carte.message(liste_adresses, db_csv)
-#
-#
+
+
 for i in range(len(liste_adresses)):
     carte.creation_marker(mcg, geo.geocode(liste_adresses[i])[0], geo.geocode(liste_adresses[i])[1], liste_messages[i])
-#
+
+
 legend = carte.ajout_legend()
 
 c.get_root().add_child(legend)
-#
+
+
 c.save('carte.html')
-#
-#
+
+
 webbrowser.open("file://" + os.getcwd() + '/carte.html')
-#
+

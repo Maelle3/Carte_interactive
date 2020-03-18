@@ -3,6 +3,7 @@ import pytesseract
 from pdf2image import convert_from_path
 import pandas
 import requests
+from gestion_erreurs import enlever_erreur, ajout_erreur
 
 # À adapter en fonction de l'ordinateur utilisé
 #pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
@@ -21,7 +22,6 @@ def pdf_to_image(pdf_path):
 def pdf_to_txt():
     db_csv = pandas.read_csv("arretes.csv", encoding='utf-8')
     for i in range(len(db_csv)):
-    # for i in range(580):
         url = db_csv.loc[i].url
         url_split = url.split("/")
         nom = url_split[-1].split(".")[0]
@@ -35,17 +35,9 @@ def pdf_to_txt():
                 fichier.write(texte)
                 fichier.close()
                 if db_csv.loc[i].erreurs:
-                    db_csv.loc[i, 'erreurs'] = False
-                    error = pandas.read_csv("Datas/erreurs.csv")
-                    indice = error.loc[error['url'] == url].index.tolist()[0]
-                    error.drop(indice, 0, inplace=True)
-                    error.to_csv("Datas/erreurs.csv", encoding='utf-8', index=False)
+                    enlever_erreur(db_csv, i, url)
             except:
-                if db_csv.loc[i, 'erreurs'] == False:
-                    db_csv.loc[i, 'erreurs'] = True
-                    error = pandas.read_csv("Datas/erreurs.csv")
-                    error.loc[len(error)] = ["Problème URL"] + list(db_csv.loc[i])
-                    error.to_csv("Datas/erreurs.csv", encoding='utf-8', index=False)
+                ajout_erreur(db_csv, i, "Problème URL")
 
             try:
                 os.remove("./Datas/PDF/" + nom + ".pdf")

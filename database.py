@@ -3,10 +3,6 @@ import json
 import recuperation as rec
 
 
-# liste des classifications de pathologies
-# 'classification_pathologies'=["affaissemnt", "altération", "risque de chutes", "fissures", "fissures", "débris",
-# "affaissement", "basculement d'escalier", "risque d'effondrement"]
-
 def ouverture_bdd():
     with open('data.json', encoding='utf-8') as json_data:
         data_dict = json.load(json_data)

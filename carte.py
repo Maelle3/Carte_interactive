@@ -2,7 +2,7 @@
 import folium
 import database
 from branca.element import Template, MacroElement
-import pandas
+from gestion_erreurs import ajout_erreur
 
 lat_marseille = 43.2969500
 lon_marseille = 5.3810700
@@ -12,9 +12,8 @@ def creation_carte():
     return folium.Map(location=[lat_marseille, lon_marseille], zoom_start=12, min_zoom=11)
 
 
-
 palette = dict()
-palette["Arrêtés de déconstruction"]  = "black"
+palette["Arrêtés de déconstruction"] = "black"
 palette["Arrêtés d'interdiction d'occuper"] = "darkred"
 palette["Arrêtés de péril"] = "red"
 palette["Arrêtés de péril modificatif"] = "red"
@@ -25,6 +24,7 @@ palette["Arrêtés de police générale"] = "beige"
 palette["Arrêtés de main levée partielle"] = "lightgreen"
 palette["Arrêtés de main levée"] = "green"
 palette["Diagnostics d'ouvrages"] = "purple"
+
 
 def creation_marker(carte, x, y, message):
     popup = folium.Popup(message[0], max_width=600, min_width=600)
@@ -78,11 +78,7 @@ def message(liste_adresse, db_csv):
                             + db[couple[0]][0]["date"] + '<br>'
             except:
                 indice = db_csv.loc[db_csv['url'] == db[couple[0]][0]["url"]].index.tolist()[0]
-                db_csv.loc[indice, 'erreurs'] = True
-                error = pandas.read_csv("Datas/erreurs.csv")
-                error.loc[len(error)] = ["Problème date"] + list(db_csv.loc[indice])
-                error.to_csv("Datas/erreurs.csv", encoding='utf-8', index=False)
-                db_csv.to_csv('arretes.csv', encoding='utf-8', index=False)
+                ajout_erreur(db_csv, indice, "Problème date")
             if cat == 'Arrêtés de péril':
                 try:
                     char += return_string(db[couple[0]][0]["classification_pathologies"]) + " <br> " + return_string(
@@ -97,8 +93,6 @@ def message(liste_adresse, db_csv):
 
 
 def ajout_legend():
-
-
     template = """
     {% macro html(this, kwargs) %}
 
@@ -196,9 +190,7 @@ def ajout_legend():
         }
     </style>
     {% endmacro %}"""
-
     macro = MacroElement()
     macro._template = Template(template)
-
     return macro
 

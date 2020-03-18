@@ -1,5 +1,5 @@
 import pandas
-
+from gestion_erreurs import ajout_erreur
 
 def recup_id(texte):
     fichier = open(texte, "r", encoding="utf-8")
@@ -22,11 +22,7 @@ def recup_pathologie(texte, db_csv, i):
         return res
 
     else:
-        db_csv.loc[i, 'erreurs'] = True
-        error = pandas.read_csv("Datas/erreurs.csv")
-        error.loc[len(error)] = ["Problème pathologies"] + list(db_csv.loc[i])
-        error.to_csv("Datas/erreurs.csv", encoding='utf-8', index=False)
-        db_csv.to_csv('arretes.csv', encoding='utf-8', index=False)
+        ajout_erreur(db_csv, i, "Problème pathologies")
         return None
 
 
@@ -38,11 +34,7 @@ def recup_date(texte, db_csv, i):
         fichier.close()
         return res
     else:
-        db_csv.loc[i, 'erreurs'] = True
-        error = pandas.read_csv("Datas/erreurs.csv")
-        error.loc[len(error)] = ["Problème date"] + list(db_csv.loc[i])
-        error.to_csv("Datas/erreurs.csv", encoding='utf-8', index=False)
-        db_csv.to_csv('arretes.csv', encoding='utf-8', index=False)
+        ajout_erreur(db_csv, i, "Problème date")
         return None
 
 

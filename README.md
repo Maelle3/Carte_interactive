@@ -11,4 +11,24 @@ Ce Read me a pour but de vous présenter globalement ce que fait le programme et
 Plusieurs changements sont à effectuer :
 <br> 
 #### Dans le fichier *`convert_pdf_to_txt.py`* :
-<br> Il faut ajouter les dépendances relatives à l'installation tesseract
+Il faut ajouter tesseract ainsi que poppler aux variables d'environnement de l'ordinateur.
+<br> Il faut ajouter les dépendances relatives à l'installation tesseract aux lignes 12 à 18. Les lignes spnt différentes suivant le système d'exploitation. 
+<br> **Sur Windows**, `pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'`suffit pour l'utilisation de la langue française.
+<br> **Sur Mac**, il faut donner le lien vers le fichier de langues : `tessdata_dir_config = r'--tessdata-dir "/Users/nomdutilisateur/Downloads/tesseract-ocr-setup-3.05.01/tessdata/"'`.
+<br><br> Il faut également ajuster la fonction *`pdf_to_image`* en commantant la ligne correspondant au bon système d'exploitation.
+<br>
+## Changement de représentation des données : marqueurs ou points
+Deux représentations sont possibles pour les différentes addresses présentant des arrêtés.
+<br>
+#### Dans le fichier *`carte.py`* :
+
+Dans la fonction *`creation_carte`* aux lignes 27 à 34, il faut commenter et décommenter la représentation voulue.
+<br>
+Dans la fonction *`creation_marker`* aux lignes 42 à 47, il faut commenter et décommenter la représentation voulue.
+<br>
+#### Dans le fichier *`main.py`*  : 
+Aux lignes 69 à 74, dans la boucle, il faut commenter et décommenter la représentation voulue.
+<br>
+Pour la représentation avec des **marqueurs**, il faut **décommenter** les lignes 57 à 61. 
+<br>
+Pour la représentation avec des **points**, il faut **commenter** ces lignes.

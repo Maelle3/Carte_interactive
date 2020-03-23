@@ -32,3 +32,13 @@ Aux lignes 69 à 74, dans la boucle, il faut commenter et décommenter la repré
 Pour la représentation avec des **marqueurs**, il faut **décommenter** les lignes 57 à 61. 
 <br>
 Pour la représentation avec des **points**, il faut **commenter** ces lignes.
+<br>
+## Personnalisation des marqueurs 
+Avec la représentation par des marqueurs, il est possible de personnaliser les icones (type et couleur). Par défaut, ce sont des maisons blanches.
+<br>
+### Dans le fichier *`carte.py`* : 
+Dans la fonction *`creation_marker`* à la ligne 44 :
+<br>
+Pour le type d'icone, il faut changer `icon='home'` en remplaçant "home" par un des icones présent sur https://fontawesome.com/icons?d=gallery . 
+<br>
+Pour la couleur de l'icone, il faut changer `icon_color='white'` en remplaçant "white" par une des couleurs listées dans la documentation  : `'red', 'darkred',  'lightred', 'orange', 'beige', 'green', 'darkgreen', 'lightgreen', 'blue', 'darkblue', 'cadetblue', 'lightblue', 'purple', 'darkpurple', 'pink', 'white', 'gray', 'lightgray', 'black'`.

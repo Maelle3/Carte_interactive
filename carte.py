@@ -63,6 +63,21 @@ def return_string(liste):
     return str
 
 
+def trie_date(liste_date):
+    for i in range(len(liste_date)):
+        intermediaire = liste_date[i].split("/")
+        intermediaire.reverse()
+        s = "/".join(intermediaire)
+        liste_date[i] = s
+    liste_date.sort(reverse = True)
+    for i in range(len(liste_date)):
+        intermediaire = liste_date[i].split("/")
+        intermediaire.reverse()
+        s = "/".join(intermediaire)
+        liste_date[i] = s
+    return liste_date
+
+
 def message(liste_adresse, db_csv):
     db = database.ouverture_bdd()
     liste = []
@@ -78,7 +93,7 @@ def message(liste_adresse, db_csv):
                     liste_key_date.append([key, value[0]["date"]])
                     liste_date.append(value[0]["date"])
         # liste_date.sort(reverse=True)
-        liste_date.reverse()
+        trie_date(liste_date)
         sorted_list = []
         for i in liste_date:
             for k in liste_key_date:

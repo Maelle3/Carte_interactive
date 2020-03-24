@@ -1,7 +1,6 @@
 import requests
 
 url_geocode = "http://api-adresse.data.gouv.fr/search/"
-adresse_test = "11 rue Moustier Marseille"
 
 
 def geocode(adresse):

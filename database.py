@@ -47,13 +47,3 @@ def ajout_ligne_autre(categorie, id, url, adresse, date):
         json.dump(db, f, ensure_ascii=False)
     return None
 
-
-def get_coordonnees_url(url):
-    db = ouverture_bdd()
-    i = 0
-    url_found = False
-    while not url_found:
-        if db.loc[i].lien_artété != url:
-            i += 1
-        else:
-            return db.loc[i].lon, db.loc[i].lat

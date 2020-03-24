@@ -100,6 +100,4 @@ def classification_lieu(pathologie):
     ajout_class("arrelage", "plancher", classification, pathologie)
     ajout_class("outre", "poutre", classification, pathologie)
     ajout_class("oiture", "toiture", classification, pathologie)
-
-
     return classification

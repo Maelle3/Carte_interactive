@@ -39,6 +39,28 @@ Avec la représentation par des marqueurs, il est possible de personnaliser les 
 ### Dans le fichier *`carte.py`* : 
 Dans la fonction *`creation_marker`* à la ligne 44 :
 <br>
-Pour le type d'icone, il faut changer `icon='home'` en remplaçant "home" par un des icones présent sur https://fontawesome.com/icons?d=gallery . 
+Pour le type d'icone, il faut changer `icon='home'` en remplaçant "home" par un des icones présent sur https://glyphicons.com/sets/basic/ . 
 <br>
 Pour la couleur de l'icone, il faut changer `icon_color='white'` en remplaçant "white" par une des couleurs listées dans la documentation  : `'red', 'darkred',  'lightred', 'orange', 'beige', 'green', 'darkgreen', 'lightgreen', 'blue', 'darkblue', 'cadetblue', 'lightblue', 'purple', 'darkpurple', 'pink', 'white', 'gray', 'lightgray', 'black'`.
+<br>
+## Gestion manuelle des erreurs
+Lorsqu'une erreur est détectée par le programme (problème d'url, d'adresse, de date ou d'annonce de pathologies), elle est ajoutée au fichier `erreurs.csv`. Certaines peuvent être traitées manuellement.
+<br>
+#### Problème de date :
+1- Aller dans le fichier `.txt`corresondant à l'adresse que l'on souhaite traiter <br>
+2- Ajouter au début du fichier : `Envoyé en préfecture le <dd/mm/yyyy>` <br>
+3- Supprimer toutes les lignes de `erreurs.csv` sauf la première <br>
+4- Supprimer le contenu du fichier `data.json` et ne laisser que `{}` comme contenu <br>
+5- Dans le fichier `arretes.csv` placer la colonne `erreurs` de l'arrêté traité sur `False` <br>
+6- Faire `run` sur le fichier `main.py` <br>
+7- Vérifier que l'arrêté n'apparaît plus dans `erreurs.csv` et que l'erreur a été correctement traité <br>
+#### Problème d'adresse : 
+1- Aller dans le fichier `arretes.csv` <br>
+2- Ajouter l'adresse dans la colonne `adresse` <br>
+3- Placer la colonne `erreurs` de l'arrêté traité sur `False` <br>
+4- Supprimer toutes les lignes de `erreurs.csv` sauf la première <br>
+5- Supprimer le contenu du fichier `data.json` et ne laisser que `{}` comme contenu <br>
+6- Faire `run` sur le fichier `main.py` <br>
+7- Vérifier que l'arrêté n'apparaît plus dans `erreurs.csv` et que l'erreur a été correctement traitée <br>
+#### Problème d'URL :
+Si c'est cette catégorie de problème qui est listée dans le fichier `erreurs.csv`, il faut vérifier que le lien vers le PDF de l'arrêté est fonctionnel. Si c'est le cas et que l'arrêté n'avait pa pu être traité à cause d'un problème de connexion, relancer le programme suffira à traiter l'erreur. Sinon, il est possible que le PDF ne soit plus disponible sur le site de la mairie.

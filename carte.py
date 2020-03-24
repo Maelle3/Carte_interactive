@@ -26,11 +26,11 @@ palette["Arrêtés d'insécurité imminente des équipements communs"] = "lightr
 palette["Arrêtés d'évacuation et de réintégration"] = "orange"
 ##########
 ### Pour des markers:
-#palette["Arrêtés de périmètres de sécurité sur voie publique"] = "beige"
-#palette["Arrêtés de police générale"] = "beige"
+palette["Arrêtés de périmètres de sécurité sur voie publique"] = "beige"
+palette["Arrêtés de police générale"] = "beige"
 ### Pour des points:
-palette["Arrêtés de périmètres de sécurité sur voie publique"] = "#FFDAB9"
-palette["Arrêtés de police générale"] = "#FFDAB9"
+#palette["Arrêtés de périmètres de sécurité sur voie publique"] = "#FFDAB9"
+#palette["Arrêtés de police générale"] = "#FFDAB9"
 #########
 palette["Arrêtés de main levée partielle"] = "lightgreen"
 palette["Arrêtés de main levée"] = "green"
@@ -41,9 +41,9 @@ def creation_marker(carte, x, y, message):
     popup = folium.Popup(message[0], max_width=600, min_width=600)
     #########
     ### Pour des Markers:
-    #return folium.Marker([x, y], popup=popup, icon=folium.Icon(icon='home', icon_color='white', color=palette[message[1]])).add_to(carte)
+    return folium.Marker([x, y], popup=popup, icon=folium.Icon(icon='home', icon_color='white', color=palette[message[1]])).add_to(carte)
     ###Pour des Points:
-    return folium.vector_layers.Circle([x, y], radius=4, fill=True,fill_opacity=0.5, popup=popup, color=palette[message[1]]).add_to(carte)
+    #return folium.vector_layers.Circle([x, y], radius=4, fill=True,fill_opacity=0.5, popup=popup, color=palette[message[1]]).add_to(carte)
     #########
 
 def adresses():

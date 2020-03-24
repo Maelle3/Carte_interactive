@@ -11,8 +11,11 @@ Ce Read me a pour but de vous présenter globalement ce que fait le programme et
 Plusieurs changements sont à effectuer :
 <br> 
 #### Dans le fichier *`convert_pdf_to_txt.py`* :
-Il faut ajouter tesseract ainsi que poppler aux variables d'environnement de l'ordinateur.
-<br> Il faut ajouter les dépendances relatives à l'installation tesseract aux lignes 12 à 18. Les lignes spnt différentes suivant le système d'exploitation. 
+Il est nécessaire d'installer `tesseract-ocr` et `poppler`sur son ordinateur et **PAS UNIQUEMENT** les bibliothèques python ! <br>
+`tesseract-ocr` peut être installé en suivant ces instructions : https://github.com/tesseract-ocr/tesseract/wiki#Installation
+<br> Il faut également ajouter le fichier `fra.traineddata`dans le répertoire *`tessdata`* afin d'avoir l'analyse des PDF en français. On peut le trouver ici : https://github.com/tesseract-ocr/tessdata/blob/3.04.00/fra.traineddata .
+<br> Il faut également ajouter tesseract ainsi que poppler aux variables d'environnement de l'ordinateur.
+<br> Il faut ajouter les dépendances relatives à l'installation tesseract aux lignes 12 à 18. Les lignes sont différentes suivant le système d'exploitation. 
 <br> **Sur Windows**, `pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'`suffit pour l'utilisation de la langue française.
 <br> **Sur Mac**, il faut donner le lien vers le fichier de langues : `tessdata_dir_config = r'--tessdata-dir "/Users/nomdutilisateur/Downloads/tesseract-ocr-setup-3.05.01/tessdata/"'`.
 <br><br> Il faut également ajuster la fonction *`pdf_to_image`* en commantant la ligne correspondant au bon système d'exploitation.
